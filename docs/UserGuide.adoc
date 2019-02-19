@@ -1,4 +1,4 @@
-﻿= AddressBook Level 4 - User Guide
+﻿= BrainTrain™ - User Guide
 :site-section: UserGuide
 :toc:
 :toclevels: 3
@@ -15,11 +15,15 @@ ifdef::env-github[]
 endif::[]
 :repoURL: https://github.com/se-edu/addressbook-level4
 
-By: `Team SE-EDU`      Since: `Jun 2016`      Licence: `MIT`
+By: `Team ...`      Since: `Feb 2019`      Licence: `...`
 
 == Introduction
 
-AddressBook Level 4 (AB4) is for those who *prefer to use a desktop app for managing contacts*. More importantly, AB4 is *optimized for those who prefer to work with a Command Line Interface* (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <<Quick Start>> to get started. Enjoy!
+BrainTrain™ is targeted at students and learners as a general memorization tool. BrainTrain implements a Spaced Repetition technique to test users on user-created lessons. Users will be tested on questions, being given a prompt, then being able to enter an answer. If the user answers correctly, the question can only be given at a later time, with incrementing delays as the user continues answering correctly. If the user answers wrongly, the question will be given more frequently, resetting the delay. This allows users to focus on poorly memorized questions, while leaving well-remembered questions for later.
+
+The app also allows you to share and import the lessons of other users, and transfer current profile progress onto another device.
+
+Interested? Jump to the <<Quick Start>> to get started. Enjoy!
 
 == Quick Start
 
