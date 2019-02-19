@@ -1,4 +1,4 @@
-= AddressBook Level 4 - Developer Guide
+= BrainTrain™ - Developer Guide
 :site-section: DeveloperGuide
 :toc:
 :toc-title:
@@ -154,7 +154,7 @@ image::SDforDeletePerson.png[width="800"]
 The sections below give more details of each component.
 
 [[Design-Ui]]
-=== UI component
+=== Data component
 
 .Structure of the UI Component
 image::UiClassDiagram.png[width="800"]
@@ -171,7 +171,7 @@ The `UI` component,
 * Listens for changes to `Model` data so that the UI can be updated with the modified data.
 
 [[Design-Logic]]
-=== Logic component
+=== Management component
 
 [[fig-LogicClassDiagram]]
 .Structure of the Logic Component
@@ -192,7 +192,7 @@ Given below is the Sequence Diagram for interactions within the `Logic` componen
 image::DeletePersonSdForLogic.png[width="800"]
 
 [[Design-Model]]
-=== Model component
+=== Deliverables component
 
 .Structure of the Model Component
 image::ModelClassDiagram.png[width="800"]
@@ -212,7 +212,7 @@ As a more OOP model, we can store a `Tag` list in `Address Book`, which `Person`
 image:ModelClassBetterOopDiagram.png[width="800"]
 
 [[Design-Storage]]
-=== Storage component
+=== Spaced Repetition System (SRS) component
 
 .Structure of the Storage Component
 image::StorageClassDiagram.png[width="800"]
@@ -225,6 +225,8 @@ The `Storage` component,
 * can save the Address Book data in json format and read it back.
 
 [[Design-Commons]]
+=== Integration component
+
 === Common classes
 
 Classes used by multiple components are in the `seedu.addressbook.commons` package.
