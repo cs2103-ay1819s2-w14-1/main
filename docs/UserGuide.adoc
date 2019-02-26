@@ -15,11 +15,15 @@ ifdef::env-github[]
 endif::[]
 :repoURL: https://github.com/se-edu/addressbook-level4
 
-By: `BrainTrain Team`      Since: `Jan 2019`      Licence: `MIT`
+By: `Team BrainTrain`      Since: `Jan 2019`      Licence: `MIT`
 
 == Introduction
 
-AddressBook Level 4 (AB4) is for those who *prefer to use a desktop app for managing contacts*. More importantly, AB4 is *optimized for those who prefer to work with a Command Line Interface* (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <<Quick Start>> to get started. Enjoy!
+*BrainTrain* is an open-source spaced repetition flashcard application which makes memorizing easy and efficient. Research has shown that the *Spaced-Repetition System (SRS) is more effective* than traditional memorization techniques. With it, you will be able to *learn more with less time*.
+
+*BrainTrain* is a desktop flashcard program and does not consume Internet bandwidth and can be used offline. It is also a *Command Line Interface (CLI)* program with none of the visual distractions Graphical User Interface (GUI) applications have. Furthermore, if you can type fast, you will spend *less time navigating the application and more time memorizing*.
+
+Interested? Jump to <<Quick Start>> to get started. Enjoy!
 
 == Quick Start
 
@@ -124,7 +128,7 @@ Deletes the 2nd flashcard.
 Imports the selected `.csv` file and loads the current progress of the user. +
 Format: `import user FILEPATH`
 
-==== Exporting user profile : 'export user'
+==== Exporting user profile : `export user`
 Exports the current progress of the user into a `.csv` file. +
 Format: `export user FILEPATH`
 
