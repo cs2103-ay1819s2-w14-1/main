@@ -57,6 +57,8 @@ test {
 dependencies {
     String testFxVersion = '4.0.12-alpha'
     String jUnitVersion = '5.1.0'
+    compileJava.options.encoding = 'UTF-8'
+    compile 'com.opencsv:opencsv:4.5'
 
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.7.0'
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.7.4'
@@ -153,15 +155,18 @@ test {
 
         if (runNonGuiTests) {
             test.include 'seedu/address/**'
+            test.include 'braintrain/**'
         }
 
         if (runGuiTests) {
             test.include 'systemtests/**'
             test.include 'seedu/address/ui/**'
+            test.include 'braintrain/**'
         }
 
         if (!runGuiTests) {
             test.exclude 'seedu/address/ui/**'
+            test.exclude 'braintrain/**'
         }
     }
 }
