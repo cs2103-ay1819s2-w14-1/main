@@ -30,7 +30,8 @@ public class StartCommandParser {
         }
 
         String name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());
-        int count = ParserUtil.parseCount(argMultimap.getValue(PREFIX_COUNT).orElse(String.valueOf(Session.CARD_COUNT_MINIMUM)));
+        int count = ParserUtil.parseCount(argMultimap.getValue(PREFIX_COUNT)
+            .orElse(String.valueOf(Session.CARD_COUNT_MINIMUM)));
         Quiz.Mode mode = ParserUtil.parseMode(argMultimap.getValue(PREFIX_MODE).get());
 
         Session session = new Session(name, count, mode);

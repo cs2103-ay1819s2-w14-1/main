@@ -2,8 +2,6 @@ package braintrain.logic;
 
 import java.util.logging.Logger;
 
-import javafx.collections.ObservableList;
-
 import braintrain.commons.core.GuiSettings;
 import braintrain.commons.core.LogsCenter;
 import braintrain.logic.commands.Command;
@@ -16,6 +14,8 @@ import braintrain.logic.parser.exceptions.ParseException;
 import braintrain.model.Model;
 import braintrain.quiz.QuizModel;
 import braintrain.quiz.commands.QuizCommand;
+
+import javafx.collections.ObservableList;
 
 
 /**
