@@ -59,7 +59,7 @@ public class BrainTrainParserTest {
     //    }
     @Test
     public void parseCommand_start() throws Exception {
-        assertTrue(parser.parseCommand(StartCommand.COMMAND_WORD) instanceof StartCommand);
+        assertTrue(parser.parseCommand(StartCommand.COMMAND_WORD + " n/02-03-learn c/15 m/LEARN") instanceof StartCommand);
     }
 
     @Test
