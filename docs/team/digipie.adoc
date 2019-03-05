@@ -15,13 +15,17 @@
 
 == Summary of contributions
 
-* *Major enhancement*:
-** What it does:
-** Justification:
-** Highlights:
+* *Major enhancement*: Implemented a Card Management System
+** What it does: Allows users to manage lessons' cards.
+*** Allows users to view all cards in a lesson
+*** Allows users to add a card to a lesson
+*** Allows users to modify an existing card in a lesson
+*** Allows users to delete a card in a lesson
+** Justification: // To do
+** Highlights: Pull request https://github.com/CS2103-AY1819S2-W14-1/main/pull/34[#34], https://github.com/CS2103-AY1819S2-W14-1/main/pull/39[#39]
 
-* *Minor enhancement*:
-
+* *Minor enhancement*: // To do
+** // To do
 * *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]]
 
 * *Other contributions*:
