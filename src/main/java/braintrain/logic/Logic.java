@@ -4,6 +4,7 @@ import braintrain.commons.core.GuiSettings;
 import braintrain.logic.commands.CommandResult;
 import braintrain.logic.commands.exceptions.CommandException;
 import braintrain.logic.parser.exceptions.ParseException;
+import braintrain.model.card.exceptions.MissingCoreException;
 import javafx.collections.ObservableList;
 
 /**
@@ -17,7 +18,7 @@ public interface Logic {
      * @throws CommandException If an error occurs during command execution.
      * @throws ParseException If an error occurs during parsing.
      */
-    CommandResult execute(String commandText) throws CommandException, ParseException;
+    CommandResult execute(String commandText) throws CommandException, ParseException, MissingCoreException;
 
     /**
      * Returns an unmodifiable view of the list of commands entered by the user.
