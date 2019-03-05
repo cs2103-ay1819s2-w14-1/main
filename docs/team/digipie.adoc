@@ -3,13 +3,15 @@
 :imagesDir: ../images
 :stylesDir: ../stylesheets
 
-== PROJECT: AddressBook - Level 4
+== PROJECT: BrainTrain
 
 ---
 
 == Overview
 
-AddressBook - Level 4 is a desktop address book application used for teaching Software Engineering principles. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.
+*BrainTrain* is an open-source spaced repetition flashcard application which makes memorizing easy and efficient. Research has shown that the *Spaced-Repetition System (SRS) is more effective* than traditional memorization techniques. With it, you will be able to *learn more with less time*.
+
+*BrainTrain* is a desktop flashcard program and does not consume Internet bandwidth and can be used offline. It is also a *Command Line Interface (CLI)* program with none of the visual distractions Graphical User Interface (GUI) applications have. Furthermore, if you can type fast, you will spend *less time navigating the application and more time memorizing*.
 
 == Summary of contributions
 
@@ -23,8 +25,22 @@ AddressBook - Level 4 is a desktop address book application used for teaching So
 * *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]]
 
 * *Other contributions*:
-
 ** Project management:
+*** // To do
+*** Closed milestone // To do
+** Enhancements to existing features:
+*** // To do
+** Documentation:
+*** Updated User Guide and Developer Guide (Pull request
+https://github.com/CS2103-AY1819S2-W14-1/main/pull/15[#15] and
+https://github.com/CS2103-AY1819S2-W14-1/main/pull/20[#20])
+** Community:
+*** Fix a bug in teammate's pull request (Pull request https://github.com/CS2103-AY1819S2-W14-1/main/pull/33[#33])
+*** Reviewed pull requests with constructive feedback (Pull request https://github.com/CS2103-AY1819S2-W14-1/main/pull/30#pullrequestreview-209863095[#30],
+https://github.com/CS2103-AY1819S2-W14-1/main/pull/36#pullrequestreview-209862756[#36], https://github.com/CS2103-AY1819S2-W14-1/main/pull/36#pullrequestreview-209862756[#36] and  https://github.com/CS2103-AY1819S2-W14-1/main/pull/37#pullrequestreview-209866595[#37])
+*** Reported bugs for other teams in the class (// To do)
+** Tools:
+*** // To do
 
 == Contributions to the User Guide
 
