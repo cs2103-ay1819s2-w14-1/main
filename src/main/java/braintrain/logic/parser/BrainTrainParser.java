@@ -1,6 +1,6 @@
 package braintrain.logic.parser;
 
-import static braintrain.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+//import static braintrain.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static braintrain.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
 
 import java.util.regex.Matcher;
@@ -12,6 +12,7 @@ import braintrain.logic.commands.HelpCommand;
 import braintrain.logic.commands.HistoryCommand;
 import braintrain.logic.commands.StartCommand;
 import braintrain.logic.parser.exceptions.ParseException;
+import braintrain.model.card.exceptions.MissingCoreException;
 
 /**
  * Parses user input.
@@ -30,21 +31,21 @@ public class BrainTrainParser {
      * @return the command based on the user input
      * @throws ParseException if the user input does not conform the expected format
      */
-    public Command parseCommand(String userInput) throws ParseException {
+    public Command parseCommand(String userInput) throws ParseException, MissingCoreException {
         final Matcher matcher = BASIC_COMMAND_FORMAT.matcher(userInput.trim());
-        if (!matcher.matches()) {
-            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));
-        }
+        //if (!matcher.matches()) {
+        //    throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));
+        //}
 
         final String commandWord = matcher.group("commandWord");
-        //        final String arguments = matcher.group("arguments");
+        final String arguments = matcher.group("arguments");
         switch (commandWord) {
 
         //        case FindCommand.COMMAND_WORD:
         //            return new FindCommandParser().parse(arguments);
         // TODO use parser here
         case StartCommand.COMMAND_WORD:
-            return new StartCommand();
+            return new StartCommandParser().parse(arguments);
 
         case HistoryCommand.COMMAND_WORD:
             return new HistoryCommand();
@@ -55,11 +56,11 @@ public class BrainTrainParser {
         case HelpCommand.COMMAND_WORD:
             return new HelpCommand();
 
-        //        case UndoCommand.COMMAND_WORD:
-        //            return new UndoCommand();
+        //    case UndoCommand.COMMAND_WORD:
+        //        return new UndoCommand();
         //
-        //        case RedoCommand.COMMAND_WORD:
-        //            return new RedoCommand();
+        //    case RedoCommand.COMMAND_WORD:
+        //        return new RedoCommand();
 
         default:
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
