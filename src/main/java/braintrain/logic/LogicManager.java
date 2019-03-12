@@ -12,11 +12,11 @@ import braintrain.logic.parser.BrainTrainParser;
 import braintrain.logic.parser.QuizModeParser;
 import braintrain.logic.parser.exceptions.ParseException;
 import braintrain.model.Model;
-import braintrain.model.card.exceptions.MissingCoreException;
 import braintrain.quiz.QuizModel;
 import braintrain.quiz.commands.QuizCommand;
 
 import javafx.collections.ObservableList;
+
 
 /**
  * The main LogicManager of the app.
@@ -40,7 +40,7 @@ public class LogicManager implements Logic {
     }
 
     @Override
-    public CommandResult execute(String commandText) throws CommandException, ParseException, MissingCoreException {
+    public CommandResult execute(String commandText) throws CommandException, ParseException {
         logger.info("----------------[USER COMMAND][" + commandText + "]");
 
         CommandResult commandResult;

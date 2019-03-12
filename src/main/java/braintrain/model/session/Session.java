@@ -8,7 +8,6 @@ import braintrain.model.card.exceptions.MissingCoreException;
 import braintrain.quiz.Quiz;
 import braintrain.quiz.QuizCard;
 
-
 /**
  * Represents a session that stores cards based on srs data.
  */
@@ -21,6 +20,11 @@ public class Session {
     private List<QuizCard> quizCards;
     private List<SrsCard> srsCards;
 
+    public Session(String name, int cardCount, Quiz.Mode mode) {
+        this.name = name;
+        this.cardCount = cardCount;
+        this.mode = mode;
+    }
 
     public Session(String name, int cardCount, Quiz.Mode mode, List<SrsCard> srsCards) {
         if (name == null || name.length() == 0) {
