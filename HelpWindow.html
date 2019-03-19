@@ -17,15 +17,17 @@
 <ul class="sectlevel3">
 <li><a href="#viewing-help-code-help-code">3.1.1. Viewing help: <code>help</code></a></li>
 <li><a href="#starting-quiz-session-code-start-code">3.1.2. Starting quiz session: <code>start</code></a></li>
-<li><a href="#list_cards">3.1.3. Listing all flashcards: <code>list cards</code></a></li>
-<li><a href="#adding-a-flashcard-code-add-card-code">3.1.4. Adding a flashcard: <code>add card</code></a></li>
-<li><a href="#editing-a-flashcard-code-edit-card-code">3.1.5. Editing a flashcard : <code>edit card</code></a></li>
-<li><a href="#deleting-a-flashcard-code-delete-card-code">3.1.6. Deleting a flashcard: <code>delete card</code></a></li>
-<li><a href="#importing-user-profile-code-import-user-code">3.1.7. Importing user profile : <code>import user</code></a></li>
-<li><a href="#exporting-user-profile-code-export-user-code">3.1.8. Exporting user profile : <code>export user</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.1.9. Listing entered commands : <code>history</code></a></li>
-<li><a href="#quitting-the-program-code-quit-code">3.1.10. Quitting the program : <code>quit</code></a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.1.11. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#listing-all-lessons-code-listlessons-code">3.1.3. Listing all lessons: <code>listLessons</code></a></li>
+<li><a href="#adding-a-lesson-code-addlesson-code">3.1.4. Adding a lesson: <code>addLesson</code></a></li>
+<li><a href="#deleting-a-lesson-code-deletelesson-code">3.1.5. Deleting a lesson: <code>deleteLesson</code></a></li>
+<li><a href="#list_cards">3.1.6. Listing all flashcards: <code>listCards</code></a></li>
+<li><a href="#adding-a-flashcard-code-addcard-code">3.1.7. Adding a flashcard: <code>addCard</code></a></li>
+<li><a href="#editing-a-flashcard-code-editcard-code">3.1.8. Editing a flashcard : <code>editCard</code></a></li>
+<li><a href="#deleting-a-flashcard-code-deletecard-code">3.1.9. Deleting a flashcard: <code>deleteCard</code></a></li>
+<li><a href="#importing-user-profile-code-importuser-code">3.1.10. Importing user profile : <code>importUser</code></a></li>
+<li><a href="#exporting-user-profile-code-exportuser-code">3.1.11. Exporting user profile : <code>exportUser</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.1.12. Listing entered commands : <code>history</code></a></li>
+<li><a href="#quitting-the-program-code-quit-code">3.1.13. Quitting the program : <code>quit</code></a></li>
 </ul>
 </li>
 <li><a href="#quiz-mode">3.2. Quiz Mode</a>
@@ -49,8 +51,14 @@
 <li><a href="#saving-the-data">4.6. Saving the data</a></li>
 </ul>
 </li>
-<li><a href="#faq">5. FAQ</a></li>
-<li><a href="#command-summary">6. Command Summary</a></li>
+<li><a href="#troubleshooting-todo">5. Troubleshooting TODO</a></li>
+<li><a href="#faq">6. FAQ</a></li>
+<li><a href="#command-summary">7. Command Summary</a>
+<ul class="sectlevel2">
+<li><a href="#management-mode-2">7.1. Management Mode</a></li>
+<li><a href="#quiz-mode-2">7.2. Quiz Mode</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -58,13 +66,13 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>BrainTrain</strong> is an open-source spaced repetition flashcard application which makes memorizing easy and efficient. Research has shown that the <strong>Spaced-Repetition System (SRS) is more effective</strong> than traditional memorization techniques. With it, you will be able to <strong>learn more with less time</strong>.</p>
+<p>BrainTrain is an open-source spaced repetition flashcard application which makes <strong>memorizing easy and efficient</strong>. Research has shown that the Spaced-Repetition System (SRS) is <strong>much more effective</strong> than traditional memorization techniques. With BrainTrain, you will <strong>learn more with less time</strong>.</p>
 </div>
 <div class="paragraph">
-<p><strong>BrainTrain</strong> is a desktop flashcard program and does not consume Internet bandwidth and can be used offline. It is also a <strong>Command Line Interface (CLI)</strong> program with none of the visual distractions Graphical User Interface (GUI) applications have. Furthermore, if you can type fast, you will spend <strong>less time navigating the application and more time memorizing</strong>.</p>
+<p>BrainTrain is also a <strong>portable</strong> and <strong>easy-to-navigate</strong> desktop program. It is an <strong>offline</strong> application which you can use anywhere, even in places with limited or no Internet availability. It can be navigated and used via <strong>easy-to-use</strong> commands through the Command Line Interface (CLI). The CLI is supplemented by a minimalistic Graphical User Interface (GUI) which provides <strong>helpful but non-distracting visual aid</strong>. Together, the CLI and GUI provides an <strong>effective and straightforward</strong> way for you to use BrainTrain.</p>
 </div>
 <div class="paragraph">
-<p>Interested? Jump to <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>Start using BrainTrain today! To get started, read <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> for installation and setup instructions.</p>
 </div>
 </div>
 </div>
@@ -74,47 +82,31 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ensure you have Java version <code>9</code> or later installed in your Computer.</p>
+<p>Ensure that Java version <code>9</code> or later is installed on your Computer. You can download it <a href="https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html">here</a>.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/se-edu/addressbook-level4/releases">here</a>.</p>
+<p>Download the latest <code>braintrain.jar</code> file <a href="https://github.com/CS2103-AY1819S2-W14-1/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Create a folder to use as the home folder for BrainTrain (e.g. <code>braintrain/</code>).</p>
 </li>
 <li>
-<p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
-<div class="imageblock">
+<p>Move the downloaded file to the created folder.</p>
+</li>
+<li>
+<p>Double-click the file to run BrainTrain. The GUI will appear in a few seconds.</p>
+<div id="img-firstlook" class="imageblock">
 <div class="content">
-<img src="images/Ui.png" alt="Ui" width="790">
+<img src="images/UiFirstLook.png" alt="UiFirstLook" width="790">
 </div>
-</div>
-</li>
-<li>
-<p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.<br>
-e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
-</li>
-<li>
-<p>Some example commands you can try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
-</li>
-<li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
-</li>
-<li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
-</li>
-<li>
-<p><strong><code>exit</code></strong> : exits the app</p>
-</li>
-</ul>
+<div class="title">Figure 1. BrainTrain&#8217;s GUI on first run</div>
 </div>
 </li>
 <li>
-<p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
+<p>Type the command <code>help</code> in the command box at the top and press <kbd>Enter</kbd> to display usage information on BrainTrain commands.</p>
+</li>
+<li>
+<p>Read <a href="#Features">Section 3, &#8220;Features&#8221;</a> to find out more about BrainTrain commands.</p>
 </li>
 </ol>
 </div>
@@ -183,7 +175,10 @@ Format: <code>help</code></p>
 <p>The count field is optional. It represents the number of cards the user wants in the session. By default, it sets to be 10.</p>
 </li>
 <li>
-<p>The number of cards should be at least 5. Otherwise, the start command will fail.</p>
+<p>The number of cards should be at least 1. The start command will fail with count to be 0.</p>
+</li>
+<li>
+<p>The mode field only supports three mode: <code>learn, preview and review</code>.</p>
 </li>
 </ul>
 </div>
@@ -199,17 +194,100 @@ Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="list_cards"><a class="link" href="#list_cards">3.1.3. Listing all flashcards: <code>list cards</code></a></h4>
+<h4 id="listing-all-lessons-code-listlessons-code"><a class="link" href="#listing-all-lessons-code-listlessons-code">3.1.3. Listing all lessons: <code>listLessons</code></a></h4>
 <div class="paragraph">
-<p>Shows a numbered list of all flashcards.<br>
-Format: <code>list cards</code></p>
+<p>Shows a numbered list of all lessons.<br>
+Format: <code>listLessons</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="adding-a-flashcard-code-add-card-code"><a class="link" href="#adding-a-flashcard-code-add-card-code">3.1.4. Adding a flashcard: <code>add card</code></a></h4>
+<h4 id="adding-a-lesson-code-addlesson-code"><a class="link" href="#adding-a-lesson-code-addlesson-code">3.1.4. Adding a lesson: <code>addLesson</code></a></h4>
+<div class="paragraph">
+<p>Adds a lesson.<br>
+Format: <code>addLesson n/NAME c/CORE&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>Usage rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The lesson to be added must contain at least 2 <code>CORE</code> parameters. These parameters are <code>CORE</code> headers which define the lesson cards' <code>CORE</code> values. An example of a <code>CORE</code> header and a card&#8217;s <code>CORE</code> value would be 'Country' and 'Japan' respectively.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The lesson can have any number of <code>OPTIONAL</code> headers (including 0).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>OPTIONAL</code> headers are optional. The values of these headers are displayed during quiz mode when you enter <a href="#hint"><code>\hint</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>addLesson n/MedicineTrivia c/Proposition c/TrueOrFalse</code></p>
+</li>
+<li>
+<p><code>addLesson n/Country Capitals c/Country c/Capital o/First letter of capital</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-a-lesson-code-deletelesson-code"><a class="link" href="#deleting-a-lesson-code-deletelesson-code">3.1.5. Deleting a lesson: <code>deleteLesson</code></a></h4>
+<div class="paragraph">
+<p>Deletes a lesson.<br>
+Format: <code>deleteLesson INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Usage rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the lesson at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>To find the <code>INDEX</code> number of a lesson, type <code>listLessons</code> to list all lessons loaded in memory.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteLesson 2</code><br>
+Deletes the 2nd lesson in the numbered list displayed by <code>listLessons</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list_cards"><a class="link" href="#list_cards">3.1.6. Listing all flashcards: <code>listCards</code></a></h4>
+<div class="paragraph">
+<p>Shows a numbered list of all flashcards.<br>
+Format: <code>listCards</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="adding-a-flashcard-code-addcard-code"><a class="link" href="#adding-a-flashcard-code-addcard-code">3.1.7. Adding a flashcard: <code>addCard</code></a></h4>
 <div class="paragraph">
 <p>Adds a flashcard.<br>
-Format: <code>add card q/QUESTION a/ANSWER [h/HINT]</code></p>
+Format: <code>addCard q/QUESTION a/ANSWER [h/HINT]</code></p>
 </div>
 <div class="paragraph">
 <p>Usage rules:</p>
@@ -227,19 +305,19 @@ Format: <code>add card q/QUESTION a/ANSWER [h/HINT]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>add card q/What is the capital of Belgium? a/Brussels</code></p>
+<p><code>addCard q/What is the capital of Belgium? a/Brussels</code></p>
 </li>
 <li>
-<p><code>add card q/What state is Seattle in? a/Washington h/The state is named after the founding father of USA.</code></p>
+<p><code>addCard q/What state is Seattle in? a/Washington h/The state is named after the founding father of USA.</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="editing-a-flashcard-code-edit-card-code"><a class="link" href="#editing-a-flashcard-code-edit-card-code">3.1.5. Editing a flashcard : <code>edit card</code></a></h4>
+<h4 id="editing-a-flashcard-code-editcard-code"><a class="link" href="#editing-a-flashcard-code-editcard-code">3.1.8. Editing a flashcard : <code>editCard</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing flashcard.<br>
-Format: <code>edit card INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code></p>
+Format: <code>editCard INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code></p>
 </div>
 <div class="paragraph">
 <p>Usage rules:</p>
@@ -247,7 +325,7 @@ Format: <code>edit card INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Edits the flashcard at the specified <code>INDEX</code>. To find the <code>INDEX</code> number of a question, type <a href="#list_cards"><code>list cards</code></a> to list all flashcards.</p>
+<p>Edits the flashcard at the specified <code>INDEX</code>. To find the <code>INDEX</code> number of a question, type <code>listCards</code> to list all flashcards.</p>
 </li>
 <li>
 <p>All fields are optional, but minimally one field must be specified.</p>
@@ -263,21 +341,21 @@ Format: <code>edit card INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>card edit 1 a/Tokyo</code><br>
+<p><code>editCard 1 a/Tokyo</code><br>
 Changes the answer of the first flashcard to <code>Tokyo</code>. All other fields such as the question remain the same.</p>
 </li>
 <li>
-<p><code>card edit 12 q/How many intercostal spaces are there? h/</code><br>
+<p><code>editCard 12 q/How many intercostal spaces are there? h/</code><br>
 Changes the question of the 12th flashcard to 'How many intercostal spaces are there?' and removes the flashcard&#8217;s hint.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-a-flashcard-code-delete-card-code"><a class="link" href="#deleting-a-flashcard-code-delete-card-code">3.1.6. Deleting a flashcard: <code>delete card</code></a></h4>
+<h4 id="deleting-a-flashcard-code-deletecard-code"><a class="link" href="#deleting-a-flashcard-code-deletecard-code">3.1.9. Deleting a flashcard: <code>deleteCard</code></a></h4>
 <div class="paragraph">
 <p>Deletes a flashcard in the question pool.<br>
-Format: <code>delete card INDEX</code></p>
+Format: <code>deleteCard INDEX</code></p>
 </div>
 <div class="paragraph">
 <p>Usage rules:</p>
@@ -288,7 +366,7 @@ Format: <code>delete card INDEX</code></p>
 <p>Deletes the flashcard at the specified <code>INDEX</code>.</p>
 </li>
 <li>
-<p>To find the <code>INDEX</code> number of a question, type <code>list cards</code> to list all flashcards in the question pool.</p>
+<p>To find the <code>INDEX</code> number of a question, type <code>listCards</code> to list all flashcards in the question pool.</p>
 </li>
 </ul>
 </div>
@@ -298,28 +376,28 @@ Format: <code>delete card INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete card 2</code><br>
+<p><code>deleteCard 2</code><br>
 Deletes the 2nd flashcard.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="importing-user-profile-code-import-user-code"><a class="link" href="#importing-user-profile-code-import-user-code">3.1.7. Importing user profile : <code>import user</code></a></h4>
+<h4 id="importing-user-profile-code-importuser-code"><a class="link" href="#importing-user-profile-code-importuser-code">3.1.10. Importing user profile : <code>importUser</code></a></h4>
 <div class="paragraph">
 <p>Imports the selected <code>.csv</code> file and loads the current progress of the user.<br>
-Format: <code>import user FILEPATH</code></p>
+Format: <code>importUser FILEPATH</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="exporting-user-profile-code-export-user-code"><a class="link" href="#exporting-user-profile-code-export-user-code">3.1.8. Exporting user profile : <code>export user</code></a></h4>
+<h4 id="exporting-user-profile-code-exportuser-code"><a class="link" href="#exporting-user-profile-code-exportuser-code">3.1.11. Exporting user profile : <code>exportUser</code></a></h4>
 <div class="paragraph">
 <p>Exports the current progress of the user into a <code>.csv</code> file.<br>
-Format: <code>export user FILEPATH</code></p>
+Format: <code>exportUser FILEPATH</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.1.9. Listing entered commands : <code>history</code></a></h4>
+<h4 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.1.12. Listing entered commands : <code>history</code></a></h4>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -340,16 +418,10 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="quitting-the-program-code-quit-code"><a class="link" href="#quitting-the-program-code-quit-code">3.1.10. Quitting the program : <code>quit</code></a></h4>
+<h4 id="quitting-the-program-code-quit-code"><a class="link" href="#quitting-the-program-code-quit-code">3.1.13. Quitting the program : <code>quit</code></a></h4>
 <div class="paragraph">
 <p>Quits the program.<br>
 Format: <code>quit</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.1.11. Encrypting data files <code>[coming in v2.0]</code></a></h4>
-<div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
 </div>
 </div>
@@ -579,7 +651,40 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">5. FAQ</a></h2>
+<h2 id="troubleshooting-todo"><a class="link" href="#troubleshooting-todo">5. Troubleshooting TODO</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: Why are my card values shown as <code>?????</code> or question marks?<br>
+<strong>A</strong>: If your lesson contains non-ASCII characters such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Characters with accents: <code>à</code></p>
+</li>
+<li>
+<p>Non-English words : <code>こんにちは</code> <code>السلام عليكم</code> <code>你好</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This can be fixed in Excel by going into the Save As dialog, and saving as <code>CSV UTF-8 (Comma delimited) (*.csv)</code>. For other csv file editors, you may need to look up relevant documentation on how save in UTF-8 encoding.<br></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The default encoding setting is unable to process special characters. As a result, you will need to save it as a UTF-8 encoded csv file.</p>
+</div>
+<div class="paragraph">
+<p>Note that the files have to be saved as a UTF-8 encoded csv file before the first save.<br>
+If the file is saved without UTF-8 encoding, the data may have already been saved as ?????, and all non-ASCII characters are lost.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
@@ -588,49 +693,77 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">6. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="management-mode-2"><a class="link" href="#management-mode-2">7.1. Management Mode</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+<p>Help: <code>help</code></p>
 </li>
 <li>
-<p><strong>Clear</strong> : <code>clear</code></p>
+<p><strong>Start a quiz session</strong>: <code>start n/NAME [c/COUNT] m/MODE</code>
+e.g. <code>start n/02-03-LEARN c/15 m/LEARN</code></p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
+<p>List all lessons: <code>listLessons</code></p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
+<p><strong>Add a lesson</strong>: <code>addLesson n/NAME c/CORE…​ [o/OPTIONAL]…​</code>
+e.g. <code>addLesson n/MedicineTrivia c/Proposition c/TrueOrFalse</code></p>
 </li>
 <li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
+<p>List all cards: <code>list cards</code></p>
 </li>
 <li>
-<p><strong>List</strong> : <code>list</code></p>
+<p><strong>Add a card</strong>: <code>add card q/QUESTION a/ANSWER [h/HINT]</code>
+e.g. <code>add card q/What state is Seattle in? a/Washington h/The state is named after the founding father of USA</code></p>
 </li>
 <li>
-<p><strong>Help</strong> : <code>help</code></p>
+<p><strong>Edit a card</strong>: <code>edit card INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code>
+e.g. <code>card edit 12 q/How many intercostal spaces are there? h/</code></p>
 </li>
 <li>
-<p><strong>Select</strong> : <code>select INDEX</code><br>
-e.g.<code>select 2</code></p>
+<p><strong>Delete a card</strong>: <code>delete card INDEX</code>
+e.g. <code>delete card 2</code></p>
 </li>
 <li>
-<p><strong>History</strong> : <code>history</code></p>
+<p>Import user profile: <code>import user</code></p>
 </li>
 <li>
-<p><strong>Undo</strong> : <code>undo</code></p>
+<p>Export user profile: <code>export user</code></p>
 </li>
 <li>
-<p><strong>Redo</strong> : <code>redo</code></p>
+<p>History: <code>history</code></p>
+</li>
+<li>
+<p>Quit: <code>quit</code></p>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-12 17:37:33 UTC</div></div></div></body></html>
+<div class="sect2">
+<h3 id="quiz-mode-2"><a class="link" href="#quiz-mode-2">7.2. Quiz Mode</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Help: <code>\help</code></p>
+</li>
+<li>
+<p>View the hint: <code>\hint</code></p>
+</li>
+<li>
+<p>View status: <code>\status</code></p>
+</li>
+<li>
+<p>Answer: <code>[*]</code></p>
+</li>
+<li>
+<p>Quit: <code>\quit</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-19 14:37:13 UTC</div></div></div></body></html>
