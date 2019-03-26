@@ -51,7 +51,7 @@
 <p>Justification: // To do</p>
 </li>
 <li>
-<p>Highlights: Pull request <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/34">#34</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/39">#39</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/77">#77</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/85">#85</a></p>
+<p>Highlights: Pull request <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/34">#34</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/39">#39</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/77">#77</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/85">#85</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/107">#107</a></p>
 </li>
 </ul>
 </div>
@@ -106,7 +106,7 @@
 <li>
 <p>Updated User Guide with management mode commands (Pull request
 ,
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/20">#20</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/85">#85</a>)</p>
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/20">#20</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/85">#85</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/85">#107</a>)</p>
 </li>
 <li>
 <p>Updated Developer Guide with management mode implementation (Pull request // To do)</p>
@@ -163,6 +163,10 @@
 </table>
 <div class="sect2">
 <h3 id="quiz-mode"><a class="link" href="#quiz-mode">Quiz Mode</a></h3>
+<div class="paragraph">
+<p>When you <a href="#start"><code>start</code></a> a quiz session successfully, you will enter quiz mode which allows you
+to enter the following commands.</p>
+</div>
 <div class="sect3">
 <h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">Viewing help: <code>\help</code></a></h4>
 <div class="paragraph">
@@ -189,6 +193,59 @@ Format: <code>\status</code></p>
 <div class="paragraph">
 <p>Any input without the escape character <code>\</code> is treated as an answer to the current flashcard.<br>
 Format: <code>[*]</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For each type of question, there is total attempts and streak.</p>
+</li>
+<li>
+<p>The total attempts refers to how many times you have tried this question, getting it wrong is
+also considered as tried.</p>
+</li>
+<li>
+<p>The streak refers to how many times you have gotten it correctly in a row.</p>
+</li>
+<li>
+<p>The streak will be reduced to 0 for getting it wrong twice in a row.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you accidentally enter the wrong answer once, your streak for the question will not be affected.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The question is "Japan" and is asking for the capital of "Japan":<br>
+<code>Tokyo</code><br>
+This is the correct answer, both the streak and total attempts increased by 1.</p>
+</li>
+<li>
+<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
+<code>Japaan</code><br>
+<code>Japan</code><br>
+This is the correct answer, the streak increased by 1 while total attempts increased by 2.</p>
+</li>
+<li>
+<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
+<code>Japaan</code><br>
+<code>Jappan</code><br>
+This is the wrong answer, the streak is reduced to 0 while total attempts increased by 2.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -312,4 +369,4 @@ answers a question:</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-19 14:37:57 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-26 15:52:04 UTC</div></div></div></body></html>

@@ -16,18 +16,20 @@
 <li><a href="#management-mode">3.1. Management Mode</a>
 <ul class="sectlevel3">
 <li><a href="#viewing-help-code-help-code">3.1.1. Viewing help: <code>help</code></a></li>
-<li><a href="#starting-quiz-session-code-start-code">3.1.2. Starting quiz session: <code>start</code></a></li>
-<li><a href="#listing-all-lessons-code-listlessons-code">3.1.3. Listing all lessons: <code>listLessons</code></a></li>
+<li><a href="#start">3.1.2. Starting quiz session: <code>start</code></a></li>
+<li><a href="#listLessons">3.1.3. Listing all lessons: <code>listLessons</code></a></li>
 <li><a href="#adding-a-lesson-code-addlesson-code">3.1.4. Adding a lesson: <code>addLesson</code></a></li>
 <li><a href="#deleting-a-lesson-code-deletelesson-code">3.1.5. Deleting a lesson: <code>deleteLesson</code></a></li>
-<li><a href="#list_cards">3.1.6. Listing all flashcards: <code>listCards</code></a></li>
-<li><a href="#adding-a-flashcard-code-addcard-code">3.1.7. Adding a flashcard: <code>addCard</code></a></li>
-<li><a href="#editing-a-flashcard-code-editcard-code">3.1.8. Editing a flashcard : <code>editCard</code></a></li>
-<li><a href="#deleting-a-flashcard-code-deletecard-code">3.1.9. Deleting a flashcard: <code>deleteCard</code></a></li>
-<li><a href="#importing-user-profile-code-importuser-code">3.1.10. Importing user profile : <code>importUser</code></a></li>
-<li><a href="#exporting-user-profile-code-exportuser-code">3.1.11. Exporting user profile : <code>exportUser</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.1.12. Listing entered commands : <code>history</code></a></li>
-<li><a href="#quitting-the-program-code-quit-code">3.1.13. Quitting the program : <code>quit</code></a></li>
+<li><a href="#opening-a-lesson-code-openlesson-code">3.1.6. Opening a lesson: <code>openLesson</code></a></li>
+<li><a href="#closing-a-lesson-code-closelesson-code">3.1.7. Closing a lesson: <code>closeLesson</code></a></li>
+<li><a href="#listing-all-flashcards-code-listcards-code">3.1.8. Listing all flashcards: <code>listCards</code></a></li>
+<li><a href="#adding-a-flashcard-code-addcard-code">3.1.9. Adding a flashcard: <code>addCard</code></a></li>
+<li><a href="#editing-a-flashcard-code-editcard-code">3.1.10. Editing a flashcard : <code>editCard</code></a></li>
+<li><a href="#deleting-a-flashcard-code-deletecard-code">3.1.11. Deleting a flashcard: <code>deleteCard</code></a></li>
+<li><a href="#importing-user-profile-code-importuser-code">3.1.12. Importing user profile : <code>importUser</code></a></li>
+<li><a href="#exporting-user-profile-code-exportuser-code">3.1.13. Exporting user profile : <code>exportUser</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.1.14. Listing entered commands : <code>history</code></a></li>
+<li><a href="#quitting-the-program-code-quit-code">3.1.15. Quitting the program : <code>quit</code></a></li>
 </ul>
 </li>
 <li><a href="#quiz-mode">3.2. Quiz Mode</a>
@@ -41,22 +43,12 @@
 </li>
 </ul>
 </li>
-<li><a href="#address-book-4-features">4. Address Book 4 Features</a>
+<li><a href="#troubleshooting">4. Troubleshooting</a></li>
+<li><a href="#faq">5. FAQ</a></li>
+<li><a href="#command-summary">6. Command Summary</a>
 <ul class="sectlevel2">
-<li><a href="#locating-persons-by-name-code-find-code">4.1. Locating persons by name: <code>find</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">4.2. Selecting a person : <code>select</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">4.3. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">4.4. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">4.5. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#saving-the-data">4.6. Saving the data</a></li>
-</ul>
-</li>
-<li><a href="#troubleshooting-todo">5. Troubleshooting TODO</a></li>
-<li><a href="#faq">6. FAQ</a></li>
-<li><a href="#command-summary">7. Command Summary</a>
-<ul class="sectlevel2">
-<li><a href="#management-mode-2">7.1. Management Mode</a></li>
-<li><a href="#quiz-mode-2">7.2. Quiz Mode</a></li>
+<li><a href="#management-mode-2">6.1. Management Mode</a></li>
+<li><a href="#quiz-mode-2">6.2. Quiz Mode</a></li>
 </ul>
 </li>
 </ul>
@@ -73,6 +65,9 @@
 </div>
 <div class="paragraph">
 <p>Start using BrainTrain today! To get started, read <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> for installation and setup instructions.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 </div>
@@ -110,6 +105,9 @@
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -135,17 +133,32 @@
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
 <div class="sect2">
 <h3 id="management-mode"><a class="link" href="#management-mode">3.1. Management Mode</a></h3>
 <div class="sect3">
 <h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1.1. Viewing help: <code>help</code></a></h4>
 <div class="paragraph">
-<p>Displays usage information on all Management Mode commands.<br>
+<p>Displays usage information on all commands.<br>
 Format: <code>help</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can press <kbd>F1</kbd> to display usage information on all commands.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="starting-quiz-session-code-start-code"><a class="link" href="#starting-quiz-session-code-start-code">3.1.2. Starting quiz session: <code>start</code></a></h4>
+<h4 id="start"><a class="link" href="#start">3.1.2. Starting quiz session: <code>start</code></a></h4>
 <div class="paragraph">
 <p>Switches to Quiz Mode and starts a new quiz session.<br></p>
 </div>
@@ -194,7 +207,7 @@ Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-lessons-code-listlessons-code"><a class="link" href="#listing-all-lessons-code-listlessons-code">3.1.3. Listing all lessons: <code>listLessons</code></a></h4>
+<h4 id="listLessons"><a class="link" href="#listLessons">3.1.3. Listing all lessons: <code>listLessons</code></a></h4>
 <div class="paragraph">
 <p>Shows a numbered list of all lessons.<br>
 Format: <code>listLessons</code></p>
@@ -257,7 +270,69 @@ Format: <code>deleteLesson INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the lesson at the specified <code>INDEX</code>.</p>
+<p>Deletes the lesson at the specified <code>INDEX</code> of the numbered lesson list.</p>
+</li>
+<li>
+<p>To view the list, enter the command <a href="#listLessons"><code>listLessons</code></a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleteLesson 2</code><br>
+Deletes the second lesson in the numbered list displayed by <code>listLessons</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="opening-a-lesson-code-openlesson-code"><a class="link" href="#opening-a-lesson-code-openlesson-code">3.1.6. Opening a lesson: <code>openLesson</code></a></h4>
+<div class="paragraph">
+<p>Opens a lesson for editing.<br>
+Format: <code>openLesson INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Usage rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Opens the lesson at the specified <code>INDEX</code> of the numbered lesson list.</p>
+</li>
+<li>
+<p>To view the list, enter the command <a href="#listLessons"><code>listLessons</code></a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>openLesson 1</code><br>
+Opens the first lesson in the numbered list displayed by <code>listLessons</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="closing-a-lesson-code-closelesson-code"><a class="link" href="#closing-a-lesson-code-closelesson-code">3.1.7. Closing a lesson: <code>closeLesson</code></a></h4>
+<div class="paragraph">
+<p>Closes and saves a lesson after editing it.<br>
+Format: <code>closeLesson INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Usage rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Closes the lesson at the specified <code>INDEX</code>.</p>
 </li>
 <li>
 <p>To find the <code>INDEX</code> number of a lesson, type <code>listLessons</code> to list all lessons loaded in memory.</p>
@@ -270,21 +345,21 @@ Format: <code>deleteLesson INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>deleteLesson 2</code><br>
-Deletes the 2nd lesson in the numbered list displayed by <code>listLessons</code>.</p>
+<p><code>closeLesson 1</code><br>
+Closes the first lesson in the numbered list displayed by <code>listLessons</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="list_cards"><a class="link" href="#list_cards">3.1.6. Listing all flashcards: <code>listCards</code></a></h4>
+<h4 id="listing-all-flashcards-code-listcards-code"><a class="link" href="#listing-all-flashcards-code-listcards-code">3.1.8. Listing all flashcards: <code>listCards</code></a></h4>
 <div class="paragraph">
 <p>Shows a numbered list of all flashcards.<br>
 Format: <code>listCards</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="adding-a-flashcard-code-addcard-code"><a class="link" href="#adding-a-flashcard-code-addcard-code">3.1.7. Adding a flashcard: <code>addCard</code></a></h4>
+<h4 id="adding-a-flashcard-code-addcard-code"><a class="link" href="#adding-a-flashcard-code-addcard-code">3.1.9. Adding a flashcard: <code>addCard</code></a></h4>
 <div class="paragraph">
 <p>Adds a flashcard.<br>
 Format: <code>addCard q/QUESTION a/ANSWER [h/HINT]</code></p>
@@ -314,7 +389,7 @@ Format: <code>addCard q/QUESTION a/ANSWER [h/HINT]</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="editing-a-flashcard-code-editcard-code"><a class="link" href="#editing-a-flashcard-code-editcard-code">3.1.8. Editing a flashcard : <code>editCard</code></a></h4>
+<h4 id="editing-a-flashcard-code-editcard-code"><a class="link" href="#editing-a-flashcard-code-editcard-code">3.1.10. Editing a flashcard : <code>editCard</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing flashcard.<br>
 Format: <code>editCard INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code></p>
@@ -352,7 +427,7 @@ Changes the question of the 12th flashcard to 'How many intercostal spaces are t
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-a-flashcard-code-deletecard-code"><a class="link" href="#deleting-a-flashcard-code-deletecard-code">3.1.9. Deleting a flashcard: <code>deleteCard</code></a></h4>
+<h4 id="deleting-a-flashcard-code-deletecard-code"><a class="link" href="#deleting-a-flashcard-code-deletecard-code">3.1.11. Deleting a flashcard: <code>deleteCard</code></a></h4>
 <div class="paragraph">
 <p>Deletes a flashcard in the question pool.<br>
 Format: <code>deleteCard INDEX</code></p>
@@ -383,21 +458,21 @@ Deletes the 2nd flashcard.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="importing-user-profile-code-importuser-code"><a class="link" href="#importing-user-profile-code-importuser-code">3.1.10. Importing user profile : <code>importUser</code></a></h4>
+<h4 id="importing-user-profile-code-importuser-code"><a class="link" href="#importing-user-profile-code-importuser-code">3.1.12. Importing user profile : <code>importUser</code></a></h4>
 <div class="paragraph">
 <p>Imports the selected <code>.csv</code> file and loads the current progress of the user.<br>
 Format: <code>importUser FILEPATH</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="exporting-user-profile-code-exportuser-code"><a class="link" href="#exporting-user-profile-code-exportuser-code">3.1.11. Exporting user profile : <code>exportUser</code></a></h4>
+<h4 id="exporting-user-profile-code-exportuser-code"><a class="link" href="#exporting-user-profile-code-exportuser-code">3.1.13. Exporting user profile : <code>exportUser</code></a></h4>
 <div class="paragraph">
 <p>Exports the current progress of the user into a <code>.csv</code> file.<br>
 Format: <code>exportUser FILEPATH</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.1.12. Listing entered commands : <code>history</code></a></h4>
+<h4 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.1.14. Listing entered commands : <code>history</code></a></h4>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -418,15 +493,22 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="quitting-the-program-code-quit-code"><a class="link" href="#quitting-the-program-code-quit-code">3.1.13. Quitting the program : <code>quit</code></a></h4>
+<h4 id="quitting-the-program-code-quit-code"><a class="link" href="#quitting-the-program-code-quit-code">3.1.15. Quitting the program : <code>quit</code></a></h4>
 <div class="paragraph">
 <p>Quits the program.<br>
 Format: <code>quit</code></p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="quiz-mode"><a class="link" href="#quiz-mode">3.2. Quiz Mode</a></h3>
+<div class="paragraph">
+<p>When you <a href="#start"><code>start</code></a> a quiz session successfully, you will enter quiz mode which allows you
+to enter the following commands.</p>
+</div>
 <div class="sect3">
 <h4 id="viewing-help-code-help-code-2"><a class="link" href="#viewing-help-code-help-code-2">3.2.1. Viewing help: <code>\help</code></a></h4>
 <div class="paragraph">
@@ -454,125 +536,31 @@ Format: <code>\status</code></p>
 <p>Any input without the escape character <code>\</code> is treated as an answer to the current flashcard.<br>
 Format: <code>[*]</code></p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="quitting-the-current-quiz-session-code-quit-code"><a class="link" href="#quitting-the-current-quiz-session-code-quit-code">3.2.5. Quitting the current quiz session: <code>\quit</code></a></h4>
-<div class="paragraph">
-<p>Quits the current quiz session and switches back to Management Mode.<br>
-Format: <code>\quit</code></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="address-book-4-features"><a class="link" href="#address-book-4-features">4. Address Book 4 Features</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Features here will be replaced by equivalent features in BrainTrain document above.</strong></p>
-</div>
-<div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">4.1. Locating persons by name: <code>find</code></a></h3>
-<div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+<p>For each type of question, there is total attempts and streak.</p>
 </li>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
+<p>The total attempts refers to how many times you have tried this question, getting it wrong is
+also considered as tried.</p>
 </li>
 <li>
-<p>Only the name is searched.</p>
+<p>The streak refers to how many times you have gotten it correctly in a row.</p>
 </li>
 <li>
-<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
-</li>
-<li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>The streak will be reduced to 0 for getting it wrong twice in a row.</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>find John</code><br>
-Returns <code>john</code> and <code>John Doe</code></p>
-</li>
-<li>
-<p><code>find Betsy Tim John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">4.2. Selecting a person : <code>select</code></a></h3>
-<div class="paragraph">
-<p>Selects the person identified by the index number used in the displayed person list.<br>
-Format: <code>select INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Selects the person and loads the Google search page the person at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed person list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br>
-<code>select 2</code><br>
-Selects the 2nd person in the address book.</p>
-</li>
-<li>
-<p><code>find Betsy</code><br>
-<code>select 1</code><br>
-Selects the 1st person in the results of the <code>find</code> command.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.3. Undoing previous command : <code>undo</code></a></h3>
-<div class="paragraph">
-<p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
-Format: <code>undo</code></p>
-</div>
-<div class="admonitionblock note">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>Undoable commands: those commands that modify the address book&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
-</div>
+If you accidentally enter the wrong answer once, your streak for the question will not be affected.
 </td>
 </tr>
 </table>
@@ -583,75 +571,40 @@ Format: <code>undo</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 1</code><br>
-<code>list</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p>The question is "Japan" and is asking for the capital of "Japan":<br>
+<code>Tokyo</code><br>
+This is the correct answer, both the streak and total attempts increased by 1.</p>
 </li>
 <li>
-<p><code>select 1</code><br>
-<code>list</code><br>
-<code>undo</code><br>
-The <code>undo</code> command fails as there are no undoable commands executed previously.</p>
+<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
+<code>Japaan</code><br>
+<code>Japan</code><br>
+This is the correct answer, the streak increased by 1 while total attempts increased by 2.</p>
 </li>
 <li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br></p>
+<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
+<code>Japaan</code><br>
+<code>Jappan</code><br>
+This is the wrong answer, the streak is reduced to 0 while total attempts increased by 2.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">4.4. Redoing the previously undone command : <code>redo</code></a></h3>
+<div class="sect3">
+<h4 id="quitting-the-current-quiz-session-code-quit-code"><a class="link" href="#quitting-the-current-quiz-session-code-quit-code">3.2.5. Quitting the current quiz session: <code>\quit</code></a></h4>
 <div class="paragraph">
-<p>Reverses the most recent <code>undo</code> command.<br>
-Format: <code>redo</code></p>
+<p>Quits the current quiz session and switches back to Management Mode.<br>
+Format: <code>\quit</code></p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><br></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>delete 1</code><br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br></p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>redo</code><br>
-The <code>redo</code> command fails as there are no <code>undo</code> commands executed previously.</p>
-</li>
-<li>
-<p><code>delete 1</code><br>
-<code>clear</code><br>
-<code>undo</code> (reverses the <code>clear</code> command)<br>
-<code>undo</code> (reverses the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>delete 1</code> command)<br>
-<code>redo</code> (reapplies the <code>clear</code> command)<br></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.5. Clearing all entries : <code>clear</code></a></h3>
-<div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.6. Saving the data</a></h3>
-<div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
-There is no need to save manually.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="troubleshooting-todo"><a class="link" href="#troubleshooting-todo">5. Troubleshooting TODO</a></h2>
+<h2 id="troubleshooting"><a class="link" href="#troubleshooting">4. Troubleshooting</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: Why are my card values shown as <code>?????</code> or question marks?<br>
@@ -681,89 +634,101 @@ If the file is saved without UTF-8 encoding, the data may have already been save
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">5. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
 <strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.</p>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">6. Command Summary</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="management-mode-2"><a class="link" href="#management-mode-2">7.1. Management Mode</a></h3>
+<h3 id="management-mode-2"><a class="link" href="#management-mode-2">6.1. Management Mode</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Help: <code>help</code></p>
+<p><strong>View help</strong>: <code>help</code></p>
 </li>
 <li>
-<p><strong>Start a quiz session</strong>: <code>start n/NAME [c/COUNT] m/MODE</code>
+<p><strong>Start a quiz session</strong>: <code>start n/NAME [c/COUNT] m/MODE</code><br>
 e.g. <code>start n/02-03-LEARN c/15 m/LEARN</code></p>
 </li>
 <li>
-<p>List all lessons: <code>listLessons</code></p>
+<p><strong>List all lessons</strong>: <code>listLessons</code></p>
 </li>
 <li>
-<p><strong>Add a lesson</strong>: <code>addLesson n/NAME c/CORE…​ [o/OPTIONAL]…​</code>
+<p><strong>Add a lesson</strong>: <code>addLesson n/NAME c/CORE…​ [o/OPTIONAL]…​</code><br>
 e.g. <code>addLesson n/MedicineTrivia c/Proposition c/TrueOrFalse</code></p>
 </li>
 <li>
-<p>List all cards: <code>list cards</code></p>
+<p><strong>List all cards</strong>: <code>list cards</code></p>
 </li>
 <li>
-<p><strong>Add a card</strong>: <code>add card q/QUESTION a/ANSWER [h/HINT]</code>
+<p><strong>Add a card</strong>: <code>add card q/QUESTION a/ANSWER [h/HINT]</code><br>
 e.g. <code>add card q/What state is Seattle in? a/Washington h/The state is named after the founding father of USA</code></p>
 </li>
 <li>
-<p><strong>Edit a card</strong>: <code>edit card INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code>
+<p><strong>Edit a card</strong>: <code>edit card INDEX [q/QUESTION] [a/ANSWER] [h/HINT]</code><br>
 e.g. <code>card edit 12 q/How many intercostal spaces are there? h/</code></p>
 </li>
 <li>
-<p><strong>Delete a card</strong>: <code>delete card INDEX</code>
+<p><strong>Delete a card</strong>: <code>delete card INDEX</code><br>
 e.g. <code>delete card 2</code></p>
 </li>
 <li>
-<p>Import user profile: <code>import user</code></p>
+<p><strong>Import user profile</strong>: <code>import user</code></p>
 </li>
 <li>
-<p>Export user profile: <code>export user</code></p>
+<p><strong>Export user profile</strong>: <code>export user</code></p>
 </li>
 <li>
-<p>History: <code>history</code></p>
+<p><strong>View history</strong>: <code>history</code></p>
 </li>
 <li>
-<p>Quit: <code>quit</code></p>
+<p><strong>Quit BrainTrain</strong>: <code>quit</code></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="quiz-mode-2"><a class="link" href="#quiz-mode-2">7.2. Quiz Mode</a></h3>
+<h3 id="quiz-mode-2"><a class="link" href="#quiz-mode-2">6.2. Quiz Mode</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Help: <code>\help</code></p>
+<p><strong>View help</strong>: <code>\help</code></p>
 </li>
 <li>
-<p>View the hint: <code>\hint</code></p>
+<p><strong>View hint</strong>: <code>\hint</code></p>
 </li>
 <li>
-<p>View status: <code>\status</code></p>
+<p><strong>View status</strong>: <code>\status</code></p>
 </li>
 <li>
-<p>Answer: <code>[*]</code></p>
+<p><strong>Enter answer</strong>: <code>[*]</code></p>
 </li>
 <li>
-<p>Quit: <code>\quit</code></p>
+<p><strong>Quit quiz mode</strong>: <code>\quit</code></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-19 14:37:57 UTC</div></div></div></body></html>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-26 15:52:04 UTC</div></div></div></body></html>
