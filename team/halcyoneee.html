@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Lee Tze Ting - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>Lee Tze Ting - Project Portfolio</h1></div><div id="content"><div class="sect1">
-<h2 id="project-braintrain"><a class="link" href="#project-braintrain">PROJECT: BrainTrain</a></h2>
+<h2 id="project-braintrain"><a class="link" href="#project-braintrain">1. PROJECT: BrainTrain</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This project portfolio page showcases my contributions to the BrainTrain project.</p>
@@ -9,7 +9,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<h2 id="overview"><a class="link" href="#overview">2. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>BrainTrain is a spaced repetition flashcard application which makes memorizing easy and efficient.
@@ -21,7 +21,7 @@ created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">3. Summary of contributions</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -41,7 +41,10 @@ commands are not.</p>
 </li>
 <li>
 <p><strong>Highlights</strong>: Pull request <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/32">#32</a>,
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/43">#42</a></p>
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/43">#42</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/96">#96</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/108">#108</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/129">#129</a></p>
 </li>
 </ul>
 </div>
@@ -77,7 +80,7 @@ commands are not.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">4. Contributions to the User Guide</a></h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -90,34 +93,26 @@ commands are not.</p>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="quiz-mode"><a class="link" href="#quiz-mode">Quiz Mode</a></h3>
+<h3 id="quiz-mode"><a class="link" href="#quiz-mode">4.1. Quiz mode</a></h3>
 <div class="paragraph">
-<p>When you <a href="#start"><code>start</code></a> a quiz session successfully, you will enter quiz mode which allows you
-to enter the following commands.</p>
+<p>When you <a href="#start"><code>start</code></a> a quiz session, you will enter quiz mode in which only the following set of quiz commands are allowed. Management commands are disabled in this mode.</p>
 </div>
 <div class="sect3">
-<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">Viewing help: <code>\help</code></a></h4>
+<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">4.1.1. Viewing help: <code>\help</code></a></h4>
 <div class="paragraph">
-<p>Displays usage information on all Quiz Mode commands and acceptable inputs for answering cards.<br>
+<p>Displays usage information on all quiz mode commands and acceptable inputs for answering cards.<br>
 Format: <code>\help</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="hint"><a class="link" href="#hint">Viewing the current flashcard&#8217;s hint: <code>\hint</code></a></h4>
+<h4 id="viewing-the-quiz-session-s-status-code-status-code"><a class="link" href="#viewing-the-quiz-session-s-status-code-status-code">4.1.2. Viewing the quiz session&#8217;s status: <code>\status</code></a></h4>
 <div class="paragraph">
-<p>Reveals the hint for the current flashcard.<br>
-Format: <code>\hint</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="viewing-the-session-status-code-status-code"><a class="link" href="#viewing-the-session-status-code-status-code">Viewing the session status: <code>\status</code></a></h4>
-<div class="paragraph">
-<p>Displays information on the current session&#8217;s status such as progression.<br>
+<p>Displays information on the current session&#8217;s status such as lesson progress (i.e. number of flashcards left).<br>
 Format: <code>\status</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="answering-a-flashcard-code-code"><a class="link" href="#answering-a-flashcard-code-code">Answering a flashcard : <code>[*]</code></a></h4>
+<h4 id="answering-a-flashcard-code-code"><a class="link" href="#answering-a-flashcard-code-code">4.1.3. Answering a flashcard : <code>[*]</code></a></h4>
 <div class="paragraph">
 <p>Any input without the escape character <code>\</code> is treated as an answer to the current flashcard.<br>
 Format: <code>[*]</code></p>
@@ -125,19 +120,27 @@ Format: <code>[*]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>For each type of question, there is total attempts and streak.</p>
+<p>For each flashcard, total attempts and answer streak is tracked.</p>
 </li>
 <li>
-<p>The total attempts refers to how many times you have tried this question, getting it wrong is
-also considered as tried.</p>
+<p>Total attempts is the number of times you have attempted this flashcard, regardless of whether you were correct or wrong.</p>
 </li>
 <li>
-<p>The streak refers to how many times you have gotten it correctly in a row.</p>
-</li>
-<li>
-<p>The streak will be reduced to 0 for getting it wrong twice in a row.</p>
+<p>The answer streak is the number of times you have answered the flashcard correctly consecutively.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The streak will be reduced to 0 after you answer a flashcard wrongly twice in a row. Hence, if you accidentally enter the wrong answer once, your streak for the question will not be affected, unless you answer wrongly again.
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -146,7 +149,7 @@ also considered as tried.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-If you accidentally enter the wrong answer once, your streak for the question will not be affected.
+If you do not know the answer of a flashcard and want to view it, simply press <kbd>ENTER</kbd> twice.
 </td>
 </tr>
 </table>
@@ -177,9 +180,41 @@ This is the wrong answer, the streak is reduced to 0 while total attempts increa
 </div>
 </div>
 <div class="sect3">
-<h4 id="quitting-the-current-quiz-session-code-quit-code"><a class="link" href="#quitting-the-current-quiz-session-code-quit-code">Quitting the current quiz session: <code>\quit</code></a></h4>
+<h4 id="labelling-the-current-flashcard-as-difficult-code-difficult-code"><a class="link" href="#labelling-the-current-flashcard-as-difficult-code-difficult-code">4.1.4. Labelling the current flashcard as difficult: <code>\difficult</code></a></h4>
 <div class="paragraph">
-<p>Quits the current quiz session and switches back to Management Mode.<br>
+<p>Labels the current flashcard as difficult.<br>
+Format: <code>\difficult</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The question is "Japan" and is asking for the capital of "Japan":<br>
+<code>\difficult</code><br>
+This will label flashcard of "Japan" as difficult.</p>
+</li>
+<li>
+<p>The question is "Japan" and is asking for the capital of "Japan":<br>
+<code>\difficult</code><br>
+<code>\difficult</code><br>
+This will label flashcard of "Japan" as not difficult.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hint"><a class="link" href="#hint">4.1.5. Viewing the current flashcard&#8217;s hint(s): <code>\hint</code></a></h4>
+<div class="paragraph">
+<p>Reveals the hint(s) for the current flashcard (if any).<br>
+Format: <code>\hint</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="quitting-the-quiz-session-code-quit-code"><a class="link" href="#quitting-the-quiz-session-code-quit-code">4.1.6. Quitting the quiz session: <code>\quit</code></a></h4>
+<div class="paragraph">
+<p>Quits the current quiz session and switches back to <code>management mode</code>.<br>
 Format: <code>\quit</code></p>
 </div>
 </div>
@@ -187,7 +222,7 @@ Format: <code>\quit</code></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">5. Contributions to the Developer Guide</a></h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -200,19 +235,22 @@ Format: <code>\quit</code></p>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="quiz-feature"><a class="link" href="#quiz-feature">Quiz feature</a></h3>
+<h3 id="quiz-feature"><a class="link" href="#quiz-feature">5.1. Quiz feature</a></h3>
 <div class="paragraph">
 <p>Quiz feature allows users to enter quiz related commands and answer.</p>
 </div>
 <div class="sect3">
-<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<h4 id="current-implementation"><a class="link" href="#current-implementation">5.1.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>The quiz feature implements the following commands and processes answer:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>\quit</code> - Quits a quiz session.</p>
+<p><code>Answer [*]</code> - Enters any character without escape character \ is treated as an answer.</p>
+</li>
+<li>
+<p><code>\difficult</code> - Labels current question in quiz as difficult or not.</p>
 </li>
 <li>
 <p><code>\help</code> - Lists all commands in quiz and inputs the program will accept.</p>
@@ -221,29 +259,16 @@ Format: <code>\quit</code></p>
 <p><code>\hint</code> - Reveals additional information to help user to solve the question.</p>
 </li>
 <li>
-<p><code>\status</code> - Lists current status and lesson progress of user.</p>
+<p><code>\quit</code> - Quits a quiz and save attempted progress.</p>
 </li>
 <li>
-<p><code>Answer [*]</code> - Enters any character without escape character \ is treated as an answer.</p>
+<p><code>\status</code> - Lists current status and lesson progress of user.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="status"><a class="link" href="#status">\status</a></h4>
-<div class="paragraph">
-<p>The <code>\status</code> feature list the total attempts you have attempted, total number of question you
-have gotten correct in this session and which question you are currently on.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/QuizStatusCommandSequenceDiagram.png" alt="QuizStatusCommandSequenceDiagram" width="800">
-</div>
-<div class="title">Figure 1. Sequence diagram for status feature</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="answer"><a class="link" href="#answer">Answer [*]</a></h4>
+<h4 id="answer"><a class="link" href="#answer">5.1.2. Answer [*]</a></h4>
 <div class="paragraph">
 <p>The <code>Answer [*]</code> feature is facilitated by <code>QuizAnswerCommand</code>. The command takes in user input
 as answer to be processed later.</p>
@@ -256,11 +281,38 @@ answers a question:</p>
 <div class="content">
 <img src="../images/QuizAnswerCommandSequenceDiagram.png" alt="QuizAnswerCommandSequenceDiagram" width="800">
 </div>
-<div class="title">Figure 2. Sequence diagram for answer feature</div>
+<div class="title">Figure 1. Sequence diagram for answer feature</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<h4 id="quit"><a class="link" href="#quit">5.1.3. \quit</a></h4>
+<div class="paragraph">
+<p>The <code>\quit</code> will force quit the current quiz and save the attempted question to the location that
+the user have specified in <code>UserPref</code>, by default it will saved to <code>\data\user\savedata.csv</code>. Once
+the <code>\quit</code> command have succeeded running, it will return back to the <code>ManagementMode</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/QuizQuitCommandSequenceDiagram.png" alt="QuizQuitCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 2. Sequence diagram for quit feature</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="status"><a class="link" href="#status">5.1.4. \status</a></h4>
+<div class="paragraph">
+<p>The <code>\status</code> feature lists the total number of attempts you have attempted, total number of
+question you have gotten correct in this quiz and which question you are currently on.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/QuizStatusCommandSequenceDiagram.png" alt="QuizStatusCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 3. Sequence diagram for status feature</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">5.1.5. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-quiz-executes"><a class="link" href="#aspect-how-quiz-executes">Aspect: How Quiz executes</a></h5>
 <div class="ulist">
@@ -270,31 +322,40 @@ answers a question:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Answer can be anything excluding word starting with a backslash <code>\</code> (e.g. <code>\help</code>)</p>
+<p>Pros: Least restricted choice of answer.</p>
 </li>
 <li>
-<p>Cons: Tedious to implement</p>
+<p>Cons: Tedious to implement.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Run quiz in the same mode as the rest of the management commands</p>
+<p><strong>Alternative 2:</strong> Run quiz together with the rest of the commands</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Easier to implement compared to alternative 1</p>
+<p>Pros: Easy to implement.</p>
 </li>
 <li>
-<p>Cons: Answer cannot start with those from the list of management commands (e.g. <code>start</code>)</p>
+<p>Cons: Restricted answer. Answer cannot start with words already listed as management commands
+(e.g. <code>start</code>)</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Alternative 1</strong> is chosen because it allows the user to have a more comprehensive choice of
+word as
+answer without restricting the possible choices. In certain question, it is possible for the
+answer to be "start". Hence by choosing alternative 1, the choice of answer is the least
+restricted. Also, by running the quiz in a different mode, it allows the user to concentrate on the quiz
+without having unrelated display as distraction.</p>
 </div>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-03-26 15:52:48 UTC</div></div></div></body></html>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-02 15:11:28 UTC</div></div></div></body></html>
