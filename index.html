@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>BrainTrain</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>BrainTrain</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">BrainTrain</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S2-W14-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>BrainTrain</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://travis-ci.org/CS2103-AY1819S2-W14-1/main"><span class="image"><img src="https://travis-ci.org/CS2103-AY1819S2-W14-1/main.svg?branch=master" alt="Build Status"></span></a>
@@ -13,40 +13,57 @@
 <img src="images/Ui.png" alt="Ui" width="600">
 </div>
 </div>
+<div class="paragraph">
+<p>BrainTrain is a <strong>spaced-repetition flashcard application</strong> which makes <strong>memorizing easy and effective</strong>. With BrainTrain&#8217;s <a href="https://www.theguardian.com/education/2016/jan/23/spaced-repetition-a-hack-to-make-your-brain-store-information">Spaced Repetition System (SRS)</a> optimizing your flashcard revision intervals, you will be able to <strong>learn more in less time</strong>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Who is it for:</strong></p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>This is a desktop flashcard application. It has a GUI but most of the user
-interactions happen using a CLI (Command Line Interface).</p>
+<p>Anyone who needs to memorise anything (e.g. Japanese vocabulary, the periodic table, the human anatomy). BrainTrain&#8217;s card system is <strong>content-agnostic</strong> and <strong>flexible</strong>. It accommodates all forms of learning you may require.</p>
 </li>
 <li>
-<p>It is an open-source spaced repetition flashcard application which makes memorizing easy and
-efficient.</p>
-</li>
-<li>
-<p>Research has shown that the Spaced-Repetition System (SRS) is more effective than traditional
-memorization techniques</p>
+<p>Anyone who needs to create flashcards for educational purposes. BrainTrain&#8217;s cards are grouped as lessons which can be <strong>easily imported and exported</strong>. These lessons are also saved in <code>.csv</code> files which you <strong>can edit in your favourite spreadsheet application</strong> (e.g. Excel).</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Main features of BrainTrain:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can manage flashcard lessons in BrainTrain&#8217;s management mode or alternatively do so in your preferred spreadsheet application.</p>
+</li>
+<li>
+<p>You can attempt flashcard lessons in BrainTrain&#8217;s quiz mode which will track and manage your user-specific spaced-repetition data automatically.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To start using BrainTrain:</strong><br>
+Follow the instructions in the <a href="UserGuide.html#Quick-start">User guide: Quick start</a> section.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="site-map"><a class="link" href="#site-map">Site Map</a></h2>
+<h2 id="site-map"><a class="link" href="#site-map">Site map</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="UserGuide.html">User Guide</a></p>
+<p><a href="UserGuide.html">User guide</a></p>
 </li>
 <li>
-<p><a href="DeveloperGuide.html">Developer Guide</a></p>
+<p><a href="DeveloperGuide.html">Developer guide</a></p>
 </li>
 <li>
-<p><a href="AboutUs.html">About Us</a></p>
+<p><a href="AboutUs.html">About us</a></p>
 </li>
 <li>
-<p><a href="ContactUs.html">Contact Us</a></p>
+<p><a href="ContactUs.html">Contact us</a></p>
 </li>
 </ul>
 </div>
@@ -58,14 +75,16 @@ memorization techniques</p>
 <div class="ulist">
 <ul>
 <li>
-<p>AddressBook-Level4 project created by SE-EDU initiative at <a href="https://github.com/se-edu/" class="bare">https://github.com/se-edu/</a></p>
+<p>BrainTrain is built upon the <em>AddressBook-Level4</em> project created by the <a href="https://github.com/se-edu/">SE-EDU initiative</a>.</p>
 </li>
 <li>
-<p>Some parts of this sample application were inspired by the excellent <a href="http://code.makery.ch/library/javafx-8-tutorial/">Java FX tutorial</a> by
-<em>Marco Jakob</em>.</p>
+<p>Parts of this application were inspired by <em>Marco Jakob</em>'s <a href="http://code.makery.ch/library/javafx-8-tutorial/">Java FX tutorial</a>.</p>
 </li>
 <li>
-<p>Libraries used: <a href="https://github.com/TestFX/TestFX">TextFX</a>, <a href="https://github.com/FasterXML/jackson">Jackson</a>, <a href="https://github.com/google/guava">Guava</a>, <a href="https://github.com/junit-team/junit5">JUnit5</a>, <a href="http://opencsv.sourceforge.net/">opencsv</a></p>
+<p>BrainTrain icon is made by <a href="https://www.freepik.com/">Freepik</a> from <a href="https://www.flaticon.com/">Flaticon</a></p>
+</li>
+<li>
+<p>Libraries used: <a href="https://github.com/TestFX/TestFX">TextFX</a>, <a href="https://github.com/FasterXML/jackson">Jackson</a>, <a href="https://github.com/google/guava">Guava</a>, <a href="https://github.com/junit-team/junit5">JUnit5</a>, <a href="http://opencsv.sourceforge.net/">OpenCSV</a></p>
 </li>
 </ul>
 </div>
@@ -76,4 +95,4 @@ memorization techniques</p>
 <div class="sectionbody">
 
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 15:56:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 14:09:35 UTC</div></div></div></body></html>

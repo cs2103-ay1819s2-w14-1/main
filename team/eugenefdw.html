@@ -1,60 +1,98 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Eugene Foo - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>Eugene Foo - Project Portfolio</h1></div><div id="content"><div class="sect1">
-<h2 id="project-braintrain"><a class="link" href="#project-braintrain">PROJECT: BrainTrain</a></h2>
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">BrainTrain</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S2-W14-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Eugene Foo - Project Portfolio</h1><div id="toc" class="toc"><div id="toctitle">Table of contents</div><ul class="sectlevel1">
+<li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#summary-of-contributions">2. Summary of contributions</a></li>
+<li><a href="#contributions-to-the-user-guide">3. Contributions to the User Guide</a></li>
+<li><a href="#contributions-to-the-developer-guide">4. Contributions to the Developer Guide</a></li>
+</ul></div></div><div id="content"><div class="sect1">
+<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This project portfolio highlights my various contributions to the BrainTrain project, including code, documentation and administrative matters.</p>
 </div>
-<hr>
+<div class="sect2">
+<h3 id="overview-of-project-requirements"><a class="link" href="#overview-of-project-requirements">1.1. Overview of project requirements</a></h3>
+<div class="paragraph">
+<p>BrainTrain was developed as part of the CS2103T Software Engineering module at the National University of Singapore. My team of 5 were given seven weeks to develop our application, built off of <a href="https://github.com/se-edu/addressbook-level4">an existing address book application</a>.</p>
+</div>
+<div class="paragraph">
+<p>We were expected to apply industry-standard practices and tools such as Github and Continuous Integration. Beyond the application, we were also required to document our work in a User Guide and Developer Guide.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="overview-of-braintrain"><a class="link" href="#overview-of-braintrain">1.2. Overview of BrainTrain</a></h3>
+<div class="paragraph">
+<p>BrainTrain is a memorisation tool made for students and other learners, especially in content-heavy subjects, such as language vocabulary, science terminology and others.</p>
+</div>
+<div class="paragraph">
+<p>BrainTrain is a flashcard application that implements a <a href="https://en.wikipedia.org/wiki/Spaced_repetition">Spaced Repetition System</a> (SRS) to test the user over time. This allows you to remember various things in a short amount of time, yet also assist in memorization long-term as you continuously use the application.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="overview-of-braintrain"><a class="link" href="#overview-of-braintrain">Overview of BrainTrain</a></h2>
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">2. Summary of contributions</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>BrainTrain is a memorisation tool made for students and other learners, especially in content-heavy subjects. BrainTrain is a flashcard application that implements a Spaced Repetition System (SRS) to test the user over time. This allows you to remember various things in a shorter amount of time, yet also ensuring that you remember it long-term as you use the application.</p>
-</div>
-<div class="paragraph">
-<p>BrainTrain was built on top of an existing command line based address book application, as part of a software engineering project.</p>
-</div>
 <div class="paragraph">
 <p>My role was to design and manage the storage of Lesson data in BrainTrain. The following sections will highlight some of the choices I made and the reasons behind them, and various other contributions to the administration and documentation of the project.</p>
 </div>
+<div class="sect2">
+<h3 id="strong-major-enhancement-strong"><a class="link" href="#strong-major-enhancement-strong">2.1. <strong>Major enhancement</strong></a></h3>
+<div class="paragraph">
+<p>Added the ability to save and load Lesson data to Comma-Separated Value (CSV) files.</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: Added the ability to <strong>save and load Lesson data to Comma-Separated Value (CSV) files</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>What it does: Allows the user to save and load flashcard lesson data to CSV files, which are easy to edit in a spreadsheet format.</p>
+<p><strong>What it does</strong>: Allows the user to save and load flashcard lesson data to CSV files.</p>
 </li>
 <li>
-<p>Justification: <code><strong>TODO FROM HERE ONWARDS</strong></code> This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.</p>
+<p><strong>Justification</strong>: CSV files can be opened in an external editor, such as Excel. Given that a lesson may have up to hundreds of cards, managing the lesson through row by row editing would be tedious for a user. An external spreadsheet editor would be more suited to editing large amounts of data.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+<p><strong>Credits</strong>: The OpenCSV library, which handles actual file I/O.</p>
 </li>
 <li>
-<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+<p><strong>Relevant pull requests</strong>: <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/28">#28</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/35">#35</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/78">#78</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/121">#121</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/179">#179</a></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="strong-minor-enhancement-strong"><a class="link" href="#strong-minor-enhancement-strong">2.2. <strong>Minor enhancement</strong></a></h3>
+<div class="paragraph">
+<p>Added the <code>reload</code> command.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>What it does</strong>: Allows the user to manually reload lessons from their hard disk.</p>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: added a history command that allows the user to navigate to previous commands using up/down keys.</p>
+<p><strong>Justification</strong>: The user would be able to modify existing lessons or download new lessons without having to close and open the application.</p>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] <em>{give links to collated code files}</em></p>
+<p><strong>Relevant pull requests</strong>: <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/121">#121</a></p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><strong>Other contributions</strong>:</p>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1819s2.github.io/cs2103-dashboard/#search=eugenefdw">RepoSense</a>]</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="strong-other-contributions-strong"><a class="link" href="#strong-other-contributions-strong">2.3. <strong>Other contributions</strong>:</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -62,20 +100,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
-</li>
-</ul>
-</div>
+<p>Led the team, setting deadlines for milestones and other tasks and contacting mentors as needed</p>
 </li>
 <li>
-<p>Enhancements to existing features:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Updated the GUI color scheme (Pull requests <a href="https://github.com">#33</a>, <a href="https://github.com">#34</a>)</p>
+<p>Set up team&#8217;s Github repository</p>
 </li>
 <li>
-<p>Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests <a href="https://github.com">#36</a>, <a href="https://github.com">#38</a>)</p>
+<p>Set up branch protection, issue labels, milestones on the repository</p>
+</li>
+<li>
+<p>Set up AppVeyor, Codacy, Coveralls, Travis on the repository</p>
 </li>
 </ul>
 </div>
@@ -85,7 +119,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Did cosmetic tweaks to existing contents of the User Guide: <a href="https://github.com">#14</a></p>
+<p>Updated User Guide and Developer guide: <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/78">#78</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/99">#99</a> , <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/121">#121</a></p>
 </li>
 </ul>
 </div>
@@ -95,16 +129,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#12</a>, <a href="https://github.com">#32</a>, <a href="https://github.com">#19</a>, <a href="https://github.com">#42</a></p>
+<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/32">#32</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/129">#129</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/180">#180</a></p>
 </li>
 <li>
-<p>Contributed to forum discussions (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>, <a href="https://github.com">4</a>)</p>
+<p>Contributed to forum discussions (examples:  <a href="https://github.com/nus-cs2103-AY1819S2/forum/issues/43">1</a>, <a href="https://github.com/nus-cs2103-AY1819S2/forum/issues/44">2</a>)</p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
-</li>
-<li>
-<p>Some parts of the history feature I added was adopted by several other class mates (<a href="https://github.com">1</a>, <a href="https://github.com">2</a>)</p>
+<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com/cs2103-ay1819s2-w09-1/main/issues/117">1</a>, <a href="https://github.com/cs2103-ay1819s2-w09-1/main/issues/122">2</a>, <a href="https://github.com/cs2103-ay1819s2-w09-1/main/issues/130">3</a>)</p>
 </li>
 </ul>
 </div>
@@ -114,26 +145,21 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Integrated a third party library (Natty) to the project (<a href="https://github.com">#42</a>)</p>
+<p>Integrated a third party library (opencsv) to the project (<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/21">#21</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/28">#28</a>)</p>
 </li>
 <li>
-<p>Integrated a new Github plugin (CircleCI) to the team repo</p>
+<p>Set up a team Discord channel with the Github Bot for notifications</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>{you can add/remove categories in the list above}</em></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">3. Contributions to the User Guide</a></h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -145,10 +171,146 @@
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><br></p>
+</div>
+<h4 id="reloading-all-lessons-code-reload-code-br" class="discrete">Reloading all lessons: <code>reload</code><br></h4>
+<div class="paragraph">
+<p>Reloads all lessons from the lessons folder. The default lessons folder is <code>/lessons/</code>, found next to <code>braintrain.jar</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>reload</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command only works in lesson view. If you are currently editing a lesson in card view, you have to use the <a href="#quit"><code>quit</code></a> command to return to lesson view before you can use this command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You have a newly downloaded .csv lesson file, <code>new_lesson.csv</code>, with no lessons currently loaded.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/reload_0_csv.png" alt="reload 0 csv">
+</div>
+<div class="title">Figure 1. A new lesson file.</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/reload_1_empty.png" alt="reload 1 empty">
+</div>
+<div class="title">Figure 2. No lessons are currently loaded.</div>
+</div>
+</li>
+<li>
+<p>You drag the new file into the <code>/lessons/</code> folder.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/reload_2_drag.png" alt="reload 2 drag">
+</div>
+<div class="title">Figure 3. Dragging the file.</div>
+</div>
+</li>
+<li>
+<p>You enter <code>reload</code> into the app, and the new lesson appears.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/reload_3_reload.png" alt="reload 3 reload" width="400">
+</div>
+<div class="title">Figure 4. Reloading lessons.</div>
+</div>
+</li>
+<li>
+<p>You verify again with <code>listLessons</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/reload_4_list.png" alt="reload 4 list" width="400">
+</div>
+<div class="title">Figure 5. New lesson has been loaded.</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Lessons are automatically reloaded when you open the application.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If the lesson does not appear, please check <a href="#troubleshooting">Troubleshooting</a>.</p>
+</div>
+<hr>
+<h2 id="troubleshooting" class="discrete">Troubleshooting</h2>
+<div class="paragraph">
+<p><strong>Q</strong>: Why are my card values shown as <code>?????</code>?<br>
+<strong>A</strong>: If your lesson contains non-English characters such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Characters with accents: <code>à</code></p>
+</li>
+<li>
+<p>Non-English words : <code>こんにちは</code> <code>السلام عليكم</code> <code>你好</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This can be fixed by opening the lesson file in your preferred spreadsheet application (e.g. Excel), and then saving it as <code>CSV UTF-8 (Comma delimited) (*.csv)</code>. UTF encoding allows a computer to show non-English characters.<br></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The default encoding setting is unable to process special characters. As a result, you will need to save it as a <code>UTF-8</code> encoded file.</p>
+</div>
+<div class="paragraph">
+<p>Note that externally created lesson files have to be saved with UTF-8 encoding before using them in BrainTrain.<br>
+If the files are saved without <code>UTF-8</code> encoding, any non-English data may be saved as <code>?????</code>, and the data will be lost.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Q</strong>: Why are my lessons not loading?<br>
+<strong>A</strong>: Please verify if the location of BrainTrain is suitable. Depending on your computer&#8217;s permissions and security settings, places such as the Desktop may not be usable, and your operating system may prevent BrainTrain from loading the lesson files.</p>
+</div>
+<div class="paragraph">
+<p>If BrainTrain still does not load lessons despite trying other locations, please contact Team BrainTrain at <a href="https://github.com/CS2103-AY1819S2-W14-1/main/issues">our issue tracker</a> or email us at <a href="mailto:eugenef@u.nus.edu">eugenef@u.nus.edu</a>, and attach any generated braintrain.log files.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">4. Contributions to the Developer Guide</a></h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -160,14 +322,228 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
-<div class="sectionbody">
-<hr>
 <div class="paragraph">
-<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="lessonStorageFeature"><a class="link" href="#lessonStorageFeature">4.1. Lesson storage feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-br"><a class="link" href="#current-implementation-br">4.1.1. Current implementation<br></a></h4>
+<div class="paragraph">
+<p>The lesson CSV storage feature implements the following functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Parsing lesson data into a list of string arrays, which is a format OpenCSV accepts for saving to CSV.</p>
+</li>
+<li>
+<p>Parsing a list of string arrays back into lesson data, as retrieved from OpenCSV.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Actual file I/O is handled in the CsvUtil class, which uses the OpenCSV library to read/write <code>.csv</code> files.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 15:56:09 UTC</div></div></div></body></html>
+<div class="sect3">
+<h4 id="csv-lesson-format-br"><a class="link" href="#csv-lesson-format-br">4.1.2. Csv lesson format<br></a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CsvLessonStorageSequenceDiagram.png" alt="CsvLessonStorageSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 6. High-level sequence diagram for the <code>reload</code> command, an example of lesson loading</div>
+</div>
+<div class="paragraph">
+<p>Lessons are parsed by CsvLessonListStorage, being converted between Lesson and List&lt;String[]&gt; formats. The List&lt;String[]&gt; format is the primary format handled by CsvUtil for reading and writing to <code>.csv</code> files.</p>
+</div>
+<div class="paragraph">
+<p>For lessons, there are three main sections when saved to a <code>.csv</code> file.</p>
+</div>
+<div class="sect4">
+<h5 id="name-br"><a class="link" href="#name-br">Name<br></a></h5>
+<div class="paragraph">
+<p>A lesson&#8217;s name in BrainTrain is equivalent to its file name.<br>
+A lesson named "French" would be saved as "French.csv", and vice-versa.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="header-br"><a class="link" href="#header-br">Header<br></a></h5>
+<div class="paragraph">
+<p>The header is represented in the file as the first two lines. Each line represents a specific set of data, as outlined below.</p>
+</div>
+<div class="paragraph">
+<p>The first line represents the type of the corresponding column. Each column can have three types:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Tested</strong><br>
+This marks the column as a core value. By default, the first two instances of <strong>Tested</strong> in the file will be tested in quiz mode. All remaining Tested values are treated as <strong>Not Tested</strong>.</p>
+</li>
+<li>
+<p><strong>Not Tested</strong><br>
+This marks the column as a core value. However, unlike <strong>Tested</strong>, they will not be tested in quiz mode. You can use the <code>set</code> command to change this.</p>
+</li>
+<li>
+<p><strong>Hint</strong><br>
+This marks the column as a hint value. <strong>Hint</strong> values will appear when the user enters the <code>\hint</code> command in quiz mode. Values here are optional and can be left empty.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Core values require every value in that column to be non-empty. This guarantees that the user will be tested on something, should they change which fields are tested.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This is a code snippet from the parsing of the header data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i &lt; headerArray.length; i++) {
+    <span class="keyword">if</span> (headerArray[i].isEmpty()) {
+        headerArray[i] = <span class="string"><span class="delimiter">&quot;</span><span class="content"> </span><span class="delimiter">&quot;</span></span>;
+    }
+}
+<span class="type">int</span> coreCount = <span class="integer">0</span>;
+<span class="type">int</span> index = <span class="integer">0</span>;
+<span class="keyword">while</span> (index &lt; headerArray.length) {
+    <span class="predefined-type">String</span> headerChar = headerArray[index].toLowerCase().substring(<span class="integer">0</span>, <span class="integer">1</span>);
+    <span class="keyword">if</span> (headerChar.equals(HEADER_CORE_QA)) {
+        <span class="keyword">if</span> (questionIndex == -<span class="integer">1</span>) {
+            questionIndex = index;
+        } <span class="keyword">else</span> <span class="keyword">if</span> (answerIndex == -<span class="integer">1</span>) {
+            answerIndex = index;
+        }
+        coreCount++;
+    } <span class="keyword">else</span> <span class="keyword">if</span> (headerChar.equals(HEADER_CORE_NOT_QA)) {
+        coreCount++;
+    } <span class="keyword">else</span> <span class="keyword">if</span> (!headerChar.equals(HEADER_OPTIONAL)) {
+        <span class="keyword">return</span> returnValues;
+    }
+    index++;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As seen at the beginning of the while loop, header values are actually treated as single case-insensitive characters. This means an experienced user may simply enter those letters as a shortcut.<br></p>
+</div>
+<div class="paragraph">
+<p>The second line represents the name of each column as shown to the user. Any names left blank are automatically replaced with Unnamed.<br>
+Any discrepancies in the number of types and the number of names will result in the lesson not being loaded.<br></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="card-data-br"><a class="link" href="#card-data-br">Card data<br></a></h5>
+<div class="paragraph">
+<p>All remaining data is treated as card data. Any invalid data found in memory or from the file is skipped over.<br></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="summary-br"><a class="link" href="#summary-br">Summary<br></a></h5>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ReloadActivityDiagram.png" alt="ReloadActivityDiagram" width="800">
+</div>
+<div class="title">Figure 7. Activity diagram for the <code>reload</code> command, highlighting failure conditions</div>
+</div>
+<div class="paragraph">
+<p>As shown in the above diagram, data that is read in from a file goes through various checks before it is loaded into the application. Any invalid data is skipped over, with an entry in the logs explaining the cause of failure.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">4.1.3. Design considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-choice-of-file-type-br"><a class="link" href="#aspect-choice-of-file-type-br">Aspect: choice of file type<br></a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Save as <code>.csv</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: User is able to modify lesson data in a more advanced external spreadsheet tool like Excel</p>
+</li>
+<li>
+<p>Cons: Lack of data verification within the file, JSON is already implemented in original code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Save as JSON</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: All values can be verified through the file</p>
+</li>
+<li>
+<p>Cons: Difficult for user to edit manually</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Alternative 1 was chosen as ease of use is a high priority for the project. Most computer users are familiar with the Microsoft Office suite of applications, such as Word and Excel. As Excel allows <code>.csv</code> files to be shown in a spreadsheet, it was intended that users use Excel alongside BrainTrain for easy lesson management.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-handling-of-invalid-data-br"><a class="link" href="#aspect-handling-of-invalid-data-br">Aspect: handling of invalid data<br></a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Skip over specific lesson/card</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: User data is not automatically overwritten</p>
+</li>
+<li>
+<p>Cons: User has to manually fix any issues with their data</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Automatically fix data</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Ease of use for user</p>
+</li>
+<li>
+<p>Cons: Automatic fix may not be as desired by user</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Alternative 1 was chosen as creators are expected to have some skill in data editing. Normal users would ideally only download lessons from a creator, and would not be familiar enough with the lesson data to fix any issues.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 14:09:35 UTC</div></div></div></body></html>

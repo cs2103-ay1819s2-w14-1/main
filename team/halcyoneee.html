@@ -1,11 +1,10 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Lee Tze Ting - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>Lee Tze Ting - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">BrainTrain</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S2-W14-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Lee Tze Ting - Project Portfolio</h1></div><div id="content"><div class="sect1">
 <h2 id="project-braintrain"><a class="link" href="#project-braintrain">1. PROJECT: BrainTrain</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This project portfolio page showcases my contributions to the BrainTrain project such as coding,
-documentation and other contributions.</p>
+<p>This project portfolio page showcases my coding, documentation and other contributions to the BrainTrain project.</p>
 </div>
 </div>
 </div>
@@ -13,16 +12,14 @@ documentation and other contributions.</p>
 <h2 id="overview"><a class="link" href="#overview">2. Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>BrainTrain is a spaced repetition flashcard application which makes memorizing easy and efficient.
-Research has shown that the Spaced-Repetition System (SRS) is more effective than traditional
-memorization techniques. With it, you will be able to learn more with less time. User interaction
-happens through Command Line Interface (CLI) and it has a minimal Graphical User Interface (GUI)
-created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+<p>As a student of the CS2103T: Software Engineering module, I was tasked with working with 4 other students as a team to build a product from an existing <a href="https://github.com/se-edu/addressbook-level4">address book application</a> over 7 weeks. We were given a choice to morph the existing address book to any application we want and we chose to develop <strong>BrainTrain</strong> to further challenge ourselves.</p>
 </div>
 <div class="paragraph">
-<p>My role in BrainTrain is to design and manage the app&#8217;s quiz mode. The following sections
-give a summary of how I have contributed to the project and showcases my ability to write both
-the user and developer guide.</p>
+<p>BrainTrain is a spaced repetition flashcard application which makes memorizing easy and efficient. User interaction happens through Command Line Interface (CLI) and it has a minimal Graphical User Interface (GUI)
+created with JavaFX. It is written in Java, and has about 16 kLoC.</p>
+</div>
+<div class="paragraph">
+<p>My role was to design and build the app&#8217;s quiz mode. The following sections detail what I have contributed to the project, and showcases my ability to write user and developer documentation.</p>
 </div>
 </div>
 </div>
@@ -37,45 +34,66 @@ the user and developer guide.</p>
 <ul>
 <li>
 <p><strong>What it does</strong>: Quiz mode manages user interaction during a quiz. It comprises of 6 commands
-which are only available in quiz mode. Quiz mode also reads in answer inputs.</p>
+which are only available in this mode. It also reads in answer inputs.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[ANSWER]&#8230;&#8203;</code> - Answers the current question. All inputs without the prefix <code>\</code> are treated as answers.</p>
 </li>
 <li>
-<p><strong>Justification</strong>: To ensure that answers are not limited or excluded of certain keywords,
-BrainTrain supports two different modes, management and quiz mode. To differentiate the
-commands between the two modes, quiz mode commands start with a backslash <code>\</code>, whereas management
-commands are not.</p>
+<p><code>\difficult</code> - Labels current question in quiz as difficult or not.</p>
 </li>
 <li>
-<p><strong>Highlights</strong>: Pull request <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/32">#32</a>,
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/43">#42</a>,
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/96">#96</a>,
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/108">#108</a>,
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/129">#129</a>,
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/175">#175</a></p>
+<p><code>\help</code> - Lists all commands in quiz and inputs the program will accept.</p>
+</li>
+<li>
+<p><code>\hint</code> - Reveals additional information to help user to solve the question.</p>
+</li>
+<li>
+<p><code>\quit</code> - Quits a quiz and save attempted progress.</p>
+</li>
+<li>
+<p><code>\status</code> - Lists current status and lesson progress of user.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: Implementation of quiz mode display to user and changing between the
-two dark and light theme.</p>
+<p><strong>Justification</strong>: Users need to be able to launch a lesson in quiz mode, where they will be tested on the lesson&#8217;s flashcards, in order to use BrainTrain for memorization.</p>
+</li>
+<li>
+<p><strong>Highlights</strong>: Pull request <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/32">#32</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/43">#42</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/96">#96</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/129">#129</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/175">#175</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/186">#186</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: Implementation of quiz mode display to user.</p>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>What it does</strong>: In order to cater for two different mode, there will be 2 different display.
-Display will switch smoothly between management mode and quiz mode. For users that prefers light
-over dark theme, they can choose either one easily that persists beyond app restart.</p>
+Display will switch smoothly between management mode and quiz mode.</p>
 </li>
 <li>
 <p><strong>Justification</strong>: This is to ensure that there is no unnecessary display to distract the user during a quiz mode.
 The user just need to focus solely on going through the flashcard without having to care about
 the list of lesson available.</p>
 </li>
+<li>
+<p><strong>Highlights</strong>: Pull request
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/108">#108</a></p>
+</li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1819s2.github.io/cs2103-dashboard/#=undefined&amp;search=halcyoneee">RepoSense</a>]</p>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1819s2.github.io/cs2103-dashboard/#search=halcyoneee">RepoSense</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -86,7 +104,7 @@ the list of lesson available.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed 2 out of 4 releases <code>v1.1</code> and <code>v1.4</code> on GitHub</p>
+<p>Managed 3 out of 6 releases <code>v1.1</code>, <code>v1.3.1</code> and <code>v1.4</code> on GitHub</p>
 </li>
 </ul>
 </div>
@@ -99,7 +117,11 @@ the list of lesson available.</p>
 <p>Integrated <code>AddressBook</code> features with <code>BrainTrain</code> (<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/33">#33</a>)</p>
 </li>
 <li>
-<p>Wrote system tests to increase coverage from 88% to 95% (<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/175">#175</a>)</p>
+<p>Improved test coverage from 88% to 95% by writing all the BrainTrain system tests (<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/175">#175</a>)</p>
+</li>
+<li>
+<p>Implemented <code>ChangeThemeCommand</code> to change between light and dark theme which persists beyond
+app restart. (<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/175">#175</a>)</p>
 </li>
 </ul>
 </div>
@@ -109,7 +131,8 @@ the list of lesson available.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Updated class and sequence diagrams to match the current implementation</p>
+<p>Updated Architecture, Logic, UI and QuizModel component diagram to match the current
+implementation. (<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/186">#186</a>)</p>
 </li>
 </ul>
 </div>
@@ -119,7 +142,7 @@ the list of lesson available.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed with comments:
+<p>Reviewed pull requests with constructive feedback
 (examples: <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/30">#30</a>,
 <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/85">#87</a>,
 <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/97">#97</a>,
@@ -135,6 +158,9 @@ the list of lesson available.</p>
 (examples: <a href="https://github.com/cs2103-ay1819s2-w09-1/main/issues/106">#106</a>,
 <a href="https://github.com/cs2103-ay1819s2-w09-1/main/issues/118">#118</a>,
 <a href="https://github.com/cs2103-ay1819s2-w09-1/main/issues/140">#140</a>)</p>
+</li>
+<li>
+<p>Assisted <a href="digipie.html">Evan</a> in adding a legend footer to his management mode (<a href="https://github.com/cs2103-ay1819s2-w09-1/main/issues/106">#106</a>)</p>
 </li>
 </ul>
 </div>
@@ -155,7 +181,7 @@ the list of lesson available.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below is an extract of my contributions to the <a href="https://cs2103-ay1819s2-w14-1.github.io/main/UserGuide.html">user guide</a>.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -163,30 +189,18 @@ the list of lesson available.</p>
 <p><em>Start of extract of quiz mode</em></p>
 </div>
 <div class="sect2">
-<h3 id="quizmode"><a class="link" href="#quizmode">4.1. Quiz mode</a></h3>
+<h3 id="quizmode"><a class="link" href="#quizmode">4.1. Quiz mode<br></a></h3>
 <div class="paragraph">
 <p>When you <a href="#start"><code>start</code></a> a quiz, you will enter quiz mode. In this mode, you will only be allowed to enter the following set of quiz commands. Management commands are disabled in this mode.</p>
 </div>
 <div class="sect3">
-<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">4.1.1. Viewing help: <code>\help</code></a></h4>
+<h4 id="answering-a-card-code-answer-code-br"><a class="link" href="#answering-a-card-code-answer-code-br">4.1.1. Answering a card : <code>[ANSWER]</code><br></a></h4>
 <div class="paragraph">
-<p>Displays usage information on all quiz mode commands and acceptable inputs for answering cards.<br>
-Format: <code>\help</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="viewing-the-quiz-session-s-status-code-status-code"><a class="link" href="#viewing-the-quiz-session-s-status-code-status-code">4.1.2. Viewing the quiz session&#8217;s status: <code>\status</code></a></h4>
-<div class="paragraph">
-<p>Displays information on the current session&#8217;s status such as lesson progress (i.e. number of flashcards left).<br>
-Format: <code>\status</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="answering-a-flashcard-code-answer-code"><a class="link" href="#answering-a-flashcard-code-answer-code">4.1.3. Answering a flashcard : <code>[ANSWER]</code></a></h4>
-<div class="paragraph">
-<p>An input without the <code>\</code> prefix will be treated as an answer to the current flashcard.<br>
+<p>An input without the <code>\</code> prefix will be treated as an answer to the current card.<br>
 Format: <code>[ANSWER]&#8230;&#8203;</code></p>
 </div>
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
 <p>Usage rules:</p>
 </div>
@@ -198,21 +212,23 @@ Format: <code>[ANSWER]&#8230;&#8203;</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p>What a flashcard contains:</p>
+<p>What a card contains:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>For each flashcard, total attempts and answer streak are tracked.</p>
+<p>For each card, total attempts and answer streak are tracked.</p>
 </li>
 <li>
-<p>Total attempts refers to the number of times you have attempted this flashcard, regardless of
+<p>Total attempts refers to the number of times you have attempted this card, regardless of
 whether you were answered it correctly.</p>
 </li>
 <li>
-<p>The answer streak is the number of times you have answered the flashcard correctly consecutively.</p>
+<p>The answer streak is the number of times you have answered the card correctly consecutively.</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -221,7 +237,8 @@ whether you were answered it correctly.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The streak will be reduced to 0 after you answer a flashcard wrongly twice in a row. Hence, if you accidentally enter the wrong answer once, your streak for the question will not be affected, unless you answer wrongly again.
+The streak will be reduced to 0 after you answer a card wrongly twice in a row. Hence, if you
+accidentally enter the wrong answer once, your streak for the question will not be affected, unless you answer wrongly again.
 </td>
 </tr>
 </table>
@@ -239,70 +256,119 @@ You can press <kbd>ENTER</kbd> twice without entering any other input to reveal 
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Going through the different scenarios in a quiz</strong>:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>The question is "Japan" and is asking for the capital of "Japan":<br>
-<code>Tokyo</code><br>
-This is the correct answer, both the streak and total attempts increased by 1.</p>
-</li>
-<li>
-<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
-<code>Japaan</code><br>
-<code>Japan</code><br>
-This is the correct answer, the streak increased by 1 while total attempts increased by 2.</p>
-</li>
-<li>
-<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
-<code>Japaan</code><br>
-<code>Jappan</code><br>
-This is the wrong answer, the streak is reduced to 0 while total attempts increased by 2.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p><strong>Step 1:</strong><br>
+  The question is "Japan" and is asking for the capital of "Japan":<br>
+  Enters <code>Tokyo</code> as answer<br>
+  The picture shown below shows the expected result if the question has been answered correctly,
+  which the total correct question counter increased by 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/answer-tokyo-correctly.PNG" alt="answer tokyo correctly" width="500">
+</div>
+<div class="title">Figure 1. Expected result of answering the question correctly.</div>
+</div>
+<div class="paragraph">
+<p><br>
+<strong>Step 2:</strong><br>
+  The question is "Tokyo" and is asking for the country of "Tokyo":<br>
+  Enters <code>Japaan</code> as wrong answer<br>
+  The picture shown below shows the expected result if the question has been answered wrongly once,
+  which the total attempts counter increased by 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/answer-japan-wrongly-once.PNG" alt="answer japan wrongly once" width="500">
+</div>
+<div class="title">Figure 2. Expected result of answering the question wrongly once.</div>
+</div>
+<div class="paragraph">
+<p><br>
+<strong>Step 3:</strong><br>
+  Same question as above, "Tokyo" and is asking for the country of "Tokyo":<br>
+  Enters <code>Jappan</code> as another wrong answer<br>
+  The picture shown below shows the expected result if the question has been answered wrongly twice,
+  which shows the correct answer and the total attempts counter increased by 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/answer-japan-wrongly-twice.PNG" alt="answer japan wrongly twice" width="500">
+</div>
+<div class="title">Figure 3. Expected result of answering the question wrongly twice.</div>
+</div>
+<div class="paragraph">
+<p><br>
+<strong>Step 4:</strong><br>
+  Same question as above, "Tokyo" and is asking for the country of "Tokyo":<br>
+  Enters <code>Japan</code> as correct answer<br>
+  The picture shown below shows the expected result if the question has been answered correctly
+  after answer has been revealed, which shows how well each question is performed in this quiz.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/answer-end.PNG" alt="answer end" width="500">
+</div>
+<div class="title">Figure 4. Expected result of quiz after questions have been completed.</div>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="labelling-the-current-flashcard-as-difficult-code-difficult-code"><a class="link" href="#labelling-the-current-flashcard-as-difficult-code-difficult-code">4.1.4. Labelling the current flashcard as difficult: <code>\difficult</code></a></h4>
+<h4 id="hint"><a class="link" href="#hint">4.1.2. Viewing the current card&#8217;s hint(s): <code>\hint</code></a></h4>
 <div class="paragraph">
-<p>Labels the current flashcard as difficult.<br>
-Format: <code>\difficult</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The question is "Japan" and is asking for the capital of "Japan":<br>
-<code>\difficult</code><br>
-This will label flashcard of "Japan" as difficult.</p>
-</li>
-<li>
-<p>The question is "Japan" and is asking for the capital of "Japan":<br>
-<code>\difficult</code><br>
-<code>\difficult</code><br>
-This will label flashcard of "Japan" as not difficult.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="hint"><a class="link" href="#hint">4.1.5. Viewing the current flashcard&#8217;s hint(s): <code>\hint</code></a></h4>
-<div class="paragraph">
-<p>Reveals the hint(s) for the current flashcard (if any).<br>
+<p>Reveals the hint(s) for the current card (if any).<br>
 Format: <code>\hint</code></p>
 </div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enters <code>\hint</code><br>
+Reveals the hint of the current card</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/hint.PNG" alt="hint" width="500">
+</div>
+<div class="title">Figure 5. Expected result revealing the hint of the card.</div>
+</div>
 </div>
 <div class="sect3">
-<h4 id="quitting-the-quiz-session-code-quit-code"><a class="link" href="#quitting-the-quiz-session-code-quit-code">4.1.6. Quitting the quiz session: <code>\quit</code></a></h4>
+<h4 id="quitting-the-quiz-session-code-quit-code"><a class="link" href="#quitting-the-quiz-session-code-quit-code">4.1.3. Quitting the quiz session: <code>\quit</code></a></h4>
 <div class="paragraph">
 <p>Quits the current quiz session and switches back to <code>management mode</code>.<br>
 Format: <code>\quit</code></p>
 </div>
 <div class="paragraph">
-<p><em>End of extract of quiz mode</em></p>
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The question is "Japan" and is asking for the capital of "Japan":<br>
+Enters <code>Tokyo</code> as answer<br>
+Enters <code>\quit</code> to quit the quiz.<br>
+Saves the progress of 1 attempted question "Japan".</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/quit.PNG" alt="quit" width="500">
+</div>
+<div class="title">Figure 6. Expected result of quitting a quiz after answering a question correctly.</div>
+</div>
+<div class="paragraph">
+<p><br>
+<em>End of extract of quiz mode</em></p>
 </div>
 </div>
 </div>
@@ -317,17 +383,20 @@ Format: <code>\quit</code></p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below is an extract of my contribution to the <a href="https://cs2103-ay1819s2-w14-1.github.io/main/DeveloperGuide.html">developer guide</a>.</em></p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><em>Start of extract of quiz mode</em></p>
+</div>
 <div class="sect2">
-<h3 id="quiz-feature"><a class="link" href="#quiz-feature">5.1. Quiz feature</a></h3>
+<h3 id="quiz-feature-br"><a class="link" href="#quiz-feature-br">5.1. Quiz feature<br></a></h3>
 <div class="paragraph">
 <p>Quiz feature allows users to enter quiz related commands and answer.</p>
 </div>
 <div class="sect3">
-<h4 id="current-implementation"><a class="link" href="#current-implementation">5.1.1. Current Implementation</a></h4>
+<h4 id="current-implementation-br"><a class="link" href="#current-implementation-br">5.1.1. Current implementation<br></a></h4>
 <div class="paragraph">
 <p>The quiz feature processes the following inputs:</p>
 </div>
@@ -337,71 +406,165 @@ Format: <code>\quit</code></p>
 <p><code>[ANSWER]&#8230;&#8203;</code> - An input without a prefix <code>\</code> is treated as an answer.</p>
 </li>
 <li>
-<p><code>\difficult</code> - Labels current question in quiz as difficult or not.</p>
+<p><code>\difficult</code> - Labels current question as difficult or not.</p>
 </li>
 <li>
-<p><code>\help</code> - Lists all commands in quiz and inputs the program will accept.</p>
+<p><code>\help</code> - Lists all quiz commands and inputs which will be accepted.</p>
 </li>
 <li>
-<p><code>\hint</code> - Reveals additional information to help user to solve the question.</p>
+<p><code>\hint</code> - Reveals additional information to help the user to answer the question.</p>
 </li>
 <li>
-<p><code>\quit</code> - Quits a quiz and save attempted progress.</p>
+<p><code>\quit</code> - Quits quiz mode and saves attempt progress.</p>
 </li>
 <li>
-<p><code>\status</code> - Lists current status and lesson progress of user.</p>
+<p><code>\status</code> - Lists current quiz progress.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="answer"><a class="link" href="#answer">5.1.2. [ANSWER]</a></h4>
+<h4 id="quiz-class-br"><a class="link" href="#quiz-class-br">5.1.2. Quiz class<br></a></h4>
+<div class="paragraph">
+<p><a href="{repoURL}/src/main/java/seedu/address/model/quiz/Quiz.java"><code>Quiz.java</code></a> holds all the in-memory
+quiz data. It takes in a list of <a href="#card">cards</a> from <code>Session</code>. Then, it generates an expanded list of cards based on the <code>mode</code> indicated by the user. The generated list of cards in both
+<code>review</code> and <code>learn</code> mode includes cards which questions and answers are flipped. This to ensure that users are
+memorizing both question and answer values. According to the mode which the user has chosen, the cards will be
+displayed differently as seen below.</p>
+</div>
+<div class="paragraph">
+<p>In the four different modes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Preview</strong>: both the question and answer are shown to the user.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/quiz-preview.PNG" alt="quiz preview" width="300">
+</div>
+<div class="title">Figure 7. Question displayed in <code>preview</code> mode.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Review</strong>: only the question is shown as the user needs to answer the question.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/quiz-review.PNG" alt="quiz review" width="300">
+</div>
+<div class="title">Figure 8. Question displayed in <code>review</code> mode.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Learn</strong>: is a combination of preview and review, the user sees both the question and
+answer as in <code>preview</code> mode, before attempting the question with the answer hidden as in <code>review</code> mode.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/quiz-command-examples/quiz-learn.PNG" alt="quiz learn" width="670">
+</div>
+<div class="title">Figure 9. Question displayed in <code>learn</code> mode.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Difficult</strong>: similar to preview mode but only contains questions which have been labelled as
+difficult.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="quiz-answer-command-code-answer-code-br"><a class="link" href="#quiz-answer-command-code-answer-code-br">5.1.3. Quiz answer command: <code>[ANSWER]</code><br></a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AnwerComponetSequenceDiagram.png" alt="AnwerComponetSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 10. High-level sequence diagram for the <code>ANSWER</code> command, an example of completing a quiz.</div>
+</div>
 <div class="paragraph">
 <p>The <code>[ANSWER]</code> feature is facilitated by <code>QuizAnswerCommand</code>. The command takes in user input
-as answer to be processed later.</p>
+as answer, which will be processed later when the command is executed.</p>
 </div>
 <div class="paragraph">
 <p>The following sequence diagram shows the interaction between the various classes when the user
-answers a question:</p>
+answered the question correctly:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/QuizAnswerCommandSequenceDiagram.png" alt="QuizAnswerCommandSequenceDiagram" width="800">
+<img src="../images/QuizAnswerCommandSequenceDiagram.png" alt="QuizAnswerCommandSequenceDiagram" width="900">
 </div>
-<div class="title">Figure 1. Sequence diagram for answer feature</div>
+<div class="title">Figure 11. Sequence diagram for answer feature</div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="quit"><a class="link" href="#quit">5.1.3. \quit</a></h4>
 <div class="paragraph">
-<p>The <code>\quit</code> will force quit the current quiz and save the attempted question to the location that
-the user have specified in <code>UserPref</code>, by default it will saved to <code>\data\user\savedata.csv</code>. Once
-the <code>\quit</code> command have succeeded running, it will return back to the <code>ManagementMode</code>.</p>
+<p>In the <code>execute</code> method of the <code>QuizAnswerCommand</code>, the following steps can be performed:</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/QuizQuitCommandSequenceDiagram.png" alt="QuizQuitCommandSequenceDiagram" width="800">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Quiz result<br>
+This step checks if the user is shown the result, this is performed because the quiz can only end after
+the result has been shown. Once the quiz ends, BrainTrain will save the progress of the quiz
+to the file specified by the user.</p>
+</li>
+<li>
+<p>Handling of answer<br>
+This step checks if the answer should be handled, if user is in <code>PREVIEW</code> mode it will not be
+handled. Otherwise, the total attempts and streak of the question will be updated depending on whether the question has been answered correctly.</p>
+</li>
+<li>
+<p>Handling of next question<br>
+This step verifies that the question has been answered correctly, and checks if there are still questions
+left for the current quiz. Depending on the check, it will then displays the next question or the quiz result.</p>
+</li>
+</ol>
 </div>
-<div class="title">Figure 2. Sequence diagram for quit feature</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="status"><a class="link" href="#status">5.1.4. \status</a></h4>
 <div class="paragraph">
-<p>The <code>\status</code> feature lists the total number of attempts you have attempted, total number of
-question you have gotten correct in this quiz and which question you are currently on.</p>
+<p>The following code shows how the steps could be performed:</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="../images/QuizStatusCommandSequenceDiagram.png" alt="QuizStatusCommandSequenceDiagram" width="800">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> CommandResult execute(Model model, CommandHistory history) <span class="directive">throws</span> CommandException {
+    requireNonNull(model);
+    <span class="local-variable">this</span>.quizModel = requireQuizModel(model);
+    <span class="local-variable">this</span>.card = quizModel.getCurrentQuizCard();
+    <span class="local-variable">this</span>.isCurrentCardWrong = <span class="predefined-constant">false</span>;
+
+    <span class="predefined-type">StringBuilder</span> sb = <span class="keyword">new</span> <span class="predefined-type">StringBuilder</span>();
+
+    <span class="keyword">if</span> (quizModel.isResultDisplay()) {
+        endQuiz();
+        <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>, <span class="predefined-constant">true</span>, <span class="predefined-constant">false</span>, <span class="predefined-constant">false</span>);
+    }
+
+    <span class="keyword">if</span> (card.isWrongTwice() || card.getQuizMode() != QuizMode.PREVIEW) {
+        sb.append(handleCurrentCardAnswer());
+    }
+
+    <span class="keyword">if</span> (!isCurrentCardWrong) {
+        <span class="predefined-type">String</span> result = handleIfCardLeft();
+        sb.append(result);
+    }
+
+    <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(sb.toString(), <span class="predefined-constant">true</span>, <span class="predefined-constant">false</span>, <span class="predefined-constant">false</span>);
+}</code></pre>
 </div>
-<div class="title">Figure 3. Sequence diagram for status feature</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">5.1.5. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">5.1.4. Design considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-how-quiz-executes"><a class="link" href="#aspect-how-quiz-executes">Aspect: How Quiz executes</a></h5>
+<h5 id="aspect-quiz-and-management-commands-execution-br"><a class="link" href="#aspect-quiz-and-management-commands-execution-br">Aspect: quiz and management commands execution<br></a></h5>
 <div class="ulist">
 <ul>
 <li>
@@ -409,10 +572,10 @@ question you have gotten correct in this quiz and which question you are current
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Least restricted choice of answer.</p>
+<p>Pro: Least restricted choice of answer and great user experience.</p>
 </li>
 <li>
-<p>Cons: Tedious to implement.</p>
+<p>Con: Tedious to implement.</p>
 </li>
 </ul>
 </div>
@@ -422,10 +585,11 @@ question you have gotten correct in this quiz and which question you are current
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Easy to implement.</p>
+<p>Pro: Easy to implement.</p>
 </li>
 <li>
-<p>Cons: Restricted answer. Answer cannot start with words already listed as management commands
+<p>Con: Restricted answer and compromised user experience. Answer cannot start with words already
+reserved for management commands.
 (e.g. <code>start</code>)</p>
 </li>
 </ul>
@@ -434,15 +598,13 @@ question you have gotten correct in this quiz and which question you are current
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Alternative 1</strong> is chosen because it allows the user to have a more comprehensive choice of
-word as
-answer without restricting the possible choices. In certain question, it is possible for the
-answer to be "start". Hence by choosing alternative 1, the choice of answer is the least
-restricted. Also, by running the quiz in a different mode, it allows the user to concentrate on the quiz
-without having unrelated display as distraction.</p>
+<p><strong>Alternative 1</strong> is chosen because it allows the user to have a more flexible choice of
+word. For certain questions, it is possible for the answer to be "start". Hence by choosing alternative 1, the choice of answer will not be restricted. Also, by running the quiz in a different mode, it allows the user to have intuitive
+interaction in quiz mode.
+<em>End of extract of quiz mode</em></p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 15:56:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 14:09:35 UTC</div></div></div></body></html>

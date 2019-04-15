@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>BrainTrain - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>BrainTrain - Developer guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>BrainTrain - Developer Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">BrainTrain</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S2-W14-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>BrainTrain - Developer guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>By: <code>Team BrainTrain</code>      Since: <code>Jan 2019</code>      Licence: <code>MIT</code></p>
@@ -9,88 +9,147 @@
 <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#setting-up">1. Setting up</a>
+<li><a href="#introduction-br">1. Introduction<br></a>
 <ul class="sectlevel2">
-<li><a href="#prerequisites">1.1. Prerequisites</a></li>
-<li><a href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></li>
-<li><a href="#verifying-the-setup">1.3. Verifying the setup</a></li>
-<li><a href="#configurations-to-do-before-writing-code">1.4. Configurations to do before writing code</a></li>
+<li><a href="#how-does-braintrain-work-br">1.1. How does BrainTrain work<br></a></li>
 </ul>
 </li>
-<li><a href="#design">2. Design</a>
+<li><a href="#setting-up-br">2. Setting up<br></a>
 <ul class="sectlevel2">
-<li><a href="#Design-Architecture">2.1. Architecture</a></li>
-<li><a href="#Design-Ui">2.2. UI component</a></li>
-<li><a href="#Design-Logic">2.3. Logic component</a></li>
-<li><a href="#Design-ManagementModel">2.4. ManagementModel component</a></li>
-<li><a href="#Design-QuizModel">2.5. QuizModel component</a></li>
-<li><a href="#Design-Storage">2.6. Storage component</a></li>
-<li><a href="#Design-Commons">2.7. Common classes</a></li>
+<li><a href="#prerequisites-br">2.1. Prerequisites<br></a></li>
+<li><a href="#setting-up-the-project-in-your-computer">2.2. Setting up the project in your computer</a></li>
+<li><a href="#verifying-the-setup">2.3. Verifying the setup</a></li>
+<li><a href="#configurations-to-do-before-writing-code">2.4. Configurations to do before writing code</a></li>
 </ul>
 </li>
-<li><a href="#implementation">3. Implementation</a>
+<li><a href="#design">3. Design</a>
 <ul class="sectlevel2">
-<li><a href="#data-storage-feature">3.1. Data storage feature</a></li>
-<li><a href="#csv-storage-feature">3.2. CSV storage feature</a></li>
-<li><a href="#session-feature">3.3. Session feature</a></li>
-<li><a href="#quiz-feature">3.4. Quiz feature</a></li>
-<li><a href="#logging">3.5. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
+<li><a href="#Design-Architecture">3.1. Architecture</a></li>
+<li><a href="#Design-Ui">3.2. UI component</a></li>
+<li><a href="#Design-Logic">3.3. Logic component<br></a></li>
+<li><a href="#Design-ManagementModel">3.4. ManagementModel component<br></a></li>
+<li><a href="#Design-QuizModel">3.5. QuizModel component<br></a></li>
+<li><a href="#Design-Storage">3.6. Storage component<br></a></li>
 </ul>
 </li>
-<li><a href="#documentation">4. Documentation</a>
+<li><a href="#implementation-br">4. Implementation<br></a>
 <ul class="sectlevel2">
-<li><a href="#editing-documentation">4.1. Editing documentation</a></li>
-<li><a href="#publishing-documentation">4.2. Publishing documentation</a></li>
-<li><a href="#converting-documentation-to-pdf-format">4.3. Converting documentation to PDF format</a></li>
-<li><a href="#Docs-SiteWideDocSettings">4.4. Site-wide documentation settings</a></li>
-<li><a href="#Docs-PerFileDocSettings">4.5. Per-file documentation settings</a></li>
-<li><a href="#site-template">4.6. Site template</a></li>
+<li><a href="#user-storage-feature-br">4.1. User storage feature<br></a></li>
+<li><a href="#lessonStorageFeature">4.2. Lesson storage feature</a></li>
+<li><a href="#mgtOverview">4.3. Management feature<br></a></li>
+<li><a href="#sessionFeature">4.4. Session feature<br></a></li>
+<li><a href="#quiz-feature-br">4.5. Quiz feature<br></a></li>
+<li><a href="#logging-br">4.6. Logging<br></a></li>
+<li><a href="#Implementation-Configuration">4.7. Configuration<br></a></li>
 </ul>
 </li>
-<li><a href="#Testing">5. Testing</a>
+<li><a href="#documentation-br">5. Documentation<br></a>
 <ul class="sectlevel2">
-<li><a href="#running-tests">5.1. Running tests</a></li>
-<li><a href="#types-of-tests">5.2. Types of tests</a></li>
-<li><a href="#troubleshooting-testing">5.3. Troubleshooting testing</a></li>
+<li><a href="#editing-documentation-br">5.1. Editing documentation<br></a></li>
+<li><a href="#publishing-documentation-br">5.2. Publishing documentation<br></a></li>
+<li><a href="#converting-documentation-to-pdf-format-br">5.3. Converting documentation to PDF format<br></a></li>
+<li><a href="#Docs-SiteWideDocSettings">5.4. Site-wide documentation settings<br></a></li>
+<li><a href="#Docs-PerFileDocSettings">5.5. Per-file documentation settings<br></a></li>
+<li><a href="#site-template-br">5.6. Site template<br></a></li>
 </ul>
 </li>
-<li><a href="#dev-ops">6. Dev ops</a>
+<li><a href="#Testing">6. Testing</a>
 <ul class="sectlevel2">
-<li><a href="#build-automation">6.1. Build automation</a></li>
-<li><a href="#continuous-integration">6.2. Continuous integration</a></li>
-<li><a href="#coverage-reporting">6.3. Coverage reporting</a></li>
-<li><a href="#documentation-previews">6.4. Documentation previews</a></li>
-<li><a href="#making-a-release">6.5. Making a release</a></li>
-<li><a href="#managing-dependencies">6.6. Managing dependencies</a></li>
+<li><a href="#running-tests-br">6.1. Running tests<br></a></li>
+<li><a href="#types-of-tests-br">6.2. Types of tests<br></a></li>
+<li><a href="#troubleshooting-testing-br">6.3. Troubleshooting testing<br></a></li>
 </ul>
 </li>
-<li><a href="#GetStartedProgramming">Appendix A: Suggested programming tasks to get started</a>
+<li><a href="#dev-ops">7. Dev ops</a>
 <ul class="sectlevel2">
-<li><a href="#GetStartedProgramming-EachComponent">A.1. Improving each component</a></li>
-<li><a href="#GetStartedProgramming-RemarkCommand">A.2. Creating a new command: <code>remark</code></a></li>
+<li><a href="#build-automation-br">7.1. Build automation<br></a></li>
+<li><a href="#continuous-integration-br">7.2. Continuous integration<br></a></li>
+<li><a href="#coverage-reporting-br">7.3. Coverage reporting<br></a></li>
+<li><a href="#documentation-previews-br">7.4. Documentation previews<br></a></li>
+<li><a href="#making-a-release-br">7.5. Making a release<br></a></li>
+<li><a href="#managing-dependencies-br">7.6. Managing dependencies<br></a></li>
 </ul>
 </li>
-<li><a href="#product-scope">Appendix B: Product scope</a></li>
-<li><a href="#user-stories">Appendix C: User stories</a></li>
-<li><a href="#use-cases">Appendix D: Use cases</a></li>
-<li><a href="#non-functional-requirements">Appendix E: Non-functional requirements</a></li>
-<li><a href="#glossary">Appendix F: Glossary</a></li>
-<li><a href="#instructions-for-manual-testing">Appendix G: Instructions for manual testing</a>
+<li><a href="#product-scope-br">Appendix A: Product scope<br></a></li>
+<li><a href="#user-stories-br">Appendix B: User stories<br></a></li>
+<li><a href="#use-cases-br">Appendix C: Use cases<br></a></li>
+<li><a href="#non-functional-requirements-br">Appendix D: Non-functional requirements<br></a></li>
+<li><a href="#glossary-br">Appendix E: Glossary<br></a></li>
+<li><a href="#instructions-for-manual-testing-br">Appendix F: Instructions for manual testing<br></a>
 <ul class="sectlevel2">
-<li><a href="#launch-and-shutdown">G.1. Launch and shutdown</a></li>
-<li><a href="#deleting-a-person">G.2. Deleting a person</a></li>
-<li><a href="#saving-data">G.3. Saving data</a></li>
+<li><a href="#launch-and-shutdown-br">F.1. Launch and shutdown<br></a></li>
+<li><a href="#changing-theme-br">F.2. Changing theme<br></a></li>
+<li><a href="#adding-a-lesson-br">F.3. Adding a lesson<br></a></li>
+<li><a href="#deleting-a-lesson-br">F.4. Deleting a lesson<br></a></li>
+<li><a href="#editing-a-lesson-br">F.5. Editing a lesson<br></a></li>
+<li><a href="#setting-a-lesson-s-test-pair-br">F.6. Setting a lesson&#8217;s test pair<br></a></li>
+<li><a href="#adding-a-card-br">F.7. Adding a card<br></a></li>
+<li><a href="#deleting-a-card-br">F.8. Deleting a card<br></a></li>
+<li><a href="#starting-a-new-quiz-br">F.9. Starting a new quiz<br></a></li>
+<li><a href="#answering-a-question-in-a-quiz-br">F.10. Answering a question in a quiz<br></a></li>
+<li><a href="#labelling-a-question-as-difficult-in-a-quiz-br">F.11. Labelling a question as difficult in a quiz<br></a></li>
+<li><a href="#viewing-hint-in-a-quiz-br">F.12. Viewing hint in a quiz<br></a></li>
+<li><a href="#quitting-the-quiz-br">F.13. Quitting the quiz<br></a></li>
+<li><a href="#viewing-status-in-a-quiz-br">F.14. Viewing status in a quiz<br></a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect1">
-<h2 id="setting-up"><a class="link" href="#setting-up">1. Setting up</a></h2>
+<h2 id="introduction-br"><a class="link" href="#introduction-br">1. Introduction<br></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is the Developer Guide for BrainTrain. This assumes you&#8217;re already familiar with the User Guide, and are interested in contributing to this project.<br></p>
+</div>
+<div class="paragraph">
+<p>Other skills useful for contributing to BrainTrain are as follows:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Good Java knowledge</p>
+</li>
+<li>
+<p>Familiarity with Object-Oriented Programming (OOP)</p>
+</li>
+<li>
+<p>Familiarity with Github</p>
+</li>
+<li>
+<p>Experience with Command Line Interface based applications</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Whether you have any, none or all of the skills above, you will first need to set up a few things before being able to start work on the project.</p>
+</div>
+<div class="sect2">
+<h3 id="how-does-braintrain-work-br"><a class="link" href="#how-does-braintrain-work-br">1.1. How does BrainTrain work<br></a></h3>
+<div class="paragraph">
+<p>This is a brief explanation of how BrainTrain works:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You can attempt cards in quiz mode, these cards whereby a <strong>question</strong> is displayed to you, and you type in the <strong>answer</strong>.</p>
+</li>
+<li>
+<p>You can group multiple cards in a single package called a <strong>lesson</strong>. You can have multiple lessons.</p>
+</li>
+<li>
+<p>You can manage lessons in management mode or alternatively do so in your preferred spreadsheet application.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setting-up-br"><a class="link" href="#setting-up-br">2. Setting up<br></a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="prerequisites"><a class="link" href="#prerequisites">1.1. Prerequisites</a></h3>
+<h3 id="prerequisites-br"><a class="link" href="#prerequisites-br">2.1. Prerequisites<br></a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -103,7 +162,7 @@
 </td>
 <td class="content">
 JDK <code>10</code> on Windows will fail to run tests in <a href="UsingGradle.html#Running-Tests">headless mode</a> due to a <a href="https://github.com/javafxports/openjdk-jfx/issues/66">JavaFX bug</a>.
-Windows developers are highly recommended to use JDK <code>9</code>.
+Windows developers should use JDK <code>9</code>.
 </td>
 </tr>
 </table>
@@ -129,11 +188,14 @@ Do not disable them. If you have disabled them, go to <code>File</code> &gt; <co
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-up-the-project-in-your-computer"><a class="link" href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></h3>
+<h3 id="setting-up-the-project-in-your-computer"><a class="link" href="#setting-up-the-project-in-your-computer">2.2. Setting up the project in your computer</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Fork this repo, and clone the fork to your computer</p>
+<p>Fork this repo</p>
+</li>
+<li>
+<p>Clone the fork to your computer</p>
 </li>
 <li>
 <p>Open IntelliJ (if you are not in the welcome screen, click <code>File</code> &gt; <code>Close Project</code> to close the existing project dialog first)</p>
@@ -164,7 +226,7 @@ Do not disable them. If you have disabled them, go to <code>File</code> &gt; <co
 <p>Click <code>OK</code> to accept the default settings</p>
 </li>
 <li>
-<p>Open a console and run the command <code>gradlew processResources</code> (Mac/Linux: <code>./gradlew processResources</code>). It should finish with the <code>BUILD SUCCESSFUL</code> message.<br>
+<p>Open a console and run the command <code>gradlew processResources</code> (for Mac/Linux: <code>./gradlew processResources</code>). It should finish with the <code>BUILD SUCCESSFUL</code> message.<br>
 This will generate all resources required by the application and tests.</p>
 </li>
 <li>
@@ -187,7 +249,7 @@ This will generate all resources required by the application and tests.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="verifying-the-setup"><a class="link" href="#verifying-the-setup">1.3. Verifying the setup</a></h3>
+<h3 id="verifying-the-setup"><a class="link" href="#verifying-the-setup">2.3. Verifying the setup</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -200,9 +262,9 @@ This will generate all resources required by the application and tests.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="configurations-to-do-before-writing-code"><a class="link" href="#configurations-to-do-before-writing-code">1.4. Configurations to do before writing code</a></h3>
+<h3 id="configurations-to-do-before-writing-code"><a class="link" href="#configurations-to-do-before-writing-code">2.4. Configurations to do before writing code</a></h3>
 <div class="sect3">
-<h4 id="configuring-the-coding-style"><a class="link" href="#configuring-the-coding-style">1.4.1. Configuring the coding style</a></h4>
+<h4 id="configuring-the-coding-style"><a class="link" href="#configuring-the-coding-style">2.4.1. Configuring the coding style</a></h4>
 <div class="paragraph">
 <p>This project follows <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.adoc">oss-generic coding standards</a>. IntelliJ&#8217;s default style is mostly compliant with ours but it uses a different import order from ours. To rectify,</p>
 </div>
@@ -234,26 +296,7 @@ This will generate all resources required by the application and tests.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="updating-documentation-to-match-your-fork"><a class="link" href="#updating-documentation-to-match-your-fork">1.4.2. Updating documentation to match your fork</a></h4>
-<div class="paragraph">
-<p>After forking the repo, the documentation will still have the SE-EDU branding and refer to the <code>se-edu/addressbook-level4</code> repo.</p>
-</div>
-<div class="paragraph">
-<p>If you plan to develop this fork as a separate product (i.e. instead of contributing to <code>se-edu/addressbook-level4</code>), you should do the following:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Configure the <a href="#Docs-SiteWideDocSettings">site-wide documentation settings</a> in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/build.gradle"><code>build.gradle</code></a>, such as the <code>site-name</code>, to suit your own project.</p>
-</li>
-<li>
-<p>Replace the URL in the attribute <code>repoURL</code> in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/docs/DeveloperGuide.adoc"><code>DeveloperGuide.adoc</code></a> and <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/docs/UserGuide.adoc"><code>UserGuide.adoc</code></a> with the URL of your fork.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="setting-up-ci"><a class="link" href="#setting-up-ci">1.4.3. Setting up CI</a></h4>
+<h4 id="setting-up-ci"><a class="link" href="#setting-up-ci">2.4.2. Setting up CI</a></h4>
 <div class="paragraph">
 <p>Set up Travis to perform Continuous Integration (CI) for your fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> to learn how to set it up.</p>
 </div>
@@ -288,38 +331,19 @@ Having both Travis and AppVeyor ensures your app works on both Unix-based platfo
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="getting-started-with-coding"><a class="link" href="#getting-started-with-coding">1.4.4. Getting started with coding</a></h4>
-<div class="paragraph">
-<p>When you are ready to start coding,</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Get some sense of the overall design by reading <a href="#Design-Architecture">Section 2.1, &#8220;Architecture&#8221;</a>.</p>
-</li>
-<li>
-<p>Take a look at <a href="#GetStartedProgramming">Appendix A, <em>Suggested programming tasks to get started</em></a>.</p>
-</li>
-</ol>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="design"><a class="link" href="#design">2. Design</a></h2>
+<h2 id="design"><a class="link" href="#design">3. Design</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Design-Architecture"><a class="link" href="#Design-Architecture">2.1. Architecture</a></h3>
+<h3 id="Design-Architecture"><a class="link" href="#Design-Architecture">3.1. Architecture</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/Architecture.png" alt="Architecture" width="600">
 </div>
-<div class="title">Figure 1. Architecture Diagram</div>
-</div>
-<div class="paragraph">
-<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of the app. Given below is a quick overview of each component.</p>
+<div class="title">Figure 1. Architecture diagram</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -333,6 +357,11 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>The <strong><em>architecture diagram</em></strong> given above illustrates the high-level design of the BrainTrain app. It shows the key components of the app, and how they interact with one another.</p>
+</div>
+<div class="sect3">
+<h4 id="brief-overview-of-key-components"><a class="link" href="#brief-overview-of-key-components">3.1.1. Brief overview of key components</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -354,7 +383,7 @@ The following class plays an important role at the architecture level:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>LogsCenter</code> : Used by many classes to write log messages to the app&#8217;s log file.</p>
+<p><code>LogsCenter</code> : Used by numerous classes to write log messages to the app&#8217;s log file.</p>
 </li>
 </ul>
 </div>
@@ -363,7 +392,7 @@ The following class plays an important role at the architecture level:</p>
 <p><a href="#Design-Ui"><strong><code>UI</code></strong></a>: Handles the user interface.</p>
 </li>
 <li>
-<p><a href="#Design-Logic"><strong><code>Logic</code></strong></a>: Executes commands.</p>
+<p><a href="#Design-Logic"><strong><code>Logic</code></strong></a>: Handles the command executions.</p>
 </li>
 <li>
 <p><a href="#Design-ManagementModel"><strong><code>ManagementModel</code></strong></a>: Handles the in-memory data of management mode.</p>
@@ -390,44 +419,47 @@ The following class plays an important role at the architecture level:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For example, the <code>Logic</code> component (refer to class diagram below) defines it&#8217;s API in the <code>Logic.java</code>, interface and exposes its functionality through the <code>LogicManager.java</code> class.</p>
+<p>For example, the <code>Logic</code> component (refer to figure 2 below) has it&#8217;s API defined in the <code>Logic.java</code> interface, and exposes its functionality through the <code>LogicManager.java</code> class.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/LogicClassDiagram.png" alt="LogicClassDiagram" width="800">
 </div>
-<div class="title">Figure 2. Class Diagram of the Logic Component</div>
+<div class="title">Figure 2. Structure of the <code>Logic</code> component</div>
 </div>
-<h4 id="how-the-architecture-components-interact-with-each-other" class="discrete">How the architecture components interact with each other</h4>
+<h4 id="componentInteractions" class="discrete">How do the key components interact</h4>
 <div class="paragraph">
-<p>The <em>Sequence Diagram</em> below shows how the components interact with each other for the scenario where the user issues the command <code>delete 1</code>.</p>
+<p>In this section, an example of how the key components interact when the user issues the command <code>deleteLesson 1</code> is shown.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/SDforDeletePerson.png" alt="SDforDeletePerson" width="800">
+<img src="images/sd_delete_lesson.png" alt="sd delete lesson" width="800">
 </div>
-<div class="title">Figure 3. Component interactions for <code>delete 1</code> command</div>
+<div class="title">Figure 3. Sequence diagram of the <code>deleteLesson 1</code> command</div>
 </div>
 <div class="paragraph">
-<p>The sections below give more details of each component.</p>
+<p>Sequence diagrams such as the one above will be provided throughout the developer guide when it is important to highlight how the key components interact. Subsequent sections provide more details on each key component.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Ui"><a class="link" href="#Design-Ui">2.2. UI component</a></h3>
+<h3 id="Design-Ui"><a class="link" href="#Design-Ui">3.2. UI component</a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/UiClassDiagram.png" alt="UiClassDiagram" width="800">
 </div>
-<div class="title">Figure 4. Structure of the UI Component</div>
+<div class="title">Figure 4. Structure of the <code>UI</code> Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>BrowserPanel</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+<p>The <code>UI</code> consists of a <code>MainWindow</code> which is made up of the following parts: <code>CommandBox</code>, <code>ResultDisplay</code>,
+<code>MainPanel</code>, <code>LessonListPanel</code>, <code>QuizResultPanel</code>, etc. All these parts, including the <code>MainWindow</code>,
+inherit from the <code>UiPart</code> abstract class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
+<p>The <code>UI</code> component uses the <strong>JavaFx</strong> <code>UI</code> framework. The layouts for these <code>UI</code> parts are defined in corresponding <code>.fxml</code> files in the <code>src/main/resources/view</code> folder. For example, the layout for  <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in the <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component,</p>
@@ -435,21 +467,21 @@ The following class plays an important role at the architecture level:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Executes user commands using the <code>Logic</code> component.</p>
+<p>passes user input to the <code>Logic</code> component for command execution.</p>
 </li>
 <li>
-<p>Listens for changes to <code>Model</code> data so that the UI can be updated with the modified data.</p>
+<p>listens for changes to <code>Logic</code> and updates if data is changed.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-Logic"><a class="link" href="#Design-Logic">2.3. Logic component</a></h3>
+<h3 id="Design-Logic"><a class="link" href="#Design-Logic">3.3. Logic component<br></a></h3>
 <div id="fig-LogicClassDiagram" class="imageblock">
 <div class="content">
 <img src="images/LogicClassDiagram.png" alt="LogicClassDiagram" width="800">
 </div>
-<div class="title">Figure 5. Structure of the Logic Component</div>
+<div class="title">Figure 5. Structure of the <code>Logic</code> component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -458,18 +490,18 @@ The following class plays an important role at the architecture level:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>Logic</code> uses either the <code>ManagementModeParser</code> or <code>QuizModeParser</code> class to parse the user command.</p>
+<p><code>Logic</code> uses either <code>ManagementModeParser</code> or <code>QuizModeParser</code> class to parse the user command.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>If <code>ManagementParser</code> is used to parse the user command:</p>
+<p>If <code>ManagementModeParser</code> is used to parse the user command:</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
 <p>This results in a <code>ManagementCommand</code> object which is executed by the <code>LogicManager</code>.</p>
 </li>
 <li>
-<p>The command execution can affect the <code>Model</code> (e.g. adding a person).</p>
+<p>The command execution can affect the <code>ManagementModel</code> (e.g. adding a lesson).</p>
 </li>
 </ol>
 </div>
@@ -491,30 +523,44 @@ The following class plays an important role at the architecture level:</p>
 </div>
 </li>
 <li>
-<p>The result of the command execution is encapsulated as a <code>CommandResult</code> object which is passed back to the <code>Ui</code>.</p>
+<p>The result of the command execution is encapsulated as a <code>CommandResult</code> object which is
+returned to the <code>UI</code>.</p>
 </li>
 <li>
-<p>In addition, the <code>CommandResult</code> object can also instruct the <code>Ui</code> to perform certain actions, such as displaying help to the user.</p>
+<p>In addition, the <code>CommandResult</code> object might also instruct the <code>UI</code> to perform certain actions,
+such as displaying the user guide to the user.</p>
 </li>
 </ol>
 </div>
+<div class="sect3">
+<h4 id="logicInteractions"><a class="link" href="#logicInteractions">3.3.1. How do the logic sub-components interact</a></h4>
 <div class="paragraph">
-<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
+<p>In this section, an example of how the <code>Logic</code> sub-components interact when the user issues the command <code>addCard t/Korea t/Seoul h/S</code> is shown.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/DeletePersonSdForLogic.png" alt="DeletePersonSdForLogic" width="800">
+<img src="images/ui_add_card.png" alt="ui add card" width="512">
 </div>
-<div class="title">Figure 6. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+<div class="title">Figure 6. 'Sample-Capitals' lesson opened in card view</div>
+</div>
+<div class="paragraph">
+<p>Given the above example, the following sequence of interactions will occur within the <code>Logic</code> component.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sd_add_card.png" alt="sd add card" width="800">
+</div>
+<div class="title">Figure 7. Sequence diagram of the <code>addCard t/Korea t/Seoul h/S</code> command</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-ManagementModel"><a class="link" href="#Design-ManagementModel">2.4. ManagementModel component</a></h3>
+<h3 id="Design-ManagementModel"><a class="link" href="#Design-ManagementModel">3.4. ManagementModel component<br></a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/ManagementModelClassDiagram.png" alt="ManagementModelClassDiagram" width="800">
 </div>
-<div class="title">Figure 7. Structure of the ManagementModel Component</div>
+<div class="title">Figure 8. Structure of the ManagementModel component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/modelmanager/ManagementModel.java"><code>ManagementModel.java</code></a></p>
@@ -525,24 +571,27 @@ The following class plays an important role at the architecture level:</p>
 <div class="ulist">
 <ul>
 <li>
+<p>stores a <code>LessonList</code> object which represents a list of <code>Lesson</code> objects.</p>
+</li>
+<li>
 <p>stores a <code>UserPref</code> object which represents the user&#8217;s preferences.</p>
 </li>
 <li>
-<p>stores the in-memory lessons in <code>LessonList</code>.</p>
+<p>stores the in-memory user SRS data in <code>User</code>.</p>
 </li>
 <li>
-<p>depends on none of the other components.</p>
+<p>does not depend on any other components.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Design-QuizModel"><a class="link" href="#Design-QuizModel">2.5. QuizModel component</a></h3>
+<h3 id="Design-QuizModel"><a class="link" href="#Design-QuizModel">3.5. QuizModel component<br></a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/QuizModelClassDiagram.png" alt="QuizModelClassDiagram" width="500">
+<img src="images/QuizModelClassDiagram.png" alt="QuizModelClassDiagram" width="800">
 </div>
-<div class="title">Figure 8. Structure of the QuizModel Component</div>
+<div class="title">Figure 9. Structure of the QuizModel Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/modelmanager/QuizModel.java"><code>QuizModel.java</code></a></p>
@@ -559,21 +608,21 @@ The following class plays an important role at the architecture level:</p>
 <p>stores a <code>Session</code> object that represents a list of <code>SrsCard</code>.</p>
 </li>
 <li>
-<p>stores a <code>QuizUiDisplayFormatter</code> object that represents the information needed to display to Ui</p>
+<p>stores a <code>ManagementModelManager</code> object that represents the <code>ManagementModel</code> component.</p>
+</li>
+<li>
+<p>depends on only the <code>ManagementModel</code> component.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>It does not depend on any of the other four components.</p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.6. Storage component</a></h3>
+<h3 id="Design-Storage"><a class="link" href="#Design-Storage">3.6. Storage component<br></a></h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/StorageClassDiagram.png" alt="StorageClassDiagram" width="800">
 </div>
-<div class="title">Figure 9. Structure of the Storage Component</div>
+<div class="title">Figure 10. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/storage/Storage.java"><code>Storage.java</code></a></p>
@@ -584,40 +633,39 @@ The following class plays an important role at the architecture level:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>can save user preferences in json format and read it back.</p>
+<p>saves lesson data in <code>.csv</code> format and read it back.</p>
 </li>
 <li>
-<p>can save lesson data in csv format and read it back.</p>
+<p>saves user preferences in <code>.json</code> format and read it back.</p>
 </li>
 <li>
-<p>can save the user&#8217;s SRS data in csv format and read it back.</p>
+<p>saves the user&#8217;s SRS data in <code>.csv</code> format and read it back.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.7. Common classes</a></h3>
-<div class="paragraph">
-<p>Classes used by multiple components are in the <code>seedu.address.commons</code> package.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="implementation"><a class="link" href="#implementation">3. Implementation</a></h2>
+<h2 id="implementation-br"><a class="link" href="#implementation-br">4. Implementation<br></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="data-storage-feature"><a class="link" href="#data-storage-feature">3.1. Data storage feature</a></h3>
+<h3 id="user-storage-feature-br"><a class="link" href="#user-storage-feature-br">4.1. User storage feature<br></a></h3>
 <div class="paragraph">
-<p>The data storage feature manages the saving of data, such as lessons and user progress, to disk for the application. This lets the user keep their progress between usage sessions.</p>
+<p>The user storage features implements the following functions:</p>
 </div>
-<div class="sect3">
-<h4 id="current-implementation"><a class="link" href="#current-implementation">3.1.1. Current Implementation</a></h4>
-<div class="paragraph">
-<p>All data storage components implement public functions that are called through Storage, with no user commands currently implemented. These functions include saving and reading of files, with an option for changing the default directory where each kind of data is saved.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Parsing user data into the correct format for file saving</p>
+</li>
+<li>
+<p>Parsing file into the correct format for user data</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -626,18 +674,104 @@ The following class plays an important role at the architecture level:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-These functions are automatically performed on opening/closing the Session.
+These functions are automatically performed on opening/closing the application. File I/O is handled in the <code>CSVUtil</code> class.
 </td>
 </tr>
 </table>
 </div>
+<div class="sect3">
+<h4 id="user-format-br"><a class="link" href="#user-format-br">4.1.1. User format<br></a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/CsvUserStorage.png" alt="CsvUserStorage" width="800">
+</div>
+<div class="title">Figure 11. Data flow diagram for user import and export</div>
+</div>
+<div class="paragraph">
+<p>The user is parsed by <code>CsvUserStorage</code>, which is converted between User and List&lt;String[]&gt; format. List&lt;String[]&gt; format is the primary format handled by <code>CsvUtil</code> for reading and writing to <code>.csv</code> files.</p>
+</div>
+<div class="paragraph">
+<p>A few noteworthy mentions of the main components saved into a <code>.csv</code> file for UserStorage are listed below.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="hashcode-br"><a class="link" href="#hashcode-br">4.1.2. Hashcode<br></a></h4>
+<div class="paragraph">
+<p>This is the question hashcode. Every question will have a unique hashcode for identification.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="srsduedate-br"><a class="link" href="#srsduedate-br">4.1.3. SRSDueDate<br></a></h4>
+<div class="paragraph">
+<p>This is the srsDueDate generated for that question. Questions with a nearer due-date will be generated first in the quiz.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="difficult-br"><a class="link" href="#difficult-br">4.1.4. Difficult<br></a></h4>
+<div class="paragraph">
+<p>These are questions that are labelled difficult by the user. Users are able to specifically practise questions that they have labelled difficult in session.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sequence-diagram-for-user-storage"><a class="link" href="#sequence-diagram-for-user-storage">4.1.5. Sequence diagram for user storage</a></h4>
+<div class="paragraph">
+<p>Below is a sequence diagram of how a file is parsed into BrainTrain</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CsvUserStorageSequenceDiagram.png" alt="CsvUserStorageSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 12. Sequence diagram of how a file is imported when BrainTrain application starts</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="code-snippet-br"><a class="link" href="#code-snippet-br">4.1.6. Code snippet<br></a></h4>
+<div class="paragraph">
+<p>The following code snippet shows how the user data is obtained:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> Optional&lt;CardSrsData&gt; parseStringIntoCard(<span class="predefined-type">String</span><span class="type">[]</span> cardArray) <span class="directive">throws</span>
+            <span class="exception">NumberFormatException</span>, DateTimeParseException {
+
+        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i &lt; cardArray.length - <span class="integer">1</span>; i++) {
+            <span class="keyword">if</span> (cardArray[i].isEmpty()) {
+                logger.warning(<span class="string"><span class="delimiter">&quot;</span><span class="content">There are empty values in the file</span><span class="delimiter">&quot;</span></span>);
+                <span class="keyword">return</span> Optional.empty();
+            }
+        }
+
+        <span class="keyword">try</span> {
+            hashCode = <span class="predefined-type">Integer</span>.parseInt(cardArray[<span class="integer">0</span>]);
+            numOfAttempts = <span class="predefined-type">Integer</span>.parseInt(cardArray[<span class="integer">1</span>]);
+            streak = <span class="predefined-type">Integer</span>.parseInt(cardArray[<span class="integer">2</span>]);
+            srs = Instant.parse(cardArray[<span class="integer">3</span>]);
+            isDifficult = cardArray[<span class="integer">4</span>].equals(<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span>);
+
+            <span class="keyword">if</span> (hashCode == ZERO) {
+                logger.warning(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hashcode cannot be 0 in </span><span class="delimiter">&quot;</span></span> + filePath.toString());
+                <span class="keyword">return</span> Optional.empty();
+            }
+
+        } <span class="keyword">catch</span> (<span class="exception">NumberFormatException</span> e) {
+            logger.warning(<span class="string"><span class="delimiter">&quot;</span><span class="content">Values are not correct in </span><span class="delimiter">&quot;</span></span> + filePath.toString());
+            <span class="keyword">return</span> Optional.empty();
+
+        }
+
+        card = <span class="keyword">new</span> CardSrsData(hashCode, numOfAttempts, streak, srs, isDifficult);
+
+        <span class="keyword">return</span> Optional.of(card);
+    }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-br"><a class="link" href="#design-considerations-br">4.1.7. Design considerations<br></a></h4>
 <div class="ulist">
 <ul>
 <li>
-<p>** Alternative 1(Current choice): Automate importing/exporting when session is open/close</p>
+<p><strong> Alternative 1 (Current choice):</strong> Automate importing/exporting when session is open/close</p>
 <div class="ulist">
 <ul>
 <li>
@@ -650,14 +784,14 @@ These functions are automatically performed on opening/closing the Session.
 </div>
 </li>
 <li>
-<p>**Alternative 2: Individual commands for user to toggle with to import and export files when desired</p>
+<p><strong>Alternative 2:</strong> Individual commands for user to toggle with to import and export files when desired</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: More control given to user</p>
 </li>
 <li>
-<p>Cons: Accidental overwriting of files may occur.</p>
+<p>Cons: Accidental overwriting of files may occur. Furthermore, if users are not able to parse in values correctly, the file will not be saved. This is troublesome for users who are not tech-savvy.</p>
 </li>
 </ul>
 </div>
@@ -667,83 +801,161 @@ These functions are automatically performed on opening/closing the Session.
 </div>
 </div>
 <div class="sect2">
-<h3 id="csv-storage-feature"><a class="link" href="#csv-storage-feature">3.2. CSV storage feature</a></h3>
+<h3 id="lessonStorageFeature"><a class="link" href="#lessonStorageFeature">4.2. Lesson storage feature</a></h3>
 <div class="sect3">
-<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.2.1. Current Implementation</a></h4>
+<h4 id="current-implementation-br"><a class="link" href="#current-implementation-br">4.2.1. Current implementation<br></a></h4>
 <div class="paragraph">
 <p>The lesson CSV storage feature implements the following functions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Parsing lesson data into the correct format for saving</p>
+<p>Parsing lesson data into a list of string arrays, which is a format OpenCSV accepts for saving to CSV.</p>
 </li>
 <li>
-<p>Parsing data from file into lessons</p>
+<p>Parsing a list of string arrays back into lesson data, as retrieved from OpenCSV.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Actual file I/O is handled in the CsvUtil class, which uses the opencsv library to read/write CSV files.</p>
+<p>Actual file I/O is handled in the CsvUtil class, which uses the OpenCSV library to read/write <code>.csv</code> files.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="csv-format"><a class="link" href="#csv-format">3.2.2. CSV Format</a></h4>
+<h4 id="csv-lesson-format-br"><a class="link" href="#csv-lesson-format-br">4.2.2. Csv lesson format<br></a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/CsvStorageDiagram.png" alt="CsvStorageDiagram" width="800">
+<img src="images/CsvLessonStorageSequenceDiagram.png" alt="CsvLessonStorageSequenceDiagram" width="800">
 </div>
-<div class="title">Figure 10. Data flow diagram for Lessons saving</div>
-</div>
-<div class="paragraph">
-<p>Lessons are parsed by CsvLessonListStorage, being converted between Lesson and List&lt;String[]&gt; formats. The List&lt;String[]&gt; format is the primary format handled by CsvUtil for reading and writing to CSV files.</p>
+<div class="title">Figure 13. High-level sequence diagram for the <code>reload</code> command, an example of lesson loading</div>
 </div>
 <div class="paragraph">
-<p>For lessons, there are three main components when saved to a CSV file.</p>
+<p>Lessons are parsed by CsvLessonListStorage, being converted between Lesson and List&lt;String[]&gt; formats. The List&lt;String[]&gt; format is the primary format handled by CsvUtil for reading and writing to <code>.csv</code> files.</p>
+</div>
+<div class="paragraph">
+<p>For lessons, there are three main sections when saved to a <code>.csv</code> file.</p>
 </div>
 <div class="sect4">
-<h5 id="name"><a class="link" href="#name">Name</a></h5>
+<h5 id="name-br"><a class="link" href="#name-br">Name<br></a></h5>
 <div class="paragraph">
-<p>Lesson names are equivalent to their filenames.</p>
-</div>
-<div class="paragraph">
-<p>A lesson named "French" would be saved as French.csv, and vice-versa.</p>
+<p>A lesson&#8217;s name in BrainTrain is equivalent to its file name.<br>
+A lesson named "French" would be saved as "French.csv", and vice-versa.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="header"><a class="link" href="#header">Header</a></h5>
+<h5 id="header-br"><a class="link" href="#header-br">Header<br></a></h5>
 <div class="paragraph">
-<p>The header stores the set up information for the lesson. For more information on the format of lessons, please read <code>TODO</code></p>
+<p>The header is represented in the file as the first two lines. Each line represents a specific set of data, as outlined below.</p>
 </div>
 <div class="paragraph">
-<p>Core fields start with <code>CORE_ESCAPE</code> character, <code>*</code>. When a field without <code>*</code> is found, all subsequent fields are assumed to be optional.</p>
+<p>The first line represents the type of the corresponding column. Each column can have three types:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Tested</strong><br>
+This marks the column as a core value. By default, the first two instances of <strong>Tested</strong> in the file will be tested in quiz mode. All remaining Tested values are treated as <strong>Not Tested</strong>.</p>
+</li>
+<li>
+<p><strong>Not Tested</strong><br>
+This marks the column as a core value. However, unlike <strong>Tested</strong>, they will not be tested in quiz mode. You can use the <code>set</code> command to change this.</p>
+</li>
+<li>
+<p><strong>Hint</strong><br>
+This marks the column as a hint value. <strong>Hint</strong> values will appear when the user enters the <code>\hint</code> command in quiz mode. Values here are optional and can be left empty.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Core values require every value in that column to be non-empty. This guarantees that the user will be tested on something, should they change which fields are tested.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Question and answer fields have the <code>QUESTION_ESCAPE</code> character, <code>?</code>, and <code>ANSWER_ESCAPE</code> character, <code>@</code>, respectively after the core character, <code>*</code>.</p>
+<p>This is a code snippet from the parsing of the header data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i &lt; headerArray.length; i++) {
+    <span class="keyword">if</span> (headerArray[i].isEmpty()) {
+        headerArray[i] = <span class="string"><span class="delimiter">&quot;</span><span class="content"> </span><span class="delimiter">&quot;</span></span>;
+    }
+}
+<span class="type">int</span> coreCount = <span class="integer">0</span>;
+<span class="type">int</span> index = <span class="integer">0</span>;
+<span class="keyword">while</span> (index &lt; headerArray.length) {
+    <span class="predefined-type">String</span> headerChar = headerArray[index].toLowerCase().substring(<span class="integer">0</span>, <span class="integer">1</span>);
+    <span class="keyword">if</span> (headerChar.equals(HEADER_CORE_QA)) {
+        <span class="keyword">if</span> (questionIndex == -<span class="integer">1</span>) {
+            questionIndex = index;
+        } <span class="keyword">else</span> <span class="keyword">if</span> (answerIndex == -<span class="integer">1</span>) {
+            answerIndex = index;
+        }
+        coreCount++;
+    } <span class="keyword">else</span> <span class="keyword">if</span> (headerChar.equals(HEADER_CORE_NOT_QA)) {
+        coreCount++;
+    } <span class="keyword">else</span> <span class="keyword">if</span> (!headerChar.equals(HEADER_OPTIONAL)) {
+        <span class="keyword">return</span> returnValues;
+    }
+    index++;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As seen at the beginning of the while loop, header values are actually treated as single case-insensitive characters. This means an experienced user may simply enter those letters as a shortcut.<br></p>
+</div>
+<div class="paragraph">
+<p>The second line represents the name of each column as shown to the user. Any names left blank are automatically replaced with Unnamed.<br>
+Any discrepancies in the number of types and the number of names will result in the lesson not being loaded.<br></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="card-data"><a class="link" href="#card-data">Card Data</a></h5>
+<h5 id="card-data-br"><a class="link" href="#card-data-br">Card data<br></a></h5>
 <div class="paragraph">
-<p>All remaining data is treated as card data. Any invalid data found in memory or from the file is skipped over.</p>
+<p>All remaining data is treated as card data. Any invalid data found in memory or from the file is skipped over.<br></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="summary-br"><a class="link" href="#summary-br">Summary<br></a></h5>
+<div class="imageblock">
+<div class="content">
+<img src="images/ReloadActivityDiagram.png" alt="ReloadActivityDiagram" width="800">
+</div>
+<div class="title">Figure 14. Activity diagram for the <code>reload</code> command, highlighting failure conditions</div>
+</div>
+<div class="paragraph">
+<p>As shown in the above diagram, data that is read in from a file goes through various checks before it is loaded into the application. Any invalid data is skipped over, with an entry in the logs explaining the cause of failure.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.3. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">4.2.3. Design considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-choice-of-file-type"><a class="link" href="#aspect-choice-of-file-type">Aspect: Choice of file type</a></h5>
+<h5 id="aspect-choice-of-file-type-br"><a class="link" href="#aspect-choice-of-file-type-br">Aspect: choice of file type<br></a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Save as CSV</p>
+<p><strong>Alternative 1 (current choice):</strong> Save as <code>.csv</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Allows the user to edit lesson data in an external program such as Excel, which provides a user-friendly spreadsheet interface.</p>
+<p>Pros: User is able to modify lesson data in a more advanced external spreadsheet tool like Excel</p>
 </li>
 <li>
-<p>Cons: Lack of data verification within the file, JSON already implemented</p>
+<p>Cons: Lack of data verification within the file, JSON is already implemented in original code</p>
 </li>
 </ul>
 </div>
@@ -753,54 +965,504 @@ These functions are automatically performed on opening/closing the Session.
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Can ensure all values are filled out correctly</p>
+<p>Pros: All values can be verified through the file</p>
 </li>
 <li>
-<p>Cons: Difficult for user to edit</p>
+<p>Cons: Difficult for user to edit manually</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Alternative 1 was chosen as ease of use is a high priority for the project. Most computer users are familiar with the Microsoft Office suite of applications, such as Word and Excel. As Excel allows <code>.csv</code> files to be shown in a spreadsheet, it was intended that users use Excel alongside BrainTrain for easy lesson management.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-handling-of-invalid-data-br"><a class="link" href="#aspect-handling-of-invalid-data-br">Aspect: handling of invalid data<br></a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Skip over specific lesson/card</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: User data is not automatically overwritten</p>
+</li>
+<li>
+<p>Cons: User has to manually fix any issues with their data</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Automatically fix data</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Ease of use for user</p>
+</li>
+<li>
+<p>Cons: Automatic fix may not be as desired by user</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Alternative 1 was chosen as creators are expected to have some skill in data editing. Normal users would ideally only download lessons from a creator, and would not be familiar enough with the lesson data to fix any issues.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="session-feature"><a class="link" href="#session-feature">3.3. Session feature</a></h3>
+<h3 id="mgtOverview"><a class="link" href="#mgtOverview">4.3. Management feature<br></a></h3>
 <div class="paragraph">
-<p>Session feature generates cards for users in quiz session based on their requirement.</p>
+<p>Management feature provides users with the ability to add, edit and delete lessons in <strong>Lesson View</strong> and <strong>Card View</strong> modes.</p>
 </div>
 <div class="sect3">
-<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">3.3.1. Current Implementation</a></h4>
+<h4 id="lesson-view-br"><a class="link" href="#lesson-view-br">4.3.1. Lesson View<br></a></h4>
 <div class="paragraph">
-<p>The session feature implements the following functions:</p>
+<p>In <strong>Lesson View</strong>, users can:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Combining data from lesson and user together.</p>
+<p><code>addLesson</code> - Adds a lesson to the list of lessons loaded in-memory.</p>
 </li>
 <li>
-<p>Generating a list of cards for quiz based on SRS(Space-Repetition technique) method and updating user data after quiz ends.</p>
+<p><code>deleteLesson</code> - Deletes a lesson from the list of lessons loaded in-memory.</p>
+</li>
+<li>
+<p><code>edit</code> - Opens a lesson in <strong>Card View</strong> for editing</p>
+</li>
+<li>
+<p><code>listLessons</code> - Lists all cards with full details</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="card-view-br"><a class="link" href="#card-view-br">4.3.2. Card View<br></a></h4>
+<div class="paragraph">
+<p>In <strong>Card View</strong>, users can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>addCard</code> - Adds a card to the lesson opened in <strong>Card View</strong>.</p>
+</li>
+<li>
+<p><code>deleteCard</code> - Deletes a card from the lesson opened in <strong>Card View</strong>.</p>
+</li>
+<li>
+<p><code>set</code> - Sets the 2 test values to be tested in quiz mode for all cards in the lesson</p>
+</li>
+<li>
+<p><code>listCards</code> - Lists all cards with full details</p>
+</li>
+<li>
+<p><code>quit</code> - Quits <strong>Card View</strong> and returns to <strong>Lesson View</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the subsequent sub-sections, I will discuss the 3 major model classes used to manage lessons and flashcards, <code>Card.java</code>, <code>Lesson.java</code>, and <code>LessonList.java</code>. These classes are also used by the <a href="#lessonStorageFeature">Lesson Storage Feature</a> and <a href="#sessionFeature">Session Feature</a>.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cardClass"><a class="link" href="#cardClass">4.3.3. Card class<br></a></h4>
+<div class="paragraph">
+<p>An instance of <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/card/Card.java"><code>Card.java</code></a> represents a flashcard which contains 2 or more test values and 0 or more hint values. It takes in a list of test values, and optionally a list of hint values.</p>
+</div>
+<div class="paragraph">
+<p>The following code shows how the card is generated:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Test and hint values are referred to as core and optional values internally. These terms are interchangeable.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
+  * Creates a {@code Card} which represents a flash card.
+  *
+  * @param cores {@link #cores} a {@code Card} must have.
+  * @param optionals {@link #optionals} a {@code Card} can have.
+  */</span>
+ <span class="directive">public</span> Card(<span class="predefined-type">List</span>&lt;<span class="predefined-type">String</span>&gt; cores, <span class="predefined-type">List</span>&lt;<span class="predefined-type">String</span>&gt; optionals) {
+     requireAllNonNull(cores, optionals);
+     <span class="local-variable">this</span>.cores = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;&gt;();
+     <span class="local-variable">this</span>.cores.addAll(cores);
+     <span class="local-variable">this</span>.optionals = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;&gt;();
+     <span class="local-variable">this</span>.optionals.addAll(optionals);
+     hashCode = generateHashCode();
+ }
+
+ <span class="comment">/**
+  * Creates a {@code Card} which represents a flash card.
+  *
+  * @param cores {@link #cores} a {@code Card} must have.
+  */</span>
+ <span class="directive">public</span> Card(<span class="predefined-type">List</span>&lt;<span class="predefined-type">String</span>&gt; cores) {
+     <span class="comment">// Generates a Card without optionals.</span>
+ }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These 2 constructors are called by the <code>Lesson.java</code> which generates a list of cards.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="lesson-class-br"><a class="link" href="#lesson-class-br">4.3.4. Lesson class<br></a></h4>
+<div class="paragraph">
+<p>An instance of <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/lesson/Lesson.java"><code>Lesson.java</code></a> represents a lesson which contains multiple flashcards of the same type and topic. This lesson can be loaded into quiz mode for testing.</p>
+</div>
+<div class="paragraph">
+<p>The following code shows how cards are generated by the lesson:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
+ * Adds a {@link Card} object to the lesson.
+ * {@code fields} are separated into two separate sub-lists of cores and optionals based on
+ * {@link #coreHeaders}'s {@code size()}.
+ *
+ * @param fields the {@link Card}'s cores and optionals in this order
+ */</span>
+<span class="directive">public</span> <span class="type">void</span> addCard(<span class="predefined-type">List</span>&lt;<span class="predefined-type">String</span>&gt; fields) {
+    requireAllNonNull(fields);
+    <span class="keyword">if</span> (fields.size() == coreHeaders.size()) {
+        addCard(<span class="keyword">new</span> Card(fields));
+    } <span class="keyword">else</span> {
+        <span class="predefined-type">List</span>&lt;<span class="predefined-type">String</span>&gt; cores = fields.subList(<span class="integer">0</span>, coreHeaders.size());
+        <span class="type">int</span> optionalStart = coreHeaders.size();
+        <span class="type">int</span> optionalEnd = fields.size();
+        <span class="predefined-type">List</span>&lt;<span class="predefined-type">String</span>&gt; optionals = fields.subList(optionalStart, optionalEnd);
+        addCard(<span class="keyword">new</span> Card(cores, optionals));
+    }
+}
+
+<span class="comment">/**
+ * Adds {@link Card} objects to the lesson.
+ *
+ * @param cards a list of {@link Card} objects to be added to the lesson
+ */</span>
+<span class="directive">public</span> <span class="type">void</span> addCards(<span class="predefined-type">List</span>&lt;Card&gt; cards) {
+    <span class="keyword">for</span> (Card card: cards) {
+        addCard(card);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>addCards(List&lt;Card&gt; cards)</code> method is called by the <code>LessonList.java</code> which generates a list of lessons.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="lessonlist-class-br"><a class="link" href="#lessonlist-class-br">4.3.5. LessonList class<br></a></h4>
+<div class="paragraph">
+<p>An instance of <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/lesson/LessonList.java"><code>LessonList.java</code></a> represents a list of lessons. It has helper functions to assist with the management of lessons.</p>
+</div>
+<div class="paragraph">
+<p>The following code shows how the <code>Main</code>, <code>Storage</code>, <code>Logic</code>, and <code>ManagementModel</code> key components use the <code>LessonList.java</code> class.</p>
+</div>
+<div class="sect4">
+<h5 id="usage-by-the-code-main-code-and-code-storage-code-key-components-br"><a class="link" href="#usage-by-the-code-main-code-and-code-storage-code-key-components-br">Usage by the <code>Main</code> and <code>Storage</code> key components<br></a></h5>
+<div class="paragraph">
+<p>When the <code>Main</code> component loads upon app launch, it triggers the <code>Storage</code> component which loads lessons from the hard disk into memory by calling the <code>LessonList()</code> constructor, the <code>addLesson(Lesson lesson)</code> and other methods.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
+ * Creates a new {@link LessonList} which is used to store a list of {@link Lesson} objects.
+ */</span>
+<span class="directive">public</span> LessonList() {
+    lessons = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;&gt;();
+}
+
+<span class="comment">/**
+ * Adds a {@link Lesson} object to {@link #lessons}.
+ *
+ * @param lesson {@link Lesson} to be added to {@link #lessons}
+ */</span>
+<span class="directive">public</span> <span class="type">void</span> addLesson(Lesson lesson) {
+    requireNonNull(lesson);
+    lessons.add(lesson);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="usage-by-the-code-logic-code-and-code-managementmodel-code-key-components-br"><a class="link" href="#usage-by-the-code-logic-code-and-code-managementmodel-code-key-components-br">Usage by the <code>Logic</code> and <code>ManagementModel</code> key components<br></a></h5>
+<div class="paragraph">
+<p>When the <code>Logic</code> component parses an <code>addCard</code> command, it triggers the <code>ManagementModel</code> component to use the <code>addCardToOpenedLesson(Card card)</code> to add a card to the lesson opened for editing in <strong>Card View</strong>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
+ * Adds a {@link Card} to the {@link #openedLesson}.
+ *
+ * @param card {@link Card} to be added to the {@link #openedLesson}
+ */</span>
+<span class="directive">public</span> <span class="type">void</span> addCardToOpenedLesson(Card card) {
+    requireAllNonNull(openedLesson, card);
+    openedLesson.addCard(card);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="addCard"><a class="link" href="#addCard">4.3.6. Add card command: <code>addCard</code><br></a></h4>
+<div class="paragraph">
+<p>The <code>addCard</code> command adds a card to the lesson which is being edited in <strong>Card View</strong>.<br></p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Given a lesson on country capitals which has 2 test values, 'Country' and 'Capital', and 1 hint value, 'Hint'.</p>
+</li>
+<li>
+<p>If a user wants to add a flashcard to this lesson, he would enter <code>addCard t/Korea t/Seoul h/S</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>How it will look like to the user after entering the command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ui_add_card_after.png" alt="ui add card after" width="512">
+</div>
+<div class="title">Figure 15. Expected result after the card is added</div>
+</div>
+<div class="paragraph">
+<p>Given the above example, the following sequence of interactions will occur within the <code>Logic</code> component.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sd_add_card.png" alt="sd add card" width="800">
+</div>
+<div class="title">Figure 16. Sequence diagram of the <code>addCard t/Korea t/Seoul h/S</code> command</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mgtConsiderations"><a class="link" href="#mgtConsiderations">4.3.7. Design consideration<br></a></h4>
+<div class="sect4">
+<h5 id="aspect-contextual-management-commands-br"><a class="link" href="#aspect-contextual-management-commands-br">Aspect: contextual management commands<br></a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Only lesson-related commands are allowed in <strong>Lesson View</strong> sub-management mode, and only card-related commands are allowed in <strong>Card View</strong> sub-management mode.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: The user need not specify which lesson he is adding or deleting cards from. It is clear which lesson is currently being edited.</p>
+</li>
+<li>
+<p>Con: Tedious to implement given that it requries significant refactoring of the base code provided.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> A single management mode where all lesson and card-related commands can be executed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pro: This is significantly easier to implement give that no major refactoring is requred.</p>
+</li>
+<li>
+<p>Con: This compromises the user experience.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Alternative 1</strong> was chosen because it will vastly improve the user experience. For example, if a user were to need to add multiple cards to a specific lesson, alternative 2 would require the user to enter the lesson&#8217;s index or name for each <code>addCard</code> command (e.g. <code>addCard n/Sample-Capitals t/Korea t/Seoul</code> where 'Sample-Capitals' is the lesson&#8217;s name).<br></p>
+</div>
+<div class="paragraph">
+<p>On the other hand, alternative 1 only requires the user to open the lesson for editing in <strong>Card View</strong> once, before calling the <code>addCard</code> commands. These <code>addCard</code> commands will not require the user to specify which lesson to add the cards to.<br></p>
+</div>
+<div class="paragraph">
+<p>Hence by choosing alternative 1, the user experience was vastly improved given that the user interface is easier to use.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sessionFeature"><a class="link" href="#sessionFeature">4.4. Session feature<br></a></h3>
+<div class="paragraph">
+<p>Session feature generates cards for users in quiz session based on their requirement.</p>
+</div>
+<div class="sect3">
+<h4 id="current-implementation-br-2"><a class="link" href="#current-implementation-br-2">4.4.1. Current implementation<br></a></h4>
+<div class="paragraph">
+<p>Session feature implements the following functions and commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Combining data from lesson and user storage together.</p>
+</li>
+<li>
+<p>SrsCardManager:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Generating a list of cards for quiz based on different modes and SRS (Space-Repetition technique) method.</p>
+</li>
+<li>
+<p>Updating user data after quiz ends.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>start</code> - An input with lesson index, count of cards and mode parameters.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="srs-method"><a class="link" href="#srs-method">3.3.2. SRS method</a></h4>
+<h4 id="srs-method-br"><a class="link" href="#srs-method-br">4.4.2. SRS method<br></a></h4>
 <div class="paragraph">
 <p>The SRS method allows users to be tested with the most urgent questions. The method gives each card a <code>srsDueDate</code> field which contains
 an instant value representing the deadline of testing this card again.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The SRS method updates users profile using <a href="https://en.wikipedia.org/wiki/Leitner_system">Leitner_system</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>There are several levels in the Leitner_system. The lower the level is, the more urgent the card is. When the user answers correctly, the level of that card will increase by one. Otherwise it will decrease by one.</p>
+</li>
+<li>
+<p>User data will be updated based on their performance in quiz session. Generally speaking, if the user answer correctly, the <code>srsDueDate</code> of the current card will be carry-forwarded.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/Leitner-system.png" alt="Leitner system" width="300">
+</div>
+<div class="title">Figure 17. Explanation diagram for Leitner-System</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-consideration"><a class="link" href="#design-consideration">3.3.3. Design Consideration</a></h4>
+<h4 id="srscardmanager-br"><a class="link" href="#srscardmanager-br">4.4.3. SrsCardManager<br></a></h4>
+<div class="paragraph">
+<p>The <code>SrsCardManager</code> generates needed list of <code>QuizCard</code> when the user wants to start a quiz. This class includes four methods for four different modes correspondingly as shown below.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Difficult mode: <code>previewDifficult()</code></p>
+</li>
+<li>
+<p>Preview mode: <code>preview()</code></p>
+</li>
+<li>
+<p>Learn mode: <code>learn()</code></p>
+</li>
+<li>
+<p>Review mode: <code>sort()</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarizes what happens when the user executes a new <code>StartCommand</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/SrsCardManagerGenerateActivityDiagram.png" alt="SrsCardManagerGenerateActivityDiagram" width="500">
+</div>
+<div class="title">Figure 18. Activity diagram for session generation</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/Spaced_repetition">Space-Repetition technique</a> is only applied in review mode.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>SrsCardManager</code> also updates user data using <code>UpdateCardData()</code> after receiving results from <code>Quiz</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="management-start-command-code-start-code-br"><a class="link" href="#management-start-command-code-start-code-br">4.4.4. Management start command: <code>start</code><br></a></h4>
+<div class="paragraph">
+<p>The <code>start</code> command starts a quiz session based on input parameters. It will analyze the current storage information and then generate the list of <code>QuizCard</code> using <code>SrsCardManager</code>. It will test the 2 values set to be tested for the lesson. The generating rules are different for different <code>QuizMode</code> as explained in a subsequent section. Once the <code>start</code> command have succeeded running, the system will switch to the quiz mode.</p>
+</div>
+<div class="paragraph">
+<p>The <code>start</code> command needs users to specify <code>LessonIndex</code>, <code>CardCount</code> and <code>QuizMode</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows the interaction between the various classes when the user starts a sample quiz:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/QuizStartCommandSequenceDiagram.png" alt="QuizStartCommandSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 19. Sequence diagram for start feature</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-consideration"><a class="link" href="#design-consideration">4.4.5. Design consideration</a></h4>
 <div class="sect4">
-<h5 id="aspect-srs-method-for-updating"><a class="link" href="#aspect-srs-method-for-updating">Aspect: SRS method for updating</a></h5>
+<h5 id="aspect-srs-method-for-updating-br"><a class="link" href="#aspect-srs-method-for-updating-br">Aspect: SRS method for updating<br></a></h5>
 <div class="ulist">
 <ul>
 <li>
@@ -821,16 +1483,88 @@ an instant value representing the deadline of testing this card again.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Short times interval between the first few repetitions.</p>
+<p>Pros: Short time interval between the first few repetitions.</p>
 </li>
 <li>
-<p>Cons: No level attribute to value the element clearly.</p>
+<p>Cons: No level attribute to group the element clearly.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Alternative 1 was chosen because it clearly displays the due date in several levels.</p>
+<p>Alternative 1 was chosen because it clearly displays the due date in several levels. Developers can also understand it easily since the actions for updating is simple. Besides, the system does not require the testing interval of the same card to be very small.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-data-storage-to-support-the-srs-system-br"><a class="link" href="#aspect-data-storage-to-support-the-srs-system-br">Aspect: data storage to support the SRS system<br></a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1: The system saves the due time into several levels and stores in a hashmap with card&#8217;s hashcode (current choice)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: It is easier to update the user progress using Leinter System since the levels are already stored.</p>
+</li>
+<li>
+<p>Cons: The system needs to generate the range of due time for each level by default and the range may be unreasonable.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2: The system saves the due time and hashcode of cards directly in a 2D array</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: It is clearer to see the match between card and its due time with same hashcode.</p>
+</li>
+<li>
+<p>Cons: It is more difficult to set the updated due time for each single card.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 1 was chosen because the quiz only passes back information of total attempts and total number of correct answers. It is hard to generate an algorithm to update due time for each single card with only these quiz information. Thus, grouping cards as different levels and updating due time under different levels can solve this problem more efficiently.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-review-mode-br"><a class="link" href="#aspect-review-mode-br">Aspect: review mode<br></a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1: Starts test directly (current choice)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Users can focus on the tests directly.</p>
+</li>
+<li>
+<p>Cons: No time for them to have a quick reminder.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2: Starts with previewing questions and answers</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Users can recall the cards before testing.</p>
+</li>
+<li>
+<p>Cons: The difficulty level becomes lower.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 1 was chosen because users are supposed to enter the test directly when they are reviewing cards. They can then judge their memorizing results in a most accurate level.</p>
 </li>
 </ul>
 </div>
@@ -838,12 +1572,12 @@ an instant value representing the deadline of testing this card again.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="quiz-feature"><a class="link" href="#quiz-feature">3.4. Quiz feature</a></h3>
+<h3 id="quiz-feature-br"><a class="link" href="#quiz-feature-br">4.5. Quiz feature<br></a></h3>
 <div class="paragraph">
 <p>Quiz feature allows users to enter quiz related commands and answer.</p>
 </div>
 <div class="sect3">
-<h4 id="current-implementation-4"><a class="link" href="#current-implementation-4">3.4.1. Current Implementation</a></h4>
+<h4 id="current-implementation-br-3"><a class="link" href="#current-implementation-br-3">4.5.1. Current implementation<br></a></h4>
 <div class="paragraph">
 <p>The quiz feature processes the following inputs:</p>
 </div>
@@ -853,71 +1587,249 @@ an instant value representing the deadline of testing this card again.</p>
 <p><code>[ANSWER]&#8230;&#8203;</code> - An input without a prefix <code>\</code> is treated as an answer.</p>
 </li>
 <li>
-<p><code>\difficult</code> - Labels current question in quiz as difficult or not.</p>
+<p><code>\difficult</code> - Labels current question as difficult or not.</p>
 </li>
 <li>
-<p><code>\help</code> - Lists all commands in quiz and inputs the program will accept.</p>
+<p><code>\help</code> - Lists all quiz commands and inputs which will be accepted.</p>
 </li>
 <li>
-<p><code>\hint</code> - Reveals additional information to help user to solve the question.</p>
+<p><code>\hint</code> - Reveals additional information to help the user to answer the question.</p>
 </li>
 <li>
-<p><code>\quit</code> - Quits a quiz and save attempted progress.</p>
+<p><code>\quit</code> - Quits quiz mode and saves attempt progress.</p>
 </li>
 <li>
-<p><code>\status</code> - Lists current status and lesson progress of user.</p>
+<p><code>\status</code> - Lists current quiz progress.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="answer"><a class="link" href="#answer">3.4.2. [ANSWER]</a></h4>
+<h4 id="quiz-class-br"><a class="link" href="#quiz-class-br">4.5.2. Quiz class<br></a></h4>
 <div class="paragraph">
-<p>The <code>[ANSWER]</code> feature is facilitated by <code>QuizAnswerCommand</code>. The command takes in user input
-as answer to be processed later.</p>
+<p><a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/quiz/Quiz.java"><code>Quiz.java</code></a> holds all the in-memory
+quiz data. It takes in a list of <a href="#card">cards</a> from <code>Session</code>. Then, it generates an expanded list of cards based on the <code>mode</code> indicated by the user. The generated list of cards in both
+<code>review</code> and <code>learn</code> mode includes cards which questions and answers are flipped. This to ensure that users are
+memorizing both question and answer values. According to the mode which the user has chosen, the cards will be
+displayed differently as seen below.</p>
 </div>
 <div class="paragraph">
-<p>The following sequence diagram shows the interaction between the various classes when the user
-answers a question:</p>
+<p>In the four different modes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Preview</strong>: both the question and answer are shown to the user.</p>
+</li>
+</ul>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/QuizAnswerCommandSequenceDiagram.png" alt="QuizAnswerCommandSequenceDiagram" width="800">
+<img src="images/quiz-command-examples/quiz-preview.PNG" alt="quiz preview" width="300">
 </div>
-<div class="title">Figure 11. Sequence diagram for answer feature</div>
+<div class="title">Figure 20. Question displayed in <code>preview</code> mode.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Review</strong>: only the question is shown as the user needs to answer the question.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/quiz-review.PNG" alt="quiz review" width="300">
+</div>
+<div class="title">Figure 21. Question displayed in <code>review</code> mode.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Learn</strong>: is a combination of preview and review, the user sees both the question and
+answer as in <code>preview</code> mode, before attempting the question with the answer hidden as in <code>review</code> mode.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/quiz-learn.PNG" alt="quiz learn" width="670">
+</div>
+<div class="title">Figure 22. Question displayed in <code>learn</code> mode.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Difficult</strong>: similar to preview mode but only contains questions which have been labelled as
+difficult.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following code shows how the cards are generated:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> <span class="predefined-type">List</span>&lt;QuizCard&gt; generate() {
+    generatedQuizCardList = <span class="keyword">new</span> <span class="predefined-type">ArrayList</span>&lt;&gt;();
+
+    <span class="keyword">switch</span> (mode) {
+    <span class="keyword">case</span> PREVIEW:
+        generatePreview();
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> LEARN:
+        <span class="comment">// Learn is a combination of preview + review</span>
+        generatePreview();
+        generateReview();
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> REVIEW:
+        generateReview();
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> DIFFICULT:
+        generatePreview();
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        <span class="keyword">break</span>;
+    }
+
+    generatedCardSize = generatedQuizCardList.size();
+    <span class="keyword">return</span> generatedQuizCardList;
+}
+
+<span class="directive">private</span> <span class="type">void</span> generateReview() {
+    QuizCard currentCard;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i &lt; originalQuizCardList.size(); i++) {
+        currentCard = originalQuizCardList.get(i);
+        generatedQuizCardList.add(
+            currentCard.generateOrderedQuizCardWithIndex(i, QuizMode.REVIEW));
+    }
+
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i &lt; originalQuizCardList.size(); i++) {
+        currentCard = originalQuizCardList.get(i);
+        generatedQuizCardList.add(
+            currentCard.generateFlippedQuizCardWithIndex(i));
+    }
+}
+
+<span class="directive">private</span> <span class="type">void</span> generatePreview() {
+    QuizCard currentCard;
+
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i &lt; originalQuizCardList.size(); i++) {
+        currentCard = originalQuizCardList.get(i);
+        generatedQuizCardList.add(
+            currentCard.generateOrderedQuizCardWithIndex(i, QuizMode.PREVIEW));
+    }
+}</code></pre>
+</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="quit"><a class="link" href="#quit">3.4.3. \quit</a></h4>
+<h4 id="quiz-answer-command-code-answer-code-br"><a class="link" href="#quiz-answer-command-code-answer-code-br">4.5.3. Quiz answer command: <code>[ANSWER]</code><br></a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/AnwerComponetSequenceDiagram.png" alt="AnwerComponetSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 23. High-level sequence diagram for the <code>ANSWER</code> command, an example of completing a quiz.</div>
+</div>
 <div class="paragraph">
-<p>The <code>\quit</code> will force quit the current quiz and save the attempted question to the location that
-the user have specified in <code>UserPref</code>, by default it will saved to <code>\data\user\savedata.csv</code>. Once
-the <code>\quit</code> command have succeeded running, it will return back to the <code>ManagementMode</code>.</p>
+<p>The <code>[ANSWER]</code> feature is facilitated by <code>QuizAnswerCommand</code>. The command takes in user input
+as answer, which will be processed later when the command is executed.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows the interaction between the various classes when the user
+answered the question correctly:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/QuizAnswerCommandSequenceDiagram.png" alt="QuizAnswerCommandSequenceDiagram" width="900">
+</div>
+<div class="title">Figure 24. Sequence diagram for answer feature</div>
+</div>
+<div class="paragraph">
+<p>In the <code>execute</code> method of the <code>QuizAnswerCommand</code>, the following steps can be performed:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Quiz result<br>
+This step checks if the user is shown the result, this is performed because the quiz can only end after
+the result has been shown. Once the quiz ends, BrainTrain will save the progress of the quiz
+to the file specified by the user.</p>
+</li>
+<li>
+<p>Handling of answer<br>
+This step checks if the answer should be handled, if user is in <code>PREVIEW</code> mode it will not be
+handled. Otherwise, the total attempts and streak of the question will be updated depending on whether the question has been answered correctly.</p>
+</li>
+<li>
+<p>Handling of next question<br>
+This step verifies that the question has been answered correctly, and checks if there are still questions
+left for the current quiz. Depending on the check, it will then displays the next question or the quiz result.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following code shows how the steps could be performed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> CommandResult execute(Model model, CommandHistory history) <span class="directive">throws</span> CommandException {
+    requireNonNull(model);
+    <span class="local-variable">this</span>.quizModel = requireQuizModel(model);
+    <span class="local-variable">this</span>.card = quizModel.getCurrentQuizCard();
+    <span class="local-variable">this</span>.isCurrentCardWrong = <span class="predefined-constant">false</span>;
+
+    <span class="predefined-type">StringBuilder</span> sb = <span class="keyword">new</span> <span class="predefined-type">StringBuilder</span>();
+
+    <span class="keyword">if</span> (quizModel.isResultDisplay()) {
+        endQuiz();
+        <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>, <span class="predefined-constant">true</span>, <span class="predefined-constant">false</span>, <span class="predefined-constant">false</span>);
+    }
+
+    <span class="keyword">if</span> (card.isWrongTwice() || card.getQuizMode() != QuizMode.PREVIEW) {
+        sb.append(handleCurrentCardAnswer());
+    }
+
+    <span class="keyword">if</span> (!isCurrentCardWrong) {
+        <span class="predefined-type">String</span> result = handleIfCardLeft();
+        sb.append(result);
+    }
+
+    <span class="keyword">return</span> <span class="keyword">new</span> CommandResult(sb.toString(), <span class="predefined-constant">true</span>, <span class="predefined-constant">false</span>, <span class="predefined-constant">false</span>);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="quiz-quit-command-code-quit-code-br"><a class="link" href="#quiz-quit-command-code-quit-code-br">4.5.4. Quiz quit command: <code>\quit</code><br></a></h4>
+<div class="paragraph">
+<p>The <code>\quit</code> will force quit the current quiz and save the attempted questions to the location which
+the user has specified in <code>UserPref</code>. By default it will be saved to <code>\userdata\savedata.csv</code>. Once
+the <code>\quit</code> command is completed, the user will be returned to the management mode.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/QuizQuitCommandSequenceDiagram.png" alt="QuizQuitCommandSequenceDiagram" width="800">
 </div>
-<div class="title">Figure 12. Sequence diagram for quit feature</div>
+<div class="title">Figure 25. Sequence diagram for quit feature</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="status"><a class="link" href="#status">3.4.4. \status</a></h4>
+<h4 id="quiz-status-command-code-status-code-br"><a class="link" href="#quiz-status-command-code-status-code-br">4.5.5. Quiz status command: <code>\status</code><br></a></h4>
 <div class="paragraph">
-<p>The <code>\status</code> feature lists the total number of attempts you have attempted, total number of
-question you have gotten correct in this quiz and which question you are currently on.</p>
+<p>The <code>\status</code> feature lists the total number of attempts you have made, total number of
+question you have gotten correct, and which question you are currently on.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/QuizStatusCommandSequenceDiagram.png" alt="QuizStatusCommandSequenceDiagram" width="800">
 </div>
-<div class="title">Figure 13. Sequence diagram for status feature</div>
+<div class="title">Figure 26. Sequence diagram for status feature</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.4.5. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">4.5.6. Design considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-how-quiz-executes"><a class="link" href="#aspect-how-quiz-executes">Aspect: How Quiz executes</a></h5>
+<h5 id="aspect-quiz-and-management-commands-execution-br"><a class="link" href="#aspect-quiz-and-management-commands-execution-br">Aspect: quiz and management commands execution<br></a></h5>
 <div class="ulist">
 <ul>
 <li>
@@ -925,10 +1837,10 @@ question you have gotten correct in this quiz and which question you are current
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Least restricted choice of answer.</p>
+<p>Pro: Least restricted choice of answer and great user experience.</p>
 </li>
 <li>
-<p>Cons: Tedious to implement.</p>
+<p>Con: Tedious to implement.</p>
 </li>
 </ul>
 </div>
@@ -938,10 +1850,11 @@ question you have gotten correct in this quiz and which question you are current
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Easy to implement.</p>
+<p>Pro: Easy to implement.</p>
 </li>
 <li>
-<p>Cons: Restricted answer. Answer cannot start with words already listed as management commands
+<p>Con: Restricted answer and compromised user experience. Answer cannot start with words already
+reserved for management commands.
 (e.g. <code>start</code>)</p>
 </li>
 </ul>
@@ -950,25 +1863,22 @@ question you have gotten correct in this quiz and which question you are current
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Alternative 1</strong> is chosen because it allows the user to have a more comprehensive choice of
-word as
-answer without restricting the possible choices. In certain question, it is possible for the
-answer to be "start". Hence by choosing alternative 1, the choice of answer is the least
-restricted. Also, by running the quiz in a different mode, it allows the user to concentrate on the quiz
-without having unrelated display as distraction.</p>
+<p><strong>Alternative 1</strong> is chosen because it allows the user to have a more flexible choice of
+word. For certain questions, it is possible for the answer to be "start". Hence by choosing alternative 1, the choice of answer will not be restricted. Also, by running the quiz in a different mode, it allows the user to have intuitive
+interaction in quiz mode.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
+<h3 id="logging-br"><a class="link" href="#logging-br">4.6. Logging<br></a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.7, &#8220;Configuration<br>&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -999,7 +1909,7 @@ without having unrelated display as distraction.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.7. Configuration<br></a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1007,10 +1917,10 @@ without having unrelated display as distraction.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="documentation"><a class="link" href="#documentation">4. Documentation</a></h2>
+<h2 id="documentation-br"><a class="link" href="#documentation-br">5. Documentation<br></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We use asciidoc for writing documentation.</p>
+<p>We used AsciiDoc for writing documentation.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1019,26 +1929,26 @@ without having unrelated display as distraction.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting.
+We chose AsciiDoc over Markdown because AsciiDoc, although a bit more complex than Markdown, provides more flexibility in formatting.
 </td>
 </tr>
 </table>
 </div>
 <div class="sect2">
-<h3 id="editing-documentation"><a class="link" href="#editing-documentation">4.1. Editing documentation</a></h3>
+<h3 id="editing-documentation-br"><a class="link" href="#editing-documentation-br">5.1. Editing documentation<br></a></h3>
 <div class="paragraph">
 <p>See <a href="UsingGradle.html#rendering-asciidoc-files">UsingGradle.adoc</a> to learn how to render <code>.adoc</code> files locally to preview the end result of your edits.
 Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your <code>.adoc</code> files in real-time.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="publishing-documentation"><a class="link" href="#publishing-documentation">4.2. Publishing documentation</a></h3>
+<h3 id="publishing-documentation-br"><a class="link" href="#publishing-documentation-br">5.2. Publishing documentation<br></a></h3>
 <div class="paragraph">
 <p>See <a href="UsingTravis.html#deploying-github-pages">UsingTravis.adoc</a> to learn how to deploy GitHub Pages using Travis.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="converting-documentation-to-pdf-format"><a class="link" href="#converting-documentation-to-pdf-format">4.3. Converting documentation to PDF format</a></h3>
+<h3 id="converting-documentation-to-pdf-format-br"><a class="link" href="#converting-documentation-to-pdf-format-br">5.3. Converting documentation to PDF format<br></a></h3>
 <div class="paragraph">
 <p>We use <a href="https://www.google.com/chrome/browser/desktop/">Google Chrome</a> for converting documentation to PDF format, as Chrome&#8217;s PDF engine preserves hyperlinks used in webpages.</p>
 </div>
@@ -1065,13 +1975,13 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 14. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 27. Saving documentation as PDF files in Chrome</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Docs-SiteWideDocSettings"><a class="link" href="#Docs-SiteWideDocSettings">4.4. Site-wide documentation settings</a></h3>
+<h3 id="Docs-SiteWideDocSettings"><a class="link" href="#Docs-SiteWideDocSettings">5.4. Site-wide documentation settings<br></a></h3>
 <div class="paragraph">
-<p>The <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/build.gradle"><code>build.gradle</code></a> file specifies some project-specific <a href="https://asciidoctor.org/docs/user-manual/#attributes">asciidoc attributes</a> which affects how all documentation files within this project are rendered.</p>
+<p>The <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/build.gradle"><code>build.gradle</code></a> file specifies some project-specific <a href="https://AsciiDoctor.org/docs/user-manual/#attributes">AsciiDoc attributes</a> which affects how all documentation files within this project are rendered.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1128,7 +2038,7 @@ This will render the SE-EDU navigation bar at the top of the page, and add some 
 </table>
 </div>
 <div class="sect2">
-<h3 id="Docs-PerFileDocSettings"><a class="link" href="#Docs-PerFileDocSettings">4.5. Per-file documentation settings</a></h3>
+<h3 id="Docs-PerFileDocSettings"><a class="link" href="#Docs-PerFileDocSettings">5.5. Per-file documentation settings<br></a></h3>
 <div class="paragraph">
 <p>Each <code>.adoc</code> file may also specify some file-specific <a href="https://asciidoctor.org/docs/user-manual/#attributes">asciidoc attributes</a> which affects how the file is rendered.</p>
 </div>
@@ -1185,7 +2095,7 @@ One of: <code>UserGuide</code>, <code>DeveloperGuide</code>, <code>LearningOutco
 </table>
 </div>
 <div class="sect2">
-<h3 id="site-template"><a class="link" href="#site-template">4.6. Site template</a></h3>
+<h3 id="site-template-br"><a class="link" href="#site-template-br">5.6. Site template<br></a></h3>
 <div class="paragraph">
 <p>The files in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/docs/stylesheets"><code>docs/stylesheets</code></a> are the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS stylesheets</a> of the site.
 You can modify them to change some properties of the site&#8217;s design.</p>
@@ -1214,10 +2124,10 @@ The SE-EDU team does not provide support for modified template files.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Testing"><a class="link" href="#Testing">5. Testing</a></h2>
+<h2 id="Testing"><a class="link" href="#Testing">6. Testing</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="running-tests"><a class="link" href="#running-tests">5.1. Running tests</a></h3>
+<h3 id="running-tests-br"><a class="link" href="#running-tests-br">6.1. Running tests<br></a></h3>
 <div class="paragraph">
 <p>There are three ways to run tests.</p>
 </div>
@@ -1279,7 +2189,7 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 </div>
 </div>
 <div class="sect2">
-<h3 id="types-of-tests"><a class="link" href="#types-of-tests">5.2. Types of tests</a></h3>
+<h3 id="types-of-tests-br"><a class="link" href="#types-of-tests-br">6.2. Types of tests<br></a></h3>
 <div class="paragraph">
 <p>We have two types of tests:</p>
 </div>
@@ -1321,7 +2231,7 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="troubleshooting-testing"><a class="link" href="#troubleshooting-testing">5.3. Troubleshooting testing</a></h3>
+<h3 id="troubleshooting-testing-br"><a class="link" href="#troubleshooting-testing-br">6.3. Troubleshooting testing<br></a></h3>
 <div class="paragraph">
 <p><strong>Problem: <code>HelpWindowTest</code> fails with a <code>NullPointerException</code>.</strong></p>
 </div>
@@ -1339,34 +2249,34 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="dev-ops"><a class="link" href="#dev-ops">6. Dev ops</a></h2>
+<h2 id="dev-ops"><a class="link" href="#dev-ops">7. Dev ops</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="build-automation"><a class="link" href="#build-automation">6.1. Build automation</a></h3>
+<h3 id="build-automation-br"><a class="link" href="#build-automation-br">7.1. Build automation<br></a></h3>
 <div class="paragraph">
 <p>See <a href="UsingGradle.html">UsingGradle.adoc</a> to learn how to use Gradle for build automation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="continuous-integration"><a class="link" href="#continuous-integration">6.2. Continuous integration</a></h3>
+<h3 id="continuous-integration-br"><a class="link" href="#continuous-integration-br">7.2. Continuous integration<br></a></h3>
 <div class="paragraph">
 <p>We use <a href="https://travis-ci.org/">Travis CI</a> and <a href="https://www.appveyor.com/">AppVeyor</a> to perform <em>Continuous Integration</em> on our projects. See <a href="UsingTravis.html">UsingTravis.adoc</a> and <a href="UsingAppVeyor.html">UsingAppVeyor.adoc</a> for more details.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="coverage-reporting"><a class="link" href="#coverage-reporting">6.3. Coverage reporting</a></h3>
+<h3 id="coverage-reporting-br"><a class="link" href="#coverage-reporting-br">7.3. Coverage reporting<br></a></h3>
 <div class="paragraph">
 <p>We use <a href="https://coveralls.io/">Coveralls</a> to track the code coverage of our projects. See <a href="UsingCoveralls.html">UsingCoveralls.adoc</a> for more details.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="documentation-previews"><a class="link" href="#documentation-previews">6.4. Documentation previews</a></h3>
+<h3 id="documentation-previews-br"><a class="link" href="#documentation-previews-br">7.4. Documentation previews<br></a></h3>
 <div class="paragraph">
-<p>When a pull request has changes to asciidoc files, you can use <a href="https://www.netlify.com/">Netlify</a> to see a preview of how the HTML version of those asciidoc files will look like when the pull request is merged. See <a href="UsingNetlify.html">UsingNetlify.adoc</a> for more details.</p>
+<p>When a pull request has changes to AsciiDoc files, you can use <a href="https://www.netlify.com/">Netlify</a> to see a preview of how the HTML version of those AsciiDoc files will look like when the pull request is merged. See <a href="UsingNetlify.html">UsingNetlify.adoc</a> for more details.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="making-a-release"><a class="link" href="#making-a-release">6.5. Making a release</a></h3>
+<h3 id="making-a-release-br"><a class="link" href="#making-a-release-br">7.5. Making a release<br></a></h3>
 <div class="paragraph">
 <p>Here are the steps to create a new release.</p>
 </div>
@@ -1388,7 +2298,7 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="managing-dependencies"><a class="link" href="#managing-dependencies">6.6. Managing dependencies</a></h3>
+<h3 id="managing-dependencies-br"><a class="link" href="#managing-dependencies-br">7.6. Managing dependencies<br></a></h3>
 <div class="paragraph">
 <p>A project often depends on third-party libraries. For example, Address Book depends on the <a href="https://github.com/FasterXML/jackson">Jackson library</a> for JSON parsing. Managing these <em>dependencies</em> can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives:</p>
 </div>
@@ -1406,716 +2316,7 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="GetStartedProgramming"><a class="link" href="#GetStartedProgramming">Appendix A: Suggested programming tasks to get started</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Suggested path for new programmers:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>First, add small local-impact (i.e. the impact of the change does not go beyond the component) enhancements to one component at a time. Some suggestions are given in <a href="#GetStartedProgramming-EachComponent">Section A.1, &#8220;Improving each component&#8221;</a>.</p>
-</li>
-<li>
-<p>Next, add a feature that touches multiple components to learn how to implement an end-to-end feature across all components. <a href="#GetStartedProgramming-RemarkCommand">Section A.2, &#8220;Creating a new command: <code>remark</code>&#8221;</a> explains how to go about adding such a feature.</p>
-</li>
-</ol>
-</div>
-<div class="sect2">
-<h3 id="GetStartedProgramming-EachComponent"><a class="link" href="#GetStartedProgramming-EachComponent">A.1. Improving each component</a></h3>
-<div class="paragraph">
-<p>Each individual exercise in this section is component-based (i.e. you would not need to modify the other components to get it to work).</p>
-</div>
-<h4 id="code-logic-code-component" class="discrete"><code>Logic</code> component</h4>
-<div class="paragraph">
-<p><strong>Scenario:</strong> You are in charge of <code>logic</code>. During dog-fooding, your team realize that it is troublesome for the user to type the whole command in order to execute a command. Your team devise some strategies to help cut down the amount of typing necessary, and one of the suggestions was to implement aliases for the command words. Your job is to implement such aliases.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Do take a look at <a href="#Design-Logic">Section 2.3, &#8220;Logic component&#8221;</a> before attempting to modify the <code>Logic</code> component.
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a shorthand equivalent alias for each of the individual commands. For example, besides typing <code>clear</code>, the user can also type <code>c</code> to remove all persons in the list.</p>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Hints</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Just like we store each individual command word constant <code>COMMAND_WORD</code> inside <code>*Command.java</code> (e.g.  <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/logic/commands/FindCommand.java"><code>FindCommand#COMMAND_WORD</code></a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/logic/commands/DeleteCommand.java"><code>DeleteCommand#COMMAND_WORD</code></a>), you need a new constant for aliases as well (e.g. <code>FindCommand#COMMAND_ALIAS</code>).</p>
-</li>
-<li>
-<p><a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> is responsible for analyzing command words.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Solution</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Modify the switch statement in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser#parseCommand(String)</code></a> such that both the proper command word and alias can be used to execute the same intended command.</p>
-</li>
-<li>
-<p>Add new tests for each of the aliases that you have added.</p>
-</li>
-<li>
-<p>Update the user guide to document the new aliases.</p>
-</li>
-<li>
-<p>See this <a href="https://github.com/se-edu/addressbook-level4/pull/785">PR</a> for the full solution.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<h4 id="code-managementmodel-code-component" class="discrete"><code>ManagementModel</code> component</h4>
-<div class="paragraph">
-<p><strong>Scenario:</strong> You are in charge of <code>managementModel</code>. One day, the <code>logic</code>-in-charge approaches you for help. He wants to implement a command such that the user is able to remove a particular <code>core</code> from the opened lesson&#8217;s headers and also from all its cards, but the <code>managementModel</code> API does not support such a functionality at the moment. Your job is to implement an API method, so that your teammate can use your API to implement his command.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Do take a look at <a href="#Design-ManagementModel">Section 2.4, &#8220;ManagementModel component&#8221;</a> before attempting to modify the <code>Model</code> component.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Add a <code>removeCoreFromlesson(String core)</code> method. The specified core will be removed from the opened lesson&#8217;s headers and from all its cards.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Hints</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/modelmanager/ManagementModel.java">ManagementModel</a>, <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/lesson/LessonList.java">LessonList</a> and <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/lesson/Lesson.java">Lesson</a> need to be updated.</p>
-</li>
-<li>
-<p>Think about how you can use SLAP to design the method. Where should we place the main logic of deleting cores?</p>
-</li>
-<li>
-<p>Find out which of the existing API methods in  <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/lesson/LessonList.java">LessonList</a> and <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/lesson/Lesson.java">Lesson</a> classes can be used to implement the core removal logic.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Suggested solution</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Implement a <code>removeCoreFromlesson(String core)</code> method in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/managementModel/AddressBook.java"><code>AddressBook</code></a>. Loop through each person, and remove the <code>tag</code> from each person.</p>
-</li>
-<li>
-<p>Add a new method <code>removeCoreFromlesson(String core)</code> in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/lesson/LessonList.java">LessonList</a>. Your <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/model/modelmanager/ManagementModel.java">ManagementModel</a> should call <code>Lessonlist#removeCoreFromlesson(String core)</code>.</p>
-</li>
-<li>
-<p>Add new tests for each of the new public methods that you have added.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<h4 id="code-ui-code-component" class="discrete"><code>Ui</code> component</h4>
-<div class="paragraph">
-<p><strong>Scenario:</strong> You are in charge of <code>ui</code>. During a beta testing session, your team is observing how the users use your address book application. You realize that one of the users occasionally tries to delete non-existent tags from a contact, because the tags all look the same visually, and the user got confused. Another user made a typing mistake in his command, but did not realize he had done so because the error message wasn&#8217;t prominent enough. A third user keeps scrolling down the list, because he keeps forgetting the index of the last person in the list. Your job is to implement improvements to the UI to solve all these problems.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Do take a look at <a href="#Design-Ui">Section 2.2, &#8220;UI component&#8221;</a> before attempting to modify the <code>UI</code> component.
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Use different colors for different tags inside person cards. For example, <code>friends</code> tags can be all in brown, and <code>colleagues</code> tags can be all in yellow.</p>
-<div class="paragraph">
-<p><strong>Before</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/getting-started-ui-tag-before.png" alt="getting started ui tag before" width="300">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>After</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/getting-started-ui-tag-after.png" alt="getting started ui tag after" width="300">
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Hints</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The tag labels are created inside <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java">the <code>PersonCard</code> constructor</a> (<code>new Label(tag.tagName)</code>). <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Label.html">JavaFX&#8217;s <code>Label</code> class</a> allows you to modify the style of each Label, such as changing its color.</p>
-</li>
-<li>
-<p>Use the .css attribute <code>-fx-background-color</code> to add a color.</p>
-</li>
-<li>
-<p>You may wish to modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/resources/view/DarkTheme.css"><code>DarkTheme.css</code></a> to include some pre-defined colors using css, especially if you have experience with web-based css.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Solution</p>
-<div class="ulist">
-<ul>
-<li>
-<p>You can modify the existing test methods for <code>PersonCard</code> 's to include testing the tag&#8217;s color as well.</p>
-</li>
-<li>
-<p>See this <a href="https://github.com/se-edu/addressbook-level4/pull/798">PR</a> for the full solution.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The PR uses the hash code of the tag names to generate a color. This is deliberately designed to ensure consistent colors each time the application runs. You may wish to expand on this design to include additional features, such as allowing users to set their own tag colors, and directly saving the colors to storage, so that tags retain their colors even if the hash code algorithm changes.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> such that <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay</code></a> can show a different style on error (currently it shows the same regardless of errors).</p>
-<div class="paragraph">
-<p><strong>Before</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/getting-started-ui-result-before.png" alt="getting started ui result before" width="200">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>After</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/getting-started-ui-result-after.png" alt="getting started ui result after" width="200">
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Hints</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> is raised by <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/CommandBox.java"><code>CommandBox</code></a> which also knows whether the result is a success or failure, and is caught by <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay</code></a> which is where we want to change the style to.</p>
-</li>
-<li>
-<p>Refer to <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/CommandBox.java"><code>CommandBox</code></a> for an example on how to display an error.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Solution</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/commons/events/ui/NewResultAvailableEvent.java"><code>NewResultAvailableEvent</code></a> 's constructor so that users of the event can indicate whether an error has occurred.</p>
-</li>
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/ResultDisplay.java"><code>ResultDisplay#handleNewResultAvailableEvent(NewResultAvailableEvent)</code></a> to react to this event appropriately.</p>
-</li>
-<li>
-<p>You can write two different kinds of tests to ensure that the functionality works:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The unit tests for <code>ResultDisplay</code> can be modified to include verification of the color.</p>
-</li>
-<li>
-<p>The system tests <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/systemtests/AddressBookSystemTest.java"><code>AddressBookSystemTest#assertCommandBoxShowsDefaultStyle() and AddressBookSystemTest#assertCommandBoxShowsErrorStyle()</code></a> to include verification for <code>ResultDisplay</code> as well.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>See this <a href="https://github.com/se-edu/addressbook-level4/pull/799">PR</a> for the full solution.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Do read the commits one at a time if you feel overwhelmed.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Modify the <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to show the total number of people in the address book.</p>
-<div class="paragraph">
-<p><strong>Before</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/getting-started-ui-status-before.png" alt="getting started ui status before" width="500">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>After</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/getting-started-ui-status-after.png" alt="getting started ui status after" width="500">
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Hints</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/resources/view/StatusBarFooter.fxml"><code>StatusBarFooter.fxml</code></a> will need a new <code>StatusBar</code>. Be sure to set the <code>GridPane.columnIndex</code> properly for each <code>StatusBar</code> to avoid misalignment!</p>
-</li>
-<li>
-<p><a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> needs to initialize the status bar on application start, and to update it accordingly whenever the address book is updated.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Solution</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Modify the constructor of <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter</code></a> to take in the number of persons when the application just started.</p>
-</li>
-<li>
-<p>Use <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/StatusBarFooter.java"><code>StatusBarFooter#handleAddressBookChangedEvent(AddressBookChangedEvent)</code></a> to update the number of persons whenever there are new changes to the addressbook.</p>
-</li>
-<li>
-<p>For tests, modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/guitests/guihandles/StatusBarFooterHandle.java"><code>StatusBarFooterHandle</code></a> by adding a state-saving functionality for the total number of people status, just like what we did for save location and sync status.</p>
-</li>
-<li>
-<p>For system tests, modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/systemtests/AddressBookSystemTest.java"><code>AddressBookSystemTest</code></a> to also verify the new total number of persons status bar.</p>
-</li>
-<li>
-<p>See this <a href="https://github.com/se-edu/addressbook-level4/pull/803">PR</a> for the full solution.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<h4 id="code-storage-code-component" class="discrete"><code>Storage</code> component</h4>
-<div class="paragraph">
-<p><strong>Scenario:</strong> You are in charge of <code>storage</code>. For your next project milestone, your team plans to implement a new feature of saving the address book to the cloud. However, the current implementation of the application constantly saves the address book after the execution of each command, which is not ideal if the user is working on limited internet connection. Your team decided that the application should instead save the changes to a temporary local backup file first, and only upload to the cloud after the user closes the application. Your job is to implement a backup API for the address book storage.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Do take a look at <a href="#Design-Storage">Section 2.6, &#8220;Storage component&#8221;</a> before attempting to modify the <code>Storage</code> component.
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a new method <code>backupAddressBook(ReadOnlyAddressBook)</code>, so that the address book can be saved in a fixed temporary location.</p>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Hint</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Add the API method in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/storage/AddressBookStorage.java"><code>AddressBookStorage</code></a> interface.</p>
-</li>
-<li>
-<p>Implement the logic in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/storage/StorageManager.java"><code>StorageManager</code></a> and <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/storage/JsonAddressBookStorage.java"><code>JsonAddressBookStorage</code></a> class.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Solution</p>
-<div class="ulist">
-<ul>
-<li>
-<p>See this <a href="https://github.com/se-edu/addressbook-level4/pull/594">PR</a> for the full solution.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="GetStartedProgramming-RemarkCommand"><a class="link" href="#GetStartedProgramming-RemarkCommand">A.2. Creating a new command: <code>remark</code></a></h3>
-<div class="paragraph">
-<p>By creating this command, you will get a chance to learn how to implement a feature end-to-end, touching all major components of the app.</p>
-</div>
-<div class="paragraph">
-<p><strong>Scenario:</strong> You are a software maintainer for <code>addressbook</code>, as the former developer team has moved on to new projects. The current users of your application have a list of new feature requests that they hope the software will eventually have. The most popular request is to allow adding additional comments/notes about a particular contact, by providing a flexible <code>remark</code> field for each contact, rather than relying on tags alone. After designing the specification for the <code>remark</code> command, you are convinced that this feature is worth implementing. Your job is to implement the <code>remark</code> command.</p>
-</div>
-<div class="sect3">
-<h4 id="description"><a class="link" href="#description">A.2.1. Description</a></h4>
-<div class="paragraph">
-<p>Edits the remark for a person specified in the <code>INDEX</code>.<br>
-Format: <code>remark INDEX r/[REMARK]</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>remark 1 r/Likes to drink coffee.</code><br>
-Edits the remark for the first person to <code>Likes to drink coffee.</code></p>
-</li>
-<li>
-<p><code>remark 1 r/</code><br>
-Removes the remark for the first person.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="step-by-step-instructions"><a class="link" href="#step-by-step-instructions">A.2.2. Step-by-step Instructions</a></h4>
-<div class="sect4">
-<h5 id="step-1-logic-teach-the-app-to-accept-remark-which-does-nothing"><a class="link" href="#step-1-logic-teach-the-app-to-accept-remark-which-does-nothing">[Step 1] Logic: Teach the app to accept 'remark' which does nothing</a></h5>
-<div class="paragraph">
-<p>Let&#8217;s start by teaching the application how to parse a <code>remark</code> command. We will add the logic of <code>remark</code> later.</p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a <code>RemarkCommand</code> that extends <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/logic/commands/Command.java"><code>Command</code></a>. Upon execution, it should just throw an <code>Exception</code>.</p>
-</li>
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> to accept a <code>RemarkCommand</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add <code>RemarkCommandTest</code> that tests that <code>execute()</code> throws an Exception.</p>
-</li>
-<li>
-<p>Add new test method to <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/seedu/address/logic/parser/AddressBookParserTest.java"><code>AddressBookParserTest</code></a>, which tests that typing "remark" returns an instance of <code>RemarkCommand</code>.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-2-logic-teach-the-app-to-accept-remark-arguments"><a class="link" href="#step-2-logic-teach-the-app-to-accept-remark-arguments">[Step 2] Logic: Teach the app to accept 'remark' arguments</a></h5>
-<div class="paragraph">
-<p>Let&#8217;s teach the application to parse arguments that our <code>remark</code> command will accept. E.g. <code>1 r/Likes to drink coffee.</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Modify <code>RemarkCommand</code> to take in an <code>Index</code> and <code>String</code> and print those two parameters as the error message.</p>
-</li>
-<li>
-<p>Add <code>RemarkCommandParser</code> that knows how to parse two arguments, one index and one with prefix 'r/'.</p>
-</li>
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/logic/parser/AddressBookParser.java"><code>AddressBookParser</code></a> to use the newly implemented <code>RemarkCommandParser</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Modify <code>RemarkCommandTest</code> to test the <code>RemarkCommand#equals()</code> method.</p>
-</li>
-<li>
-<p>Add <code>RemarkCommandParserTest</code> that tests different boundary values
-for <code>RemarkCommandParser</code>.</p>
-</li>
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/seedu/address/logic/parser/AddressBookParserTest.java"><code>AddressBookParserTest</code></a> to test that the correct command is generated according to the user input.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-3-ui-add-a-placeholder-for-remark-in-code-personcard-code"><a class="link" href="#step-3-ui-add-a-placeholder-for-remark-in-code-personcard-code">[Step 3] Ui: Add a placeholder for remark in <code>PersonCard</code></a></h5>
-<div class="paragraph">
-<p>Let&#8217;s add a placeholder on all our <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> s to display a remark for each person later.</p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a <code>Label</code> with any random text inside <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/resources/view/PersonListCard.fxml"><code>PersonListCard.fxml</code></a>.</p>
-</li>
-<li>
-<p>Add FXML annotation in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> to tie the variable to the actual label.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/guitests/guihandles/PersonCardHandle.java"><code>PersonCardHandle</code></a> so that future tests can read the contents of the remark label.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-4-model-add-code-remark-code-class"><a class="link" href="#step-4-model-add-code-remark-code-class">[Step 4] Model: Add <code>Remark</code> class</a></h5>
-<div class="paragraph">
-<p>We have to properly encapsulate the remark in our <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/managementModel/person/Person.java"><code>Person</code></a> class. Instead of just using a <code>String</code>, let&#8217;s follow the conventional class structure that the codebase already uses by adding a <code>Remark</code> class.</p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add <code>Remark</code> to managementModel component (you can copy from <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/managementModel/person/Address.java"><code>Address</code></a>, remove the regex and change the names accordingly).</p>
-</li>
-<li>
-<p>Modify <code>RemarkCommand</code> to now take in a <code>Remark</code> instead of a <code>String</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add test for <code>Remark</code>, to test the <code>Remark#equals()</code> method.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-5-model-modify-code-person-code-to-support-a-code-remark-code-field"><a class="link" href="#step-5-model-modify-code-person-code-to-support-a-code-remark-code-field">[Step 5] Model: Modify <code>Person</code> to support a <code>Remark</code> field</a></h5>
-<div class="paragraph">
-<p>Now we have the <code>Remark</code> class, we need to actually use it inside <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/managementModel/person/Person.java"><code>Person</code></a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add <code>getRemark()</code> in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/managementModel/person/Person.java"><code>Person</code></a>.</p>
-</li>
-<li>
-<p>You may assume that the user will not be able to use the <code>add</code> and <code>edit</code> commands to modify the remarks field (i.e. the person will be created without a remark).</p>
-</li>
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/managementModel/util/SampleDataUtil.java/"><code>SampleDataUtil</code></a> to add remarks for the sample data (delete your <code>data/addressbook.json</code> so that the application will load the sample data when you launch it.)</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-6-storage-add-code-remark-code-field-to-code-jsonadaptedperson-code-class"><a class="link" href="#step-6-storage-add-code-remark-code-field-to-code-jsonadaptedperson-code-class">[Step 6] Storage: Add <code>Remark</code> field to <code>JsonAdaptedPerson</code> class</a></h5>
-<div class="paragraph">
-<p>We now have <code>Remark</code> s for <code>Person</code> s, but they will be gone when we exit the application. Let&#8217;s modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/storage/JsonAdaptedPerson.java"><code>JsonAdaptedPerson</code></a> to include a <code>Remark</code> field so that it will be saved.</p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a new JSON field for <code>Remark</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Fix <code>invalidAndValidPersonAddressBook.json</code>, <code>typicalPersonsAddressBook.json</code>, <code>validAddressBook.json</code> etc., such that the JSON tests will not fail due to a missing <code>remark</code> field.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-6b-test-add-withremark-for-code-personbuilder-code"><a class="link" href="#step-6b-test-add-withremark-for-code-personbuilder-code">[Step 6b] Test: Add withRemark() for <code>PersonBuilder</code></a></h5>
-<div class="paragraph">
-<p>Since <code>Person</code> can now have a <code>Remark</code>, we should add a helper method to <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/seedu/address/testutil/PersonBuilder.java"><code>PersonBuilder</code></a>, so that users are able to create remarks when building a <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/managementModel/person/Person.java"><code>Person</code></a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a new method <code>withRemark()</code> for <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/seedu/address/testutil/PersonBuilder.java"><code>PersonBuilder</code></a>. This method will create a new <code>Remark</code> for the person that it is currently building.</p>
-</li>
-<li>
-<p>Try and use the method on any sample <code>Person</code> in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/seedu/address/testutil/TypicalPersons.java"><code>TypicalPersons</code></a>.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-7-ui-connect-code-remark-code-field-to-code-personcard-code"><a class="link" href="#step-7-ui-connect-code-remark-code-field-to-code-personcard-code">[Step 7] Ui: Connect <code>Remark</code> field to <code>PersonCard</code></a></h5>
-<div class="paragraph">
-<p>Our remark label in <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a> is still a placeholder. Let&#8217;s bring it to life by binding it with the actual <code>remark</code> field.</p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/main/java/seedu/address/ui/PersonCard.java"><code>PersonCard</code></a>'s constructor to bind the <code>Remark</code> field to the <code>Person</code> 's remark.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Modify <a href="https://github.com/CS2103-AY1819S2-W14-1/main/tree/master/src/test/java/seedu/address/ui/testutil/GuiTestAssert.java"><code>GuiTestAssert#assertCardDisplaysPerson(&#8230;&#8203;)</code></a> so that it will compare the now-functioning remark label.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="step-8-logic-implement-code-remarkcommand-execute-code-logic"><a class="link" href="#step-8-logic-implement-code-remarkcommand-execute-code-logic">[Step 8] Logic: Implement <code>RemarkCommand#execute()</code> logic</a></h5>
-<div class="paragraph">
-<p>We now have everything set up&#8230;&#8203; but we still can&#8217;t modify the remarks. Let&#8217;s finish it up by adding in actual logic for our <code>remark</code> command.</p>
-</div>
-<div class="paragraph">
-<p><strong>Main:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Replace the logic in <code>RemarkCommand#execute()</code> (that currently just throws an <code>Exception</code>), with the actual logic to modify the remarks of a person.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Tests:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Update <code>RemarkCommandTest</code> to test that the <code>execute()</code> logic works.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="full-solution"><a class="link" href="#full-solution">A.2.3. Full Solution</a></h4>
-<div class="paragraph">
-<p>See this <a href="https://github.com/se-edu/addressbook-level4/pull/599">PR</a> for the step-by-step solution.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="product-scope"><a class="link" href="#product-scope">Appendix B: Product scope</a></h2>
+<h2 id="product-scope-br"><a class="link" href="#product-scope-br">Appendix A: Product scope<br></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Target user profile</strong>:</p>
@@ -2155,7 +2356,7 @@ for <code>RemarkCommandParser</code>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="user-stories"><a class="link" href="#user-stories">Appendix C: User stories</a></h2>
+<h2 id="user-stories-br"><a class="link" href="#user-stories-br">Appendix B: User stories<br></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Priorities: High (must have) - <code>* * *</code>, Medium (nice to have) - <code>* *</code>, Low (unlikely to have) - <code>*</code></p>
@@ -2215,12 +2416,6 @@ for <code>RemarkCommandParser</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">start multiple lessons</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can see all the question at once</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">reset my progress</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can start anew</p></td>
 </tr>
@@ -2239,14 +2434,20 @@ for <code>RemarkCommandParser</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">add tags to the lessons</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can search based on the tags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">start a lesson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can start to memorise</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">start a lesson</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can start to memorise</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see a hint if I am not sure about the answer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can have a deeper impression</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exit a quit any time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can save my progress and continue next time.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
@@ -2256,10 +2457,34 @@ for <code>RemarkCommandParser</code>.</p>
 remember it better</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view the cards from the lesson at a glance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can manage the lesson&#8217;s cards easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view all the lessons at a glance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can easily manage the lessons easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">change the testable values</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can choose which values to tested.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see a hint if I am not sure about the answer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can have a deeper impression</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">add tags to the lessons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can search based on the tags</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">start multiple lessons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can see all the question at once</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
@@ -2350,65 +2575,9 @@ remember it better</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="use-cases"><a class="link" href="#use-cases">Appendix D: Use cases</a></h2>
+<h2 id="use-cases-br"><a class="link" href="#use-cases-br">Appendix C: Use cases<br></a></h2>
 <div class="sectionbody">
-<h3 id="use-case-export-a-lesson" class="discrete">Use case: Export a lesson</h3>
-<div class="paragraph">
-<p><strong>MSS</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User finds the lesson he wishes to export by using list or find command.</p>
-</li>
-<li>
-<p>User uses export command.</p>
-</li>
-<li>
-<p>App displays the location where the exported csv file is saved to.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. User inputs invalid lesson name.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a1. Step 2 repeats until a valid lesson is found.</p>
-<div class="paragraph">
-<p>Use case resumes at step 3.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2b. App is unable to save due to permissions, invalid format, etc</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2b1. App notifies User of the error.</p>
-</li>
-<li>
-<p>2b2. Step 2 repeats until the file is able to be saved.</p>
-<div class="paragraph">
-<p>Use case resumes at step 3.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h3 id="use-case-import-a-lesson" class="discrete">Use case: Import a lesson</h3>
+<h3 id="use-case-import-a-lesson-br" class="discrete">Use case: import a lesson<br></h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -2418,16 +2587,16 @@ remember it better</p></td>
 <p>User downloads file from a source (e.g Internet, other users).</p>
 </li>
 <li>
-<p>User uses import command.</p>
+<p>User moves the file to the lessons folder.</p>
 </li>
 <li>
-<p>App loads the file as a lesson into the app shows the content of the lesson.</p>
+<p>User restarts App.</p>
 </li>
 <li>
-<p>App requests confirmation.</p>
+<p>App loads the file as a lesson.</p>
 </li>
 <li>
-<p>App saves lesson to user profile.</p>
+<p>App shows loaded lessons in the UI.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2440,47 +2609,21 @@ remember it better</p></td>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. User inputs invalid file path, file is not found or file is not valid.</p>
+<p>3a. User inputs invalid file.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a1. Step 2 repeats until a valid file is found.</p>
+<p>3a1. App continues loading other lessons.</p>
 <div class="paragraph">
-<p>Use case resumes at step 3.</p>
+<p>Use case resumes at step 5.</p>
 </div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3a. App fails to load the file due to interruption, etc</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>3a1. App tells user cause of failure.</p>
-</li>
-<li>
-<p>3a2. Step 2 repeats until a valid file is successfully loaded.</p>
-<div class="paragraph">
-<p>Use case resumes at step 3.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>4a. User declines</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>Use case ends</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
-<h3 id="use-case-test-poorly-memorised-questions" class="discrete">Use case: Test poorly memorised questions</h3>
+<h3 id="use-case-test-poorly-memorised-questions-br" class="discrete">Use case: test poorly memorised questions<br></h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -2532,17 +2675,17 @@ remember it better</p></td>
 </li>
 </ul>
 </div>
-<h3 id="use-case-start-multiple-lessons" class="discrete">Use case: Start multiple lessons</h3>
+<h3 id="use-case-start-a-review-quiz-br" class="discrete">Use case: start a review quiz<br></h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User finds specified lessons.</p>
+<p>User finds specified lesson.</p>
 </li>
 <li>
-<p>User starts lessons by lesson names.</p>
+<p>User starts quiz by lesson name.</p>
 </li>
 <li>
 <p>App displays questions for User to answer.</p>
@@ -2567,19 +2710,16 @@ remember it better</p></td>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a. App detects no questions to be tested now.</p>
+<p>3a. App detects no questions to be reviewed now.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. App prompts User to continue testing all questions.</p>
-</li>
-<li>
-<p>3a2. User enter yes.</p>
-<div class="paragraph">
-<p>Use case resumes at step 3.</p>
-</div>
+<p>3a1. App prompts User no questions to be reviewed now.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
@@ -2587,7 +2727,7 @@ remember it better</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="non-functional-requirements"><a class="link" href="#non-functional-requirements">Appendix E: Non-functional requirements</a></h2>
+<h2 id="non-functional-requirements-br"><a class="link" href="#non-functional-requirements-br">Appendix D: Non-functional requirements<br></a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -2595,34 +2735,46 @@ remember it better</p></td>
 <p>Should work on any <a href="#mainstream-os">mainstream OS</a> as long as it has Java <code>9</code> or higher installed.</p>
 </li>
 <li>
-<p>Should be able to hold up to 1000 lessons without a noticeable sluggishness in performance for typical usage.</p>
+<p>Should be able to hold up to 1000 cards in multiple lessons without a noticeable sluggishness in
+performance for typical usage.</p>
+</li>
+<li>
+<p>Should be able to load 1000 cards within 7 seconds.</p>
+</li>
+<li>
+<p>Product is not required to handle mass data editing (i.e no spreadsheet editing functionality)</p>
+</li>
+<li>
+<p>User data (both lessons and SRS data) should be easily portable</p>
 </li>
 <li>
 <p>A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="glossary"><a class="link" href="#glossary">Appendix F: Glossary</a></h2>
+<h2 id="glossary-br"><a class="link" href="#glossary-br">Appendix E: Glossary<br></a></h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><a id="card"></a> Card</dt>
+<dd>
+<p>A card contains 2 or more <code>TEST</code> values and 0 or more <code>HINT</code> values. When a card is tested in
+quiz mode, 2 of its <code>TEST</code> values will be tested as a question-answer pair. <code>HINT</code> values will be
+shown when the <code>\hint</code> command is entered.</p>
+</dd>
 <dt class="hdlist1"><a id="lesson"></a> Lesson</dt>
 <dd>
-<p>A labelled set of <a href="#question">questions</a>.</p>
+<p>A lesson contains <a href="#card">cards</a> of the same type and topic. It has 2 or more <code>TEST</code> values and 0
+ or more <code>HINT</code> values. Cards added to this lesson must have corresponding <code>TEST</code> values, but need
+ not have matching <code>HINT</code> values. By default, the first 2 <code>TEST</code> values of cards in this lesson will
+ be tested when the lesson is started in quiz mode. You can change this by using the <code>set</code> command.</p>
 </dd>
 <dt class="hdlist1"><a id="mainstream-os"></a> Mainstream OS</dt>
 <dd>
 <p>Windows, Linux, Unix, OS-X</p>
-</dd>
-<dt class="hdlist1"><a id="question"></a> Question</dt>
-<dd>
-<p>A set of values, where one value is given as a prompt to the user, and another value is used as the correct answer for that given question. Other values may be shown to supplement the question.</p>
 </dd>
 <dt class="hdlist1"><a id="session"></a> Session</dt>
 <dd>
@@ -2637,7 +2789,7 @@ remember it better</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix G: Instructions for manual testing</a></h2>
+<h2 id="instructions-for-manual-testing-br"><a class="link" href="#instructions-for-manual-testing-br">Appendix F: Instructions for manual testing<br></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Given below are instructions to test the app manually.</p>
@@ -2655,7 +2807,7 @@ These instructions only provide a starting point for testers to work on; testers
 </table>
 </div>
 <div class="sect2">
-<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">G.1. Launch and shutdown</a></h3>
+<h3 id="launch-and-shutdown-br"><a class="link" href="#launch-and-shutdown-br">F.1. Launch and shutdown<br></a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2688,61 +2840,466 @@ Expected: The most recent window size and location is retained.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">G.2. Deleting a person</a></h3>
+<h3 id="changing-theme-br"><a class="link" href="#changing-theme-br">F.2. Changing theme<br></a></h3>
+<div class="paragraph">
+<p>Changing from light theme to dark theme.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Deleting a person while all persons are listed</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: List all persons using the <code>list</code> command. Multiple persons in the list.</p>
+<p><code>changeTheme</code><br></p>
 </li>
 <li>
-<p>Test case: <code>delete 1</code><br>
-Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.</p>
-</li>
-<li>
-<p>Test case: <code>delete 0</code><br>
-Expected: No person is deleted. Error details shown in the status message. Status bar remains the same.</p>
-</li>
-<li>
-<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
-Expected: Similar to previous.</p>
+<p>Exit and start <code>BrainTrain</code> again.<br>
+Expected: The theme have changed to dark theme and persist beyond restart.</p>
 </li>
 </ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">G.3. Saving data</a></h3>
+<h3 id="adding-a-lesson-br"><a class="link" href="#adding-a-lesson-br">F.3. Adding a lesson<br></a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Dealing with missing/corrupted data files</p>
+<p>Test case (successful): <code>addLesson n/Capitals of the world t/Country t/Capital t/Language h/Hint</code><br>
+Expected: The lesson is added and appears on the user interface.<br>
+Exit the BrainTrain app, and launch it again.<br>
+Expected: The lesson 'Capitals of the world' is loaded on app launch.</p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>addLesson t/Country t/Capital t/Language h/Hint</code><br>
+Expected: No lesson is added because name is missing. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>addLesson n/Capitals t/Country h/Language h/Hint</code><br>
+Expected: No lesson is added because there is only 1 test value. Error details are shown to the user.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-lesson-br"><a class="link" href="#deleting-a-lesson-br">F.4. Deleting a lesson<br></a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite: There is at least 1 lesson loaded in-memory.</p>
+</li>
+<li>
+<p>Test case (successful): <code>deleteLesson 1</code><br>
+Expected: The first lesson is deleted and no longer appears on the user interface.<br>
+Exit the BrainTrain app, and launch it again.<br>
+Expected: The lesson is permanently gone and does not re-appear on app restart.</p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>deleteLesson 0</code><br>
+Expected: No lesson is deleted because of invalid index. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Other incorrect <code>deleteLesson</code> commands to try: <code>deleteLesson</code>, <code>deleteLesson x</code> where x is larger than the number of lessons loaded in-memory</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-lesson-br"><a class="link" href="#editing-a-lesson-br">F.5. Editing a lesson<br></a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite: There is at least 1 lesson loaded in-memory.</p>
+</li>
+<li>
+<p>Test case (successful): <code>edit 1</code><br>
+Expected: The first lesson is opened in Card View for editing.<br></p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>edit 0</code><br>
+Expected: No lesson is opened for editing because of invalid index. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Other incorrect <code>edit</code> commands to try: <code>edit</code>, <code>edit x</code> where x is larger than the number of lessons loaded in-memory.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="setting-a-lesson-s-test-pair-br"><a class="link" href="#setting-a-lesson-s-test-pair-br">F.6. Setting a lesson&#8217;s test pair<br></a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite steps:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
+<p>Enter <code>addLesson n/Capitals of the world t/Country t/Capital t/Language h/Hint</code> to create a lesson</p>
+</li>
+<li>
+<p>Enter <code>edit x</code> where x is the number of the lesson added</p>
+</li>
+<li>
+<p>Enter <code>addCard t/Australia t/Canberra t/English h/Starts with C</code> to add a card</p>
+</li>
+<li>
+<p>Enter <code>addCard t/Korea t/Seoul t/Korean</code> to add another card</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Test case (successful): <code>set 1 3</code><br>
+Expected: The user interface indicates that 'Country' and 'Language' are the 2 test values to be tested.</p>
+</li>
+<li>
+<p>Test case (successful): <code>set 3 2</code><br>
+Expected: The user interface indicates that 'Language' and 'Capital' are the 2 test values to be tested.</p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>set 0 2</code><br>
+Expected: No setting is done because of invalid index. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>set 1 5</code><br>
+Expected: No setting is done because the lesson only has 3 test values, and there is no test value at index 5. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Other incorrect <code>set</code> commands to try: <code>set</code>, <code>set x y</code> where x or y is larger than the number of test values the lesson has.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-card-br"><a class="link" href="#adding-a-card-br">F.7. Adding a card<br></a></h3>
+<div class="paragraph">
+<p>Adding a card.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Enter <code>addLesson n/Capitals of the world t/Country t/Capital t/Language h/Hint</code> to create a lesson</p>
+</li>
+<li>
+<p>Enter <code>edit x</code> where x is the number of the lesson added</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Test case (successful): <code>addCard t/Australia t/Canberra t/English h/Starts with C</code><br>
+Expected: The card is added and appears on the user interface.<br></p>
+</li>
+<li>
+<p>Test case (successful): <code>addCard t/Korea t/Seoul t/Korean</code><br>
+Expected: The card is added and appears on the user interface.<br></p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>addCard t/English h/Starts with C</code><br>
+Expected: No card is added because there is only 1 test value and all cards require at least 2 test values. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>addCard t/Australia t/Canberra h/Starts with C</code><br>
+Expected: No card is added because there is only 2 test value but the lesson requires 3. Error details are shown to the user.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-card-br"><a class="link" href="#deleting-a-card-br">F.8. Deleting a card<br></a></h3>
+<div class="paragraph">
+<p>Deleting a card.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Enter <code>addLesson n/Capitals of the world t/Country t/Capital t/Language h/Hint</code> to create a lesson</p>
+</li>
+<li>
+<p>Enter <code>edit x</code> where x is the number of the lesson added</p>
+</li>
+<li>
+<p>Enter <code>addCard t/Australia t/Canberra t/English h/Starts with C</code> to add a card</p>
+</li>
+<li>
+<p>Enter <code>addCard t/Korea t/Seoul t/Korean</code> to add another card</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Test case (successful): <code>deleteCard 1</code><br>
+Expected: The first card is deleted and no longer appears on the user interface.<br></p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>deleteCard 0</code><br>
+Expected: No card is deleted because of invalid index. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Test case (unsuccessful): <code>deleteCard 100</code><br>
+Expected: No card is deleted because of invalid index. Error details are shown to the user.</p>
+</li>
+<li>
+<p>Other incorrect <code>deleteCard</code> commands to try: <code>deleteCard</code>, <code>deleteCard x</code> where x is larger than the number of cards in the opened lesson.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="starting-a-new-quiz-br"><a class="link" href="#starting-a-new-quiz-br">F.9. Starting a new quiz<br></a></h3>
+<div class="paragraph">
+<p>Below are some test cases you can perform to test the <code>StartCommand</code> for the Management feature.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite: The system is in the management mode and there is no opened lesson currently.</p>
+</li>
+<li>
+<p>Test case:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>start 1 m/preview</code><br>
+Expected: The system and GUI change to <code>Quiz mode</code>. Starting new quiz. Current lesson is the first lesson in the list. Besides, only one card will be previewed in the quiz.</p>
+</li>
+<li>
+<p><code>start 3 c/1 m/learn</code><br>
+Expected: The system and GUI change to <code>Quiz mode</code>. Starting new quiz. Current lesson is the third lesson in the list. Besides, only one card will be learnt in the quiz.</p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="answering-a-question-in-a-quiz-br"><a class="link" href="#answering-a-question-in-a-quiz-br">F.10. Answering a question in a quiz<br></a></h3>
+<div class="paragraph">
+<p>Below are some test cases you can perform to test the <code>QuizAnswerCommand</code> for the Quiz feature.<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Answering questions in <code>learn</code> mode</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: A quiz have already started.<br>
+Start a quiz, for example <code>start 1 c/1 m/learn</code><br>
+Replace lesson name with a lesson of your choice.<br>
+Answer the question according to the question from the specified lesson.</p>
+</li>
+<li>
+<p>Test case: <br></p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><kbd>enter</kbd> or anything without the prefix <code>\</code> followed by <kbd>enter</kbd><br>
+Expected: Shown the question for answering.<br></p>
+</li>
+<li>
+<p><code>brussels</code><br>
+Expected: Answered the question correct. Total correct question updated.</p>
+</li>
+<li>
+<p><code>belgiu</code><br>
+Expected: Answered the question wrongly once. Total correct question updated.</p>
+</li>
+<li>
+<p><code>belgiuu</code><br>
+Expected: Answered the question wrongly twice and shown the correct answer. Total correct
+question updated.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Answering questions in <code>review</code> mode</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: A quiz have already started.<br>
+Start a quiz, for example <code>start 1 c/1 m/review</code><br>
+Replace lesson name with a lesson of your choice.<br>
+Answer the question according to the question from the specified lesson.</p>
+</li>
+<li>
+<p>Test case:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><code>brussels</code><br>
+Expected: Answered the question correct. Total correct question updated.</p>
+</li>
+<li>
+<p><code>belgiu</code><br>
+Expected: Answered the question wrongly once. Total correct question updated.</p>
+</li>
+<li>
+<p><code>belgiuu</code><br>
+Expected: Answered the question wrongly twice and shown the correct answer. Total correct
+question updated.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Answering questions in <code>preview</code> mode</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: A quiz have already started.<br>
+Start a quiz, for example <code>start 1 c/1 m/preview</code><br>
+Replace lesson name with a lesson of your choice.<br>
+Answer the question according to the question from the specified lesson.</p>
+</li>
+<li>
+<p>Test case:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><kbd>enter</kbd> or anything without the prefix <code>\</code> followed by <kbd>enter</kbd><br>
+Expected: Shown the next question for previewing.<br></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="labelling-a-question-as-difficult-in-a-quiz-br"><a class="link" href="#labelling-a-question-as-difficult-in-a-quiz-br">F.11. Labelling a question as difficult in a quiz<br></a></h3>
+<div class="paragraph">
+<p>Below is a test case you can perform to test the <code>QuizDifficultCommand</code> for the Quiz feature.<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite: A quiz have already started.<br>
+Start a quiz, for example <code>start 1 c/1 m/learn</code><br>
+Replace the lesson name with a lesson of your choice.<br></p>
+</li>
+<li>
+<p>Test case: <br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>\difficult</code><br>
+Expected: Card labelled as difficult.<br></p>
+</li>
+<li>
+<p><code>\difficult</code><br>
+Expected: Card labelled as not difficult.<br></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-hint-in-a-quiz-br"><a class="link" href="#viewing-hint-in-a-quiz-br">F.12. Viewing hint in a quiz<br></a></h3>
+<div class="paragraph">
+<p>Below is a test case you can perform to test the <code>QuizHintCommand</code> for the Quiz feature.<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite: A quiz have already started.<br>
+Start a quiz, for example <code>start 1 c/1 m/review</code><br>
+Replace the lesson name with a lesson of your choice.<br></p>
+</li>
+<li>
+<p>Test case: <code>\hint</code><br>
+Expected: Shown the hint for this question.<br></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="quitting-the-quiz-br"><a class="link" href="#quitting-the-quiz-br">F.13. Quitting the quiz<br></a></h3>
+<div class="paragraph">
+<p>Below are some test cases you can perform to test the <code>QuizQuitCommand</code> for the Quiz feature.<br></p>
 </div>
 <div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
+<p>Prerequisite: A quiz have already started.<br>
+Start a quiz, for example <code>start 1 c/1 m/review</code><br>
+Replace lesson name with a lesson of your choice.<br>
+Answer the question according to the question from the specified lesson.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>\quit</code><br>
+Expected: Shown the result of the quiz and saved the progress of 0 attempted question.</p>
+</li>
+<li>
+<p>Test case: <code>brussels</code><br>
+<code>\quit</code><br>
+Expected: Shown the result of the quiz and saved the progress of 1 attempted question.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-status-in-a-quiz-br"><a class="link" href="#viewing-status-in-a-quiz-br">F.14. Viewing status in a quiz<br></a></h3>
+<div class="paragraph">
+<p>Below is a test cases you can perform to test the <code>QuizStatusCommand</code> for the Quiz feature.<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisite: A quiz have already started.<br>
+Start a quiz, for example <code>start 1 c/1 m/learn</code><br>
+Replace the lesson name with a lesson of your choice.<br></p>
+</li>
+<li>
+<p>Test case: <code>\status</code><br>
+Expected: Shown the quiz progress.<br></p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="saving-user-data-br"><a class="link" href="#saving-user-data-br">F.14.1. Saving user data<br></a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensuring that there is a save user file generated. The file should be generated under <code>/userdata/savedata</code></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The user has at least started on a quiz once.</p>
+</li>
+<li>
+<p>NOTE: There will be 5 unique notations generated in the <code>savedata</code> file. It is arranged in an array as such [hashcode, number of attempts, streak, SRS date, isDifficult]</p>
+</li>
+<li>
+<p>Test case: Open the <code>savedata</code> file and modify <code>hashcode = 0</code><br>
+Expected: Launch braintrain.jar again and open braintrain.log. There should be a warning message stating: <code>"WARNING: There are empty values in the file"</code><br>
+Other incorrect cases: Setting <code>number of attempts &lt; 0</code> or <code>streak &lt; 0</code>.<br></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 15:56:09 UTC</div></div></div></body></html>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 14:09:35 UTC</div></div></div></body></html>

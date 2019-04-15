@@ -1,10 +1,11 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Jerald Tan - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>Jerald Tan - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">BrainTrain</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S2-W14-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Jerald Tan - Project Portfolio</h1></div><div id="content"><div class="sect1">
 <h2 id="project-braintrain"><a class="link" href="#project-braintrain">PROJECT: BrainTrain</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This project portfolio page showcases my contributions to the BrainTrain project.</p>
+<p>This project portfolio page showcases my contributions to the BrainTrain project such as coding,
+documentation and other contributions.</p>
 </div>
 </div>
 </div>
@@ -12,11 +13,24 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>BrainTrain is a spaced repetition flashcard application which makes memorizing easy and efficient.
-Research has shown that the Spaced-Repetition System (SRS) is more effective than traditional
-memorization techniques. With it, you will be able to learn more with less time. User interaction
+<p>All National University of Singapore(NUS) School of Computing(SoC) students have to take a software engineering module
+part encoded CS2103T as a required module. Our team comprises of 5 members who were tasked to develop and enhance an existing
+<a href="https://github.com/se-edu/addressbook-level4">address book application</a> within 7 weeks.</p>
+</div>
+<div class="paragraph">
+<p>We were given a choice to morph the existing address book to any application we want and we chose
+to develop <strong>BrainTrain</strong>, which will be detailed below.</p>
+</div>
+<div class="paragraph">
+<p>BrainTrain uses Spaced-Repetition System (SRS), a more effective and efficient memorisation technique compared to hardcore
+memorisation techniques. Users will be able to learn more with less time. User interaction
 happens through Command Line Interface (CLI) and it has a minimal Graphical User Interface (GUI)
 created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+</div>
+<div class="paragraph">
+<p>My role in BrainTrain is to design and manage the user data through the manipulation of importing and exporting of files.
+The following sections give a summary of how I have contributed to the project and showcases my ability to write both
+the user and developer guide.</p>
 </div>
 </div>
 </div>
@@ -26,26 +40,305 @@ created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: User features, CSV File Storage</p>
+<p><strong>Major enhancement</strong>: User features, Comma-Separated Values(CSV) File Storage</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>What it does</strong>: User features manage the user progress and import and export their progress into a CSV file accordingly. The feature is automated whenever the program is open(Import) or close(export)</p>
+<p><strong>What it does</strong>: User features manage the user progress and import and export their progress into a simple CSV file accordingly.
+This feature is automated.<br>
+Import of user file happens when the application is opened.<br>
+Export of user file happens when the application is closed.<br></p>
 </li>
 <li>
-<p><strong>Highlights</strong>: <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/86(86" class="bare">https://github.com/CS2103-AY1819S2-W14-1/main/pull/86(86</a>)
-<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/30">#30</a></p>
+<p><strong>Why it is important</strong>: In consideration of the portability for users to use BrainTrain across different devices, it is
+important to have a file to keep track of the status of the questions. Furthermore, each question will have a unique SRS-date that is
+dependent on how well the user answered the questions. Questions with approaching due dates will be listed first.</p>
+</li>
+<li>
+<p><strong>Highlights</strong>: Pull request <a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/30">#30</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/75">#75</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/106">#106</a>,
+<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/139">#139</a></p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>:</p>
+<p><strong>Minor enhancement</strong>: Sanitise user inputs of the CSV file that is generated</p>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/30">Functional code</a>] [<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/86">Functional code</a>] [<a href="https://github.com/CS2103-AY1819S2-W14-1/main/pull/120">Test code</a>] <em>{give links to collated code files}</em></p>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1819s2.github.io/cs2103-dashboard/#=undefined&amp;search=jeraldtsy">RepoSense</a>]</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated class and sequence diagrams to match the current implementation</p>
+</li>
+<li>
+<p>Reported bugs and suggestion for other team in the class
+(examples: <a href="https://github.com/CS2103-AY1819S2-W16-1/main/issues/143">#143</a>,
+<a href="https://github.com/CS2103-AY1819S2-W16-1/main/issues/152">#152</a>,
+<a href="https://github.com/CS2103-AY1819S2-W16-1/main/issues/163">#163</a>,
+<a href="https://github.com/CS2103-AY1819S2-W16-1/main/issues/172">#172</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 15:56:09 UTC</div></div></div></body></html>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Start of extract of user mode</em></p>
+</div>
+<div class="sect2">
+<h3 id="usermode"><a class="link" href="#usermode">User Transfer mode</a></h3>
+<div class="paragraph">
+<p>You can use BrainTrain across different devices. This is an in-built feature that is automated in BrainTrain.</p>
+</div>
+<div class="sect3">
+<h4 id="using-braintrain-across-different-devices"><a class="link" href="#using-braintrain-across-different-devices">Using BrainTrain across different devices</a></h4>
+<div class="paragraph">
+<p>To transfer your files:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Store the <code>userdata</code> and <code>lessons</code> folder into your transfer device (thumbdrive etc.).</p>
+</li>
+<li>
+<p>On another device, ensure that BrainTrain has been executed <code>at least once</code>.</p>
+</li>
+<li>
+<p>Transfer and overwrite the <code>userdata</code> and <code>lessons</code> folder.</p>
+</li>
+<li>
+<p>Your progress will be automatically imported on that device.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="future-enhancements"><a class="link" href="#future-enhancements">Future enhancements</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="importing-data-from-website-coming-in-v2-0"><a class="link" href="#importing-data-from-website-coming-in-v2-0">Importing data from website [Coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Easily transfer files using import command to get files directly from a specific link without the use of transfer devices.<br>
+The usage of hard drives to transfer and pull documents has reduced overtime as new cloud storage are introduced. Thus, with this new feature, it will help to pull the user file and lessons from links.<br>
+Example : <code>import User l/[INSERT_DESIRED_LINK_HERE]</code></p>
+</div>
+<div class="paragraph">
+<p><em>End of extract of user mode</em></p>
+</div>
+<div class="paragraph">
+<p>Click to read the full <a href="https://cs2103-ay1819s2-w14-1.github.io/main/UserGuide.html">User Guide</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Start of extract of data storage</em></p>
+</div>
+<div class="sect2">
+<h3 id="user-storage-feature-br"><a class="link" href="#user-storage-feature-br">User storage feature<br></a></h3>
+<div class="paragraph">
+<p>The user storage features implements the following functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Parsing user data into the correct format for file saving</p>
+</li>
+<li>
+<p>Parsing file into the correct format for user data</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+These functions are automatically performed on opening/closing the application. File I/O is handled in the <code>CSVUtil</code> class.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="user-format-br"><a class="link" href="#user-format-br">User format<br></a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CsvUserStorage.png" alt="CsvUserStorage" width="800">
+</div>
+<div class="title">Figure 1. Data flow diagram for user import and export</div>
+</div>
+<div class="paragraph">
+<p>The user is parsed by <code>CsvUserStorage</code>, which is converted between User and List&lt;String[]&gt; format. List&lt;String[]&gt; format is the primary format handled by <code>CsvUtil</code> for reading and writing to <code>.csv</code> files.</p>
+</div>
+<div class="paragraph">
+<p>A few noteworthy mentions of the main components saved into a <code>.csv</code> file for UserStorage are listed below.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hashcode-br"><a class="link" href="#hashcode-br">Hashcode<br></a></h4>
+<div class="paragraph">
+<p>This is the question hashcode. Every question will have a unique hashcode for identification.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="srsduedate-br"><a class="link" href="#srsduedate-br">SRSDueDate<br></a></h4>
+<div class="paragraph">
+<p>This is the srsDueDate generated for that question. Questions with a nearer due-date will be generated first in the quiz.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="difficult-br"><a class="link" href="#difficult-br">Difficult<br></a></h4>
+<div class="paragraph">
+<p>These are questions that are labelled difficult by the user. Users are able to specifically practise questions that they have labelled difficult in session.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sequence-diagram-for-user-storage"><a class="link" href="#sequence-diagram-for-user-storage">Sequence diagram for user storage</a></h4>
+<div class="paragraph">
+<p>Below is a sequence diagram of how a file is parsed into BrainTrain</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CsvUserStorageSequenceDiagram.png" alt="CsvUserStorageSequenceDiagram" width="800">
+</div>
+<div class="title">Figure 2. Sequence diagram of how a file is imported when BrainTrain application starts</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="code-snippet-br"><a class="link" href="#code-snippet-br">Code snippet<br></a></h4>
+<div class="paragraph">
+<p>The following code snippet shows how the user data is obtained:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> Optional&lt;CardSrsData&gt; parseStringIntoCard(<span class="predefined-type">String</span><span class="type">[]</span> cardArray) <span class="directive">throws</span>
+            <span class="exception">NumberFormatException</span>, DateTimeParseException {
+
+        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="integer">0</span>; i &lt; cardArray.length - <span class="integer">1</span>; i++) {
+            <span class="keyword">if</span> (cardArray[i].isEmpty()) {
+                logger.warning(<span class="string"><span class="delimiter">&quot;</span><span class="content">There are empty values in the file</span><span class="delimiter">&quot;</span></span>);
+                <span class="keyword">return</span> Optional.empty();
+            }
+        }
+
+        <span class="keyword">try</span> {
+            hashCode = <span class="predefined-type">Integer</span>.parseInt(cardArray[<span class="integer">0</span>]);
+            numOfAttempts = <span class="predefined-type">Integer</span>.parseInt(cardArray[<span class="integer">1</span>]);
+            streak = <span class="predefined-type">Integer</span>.parseInt(cardArray[<span class="integer">2</span>]);
+            srs = Instant.parse(cardArray[<span class="integer">3</span>]);
+            isDifficult = cardArray[<span class="integer">4</span>].equals(<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span>);
+
+            <span class="keyword">if</span> (hashCode == ZERO) {
+                logger.warning(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hashcode cannot be 0 in </span><span class="delimiter">&quot;</span></span> + filePath.toString());
+                <span class="keyword">return</span> Optional.empty();
+            }
+
+        } <span class="keyword">catch</span> (<span class="exception">NumberFormatException</span> e) {
+            logger.warning(<span class="string"><span class="delimiter">&quot;</span><span class="content">Values are not correct in </span><span class="delimiter">&quot;</span></span> + filePath.toString());
+            <span class="keyword">return</span> Optional.empty();
+
+        }
+
+        card = <span class="keyword">new</span> CardSrsData(hashCode, numOfAttempts, streak, srs, isDifficult);
+
+        <span class="keyword">return</span> Optional.of(card);
+    }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-br"><a class="link" href="#design-considerations-br">Design considerations<br></a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong> Alternative 1 (Current choice):</strong> Automate importing/exporting when session is open/close</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Lesser commands to manage.</p>
+</li>
+<li>
+<p>Cons: Opening and closing may take up a lot of time if file is very big.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Individual commands for user to toggle with to import and export files when desired</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More control given to user</p>
+</li>
+<li>
+<p>Cons: Accidental overwriting of files may occur. Furthermore, if users are not able to parse in values correctly, the file will not be saved. This is troublesome for users who are not tech-savvy.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="saving-user-data-br"><a class="link" href="#saving-user-data-br">Saving user data<br></a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensuring that there is a save user file generated. The file should be generated under <code>/userdata/savedata</code></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The user has at least started on a quiz once.</p>
+</li>
+<li>
+<p>NOTE: There will be 5 unique notations generated in the <code>savedata</code> file. It is arranged in an array as such [hashcode, number of attempts, streak, SRS date, isDifficult]</p>
+</li>
+<li>
+<p>Test case: Open the <code>savedata</code> file and modify <code>hashcode = 0</code><br>
+Expected: Launch braintrain.jar again and open braintrain.log. There should be a warning message stating: <code>"WARNING: There are empty values in the file"</code><br>
+Other incorrect cases: Setting <code>number of attempts &lt; 0</code> or <code>streak &lt; 0</code>.<br></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>End of extract of data storage</em></p>
+</div>
+<div class="paragraph">
+<p>Click to read the full <a href="https://cs2103-ay1819s2-w14-1.github.io/main/DeveloperGuide.html">Developer Guide</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 14:09:35 UTC</div></div></div></body></html>

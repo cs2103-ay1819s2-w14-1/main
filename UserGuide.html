@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>BrainTrain - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>BrainTrain - User guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="header"><h1>BrainTrain - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">BrainTrain</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/CS2103-AY1819S2-W14-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>BrainTrain - User guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>By: <code>Team BrainTrain</code>      Since: <code>Jan 2019</code>      Licence: <code>MIT</code></p>
@@ -10,44 +10,61 @@
 <div id="toctitle"></div>
 <ul class="sectlevel1">
 <li><a href="#introduction">1. Introduction</a></li>
-<li><a href="#quick-start">2. Quick start</a></li>
+<li><a href="#Quick-start">2. Quick start</a></li>
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#management-mode">3.1. Management mode</a>
 <ul class="sectlevel3">
 <li><a href="#help">3.1.1. Viewing help: <code>help</code></a></li>
-<li><a href="#start">3.1.2. Starting a quiz session: <code>start</code></a></li>
-<li><a href="#listLessons">3.1.3. Listing all lessons: <code>listLessons</code></a></li>
-<li><a href="#adding-a-lesson-code-addlesson-code">3.1.4. Adding a lesson: <code>addLesson</code></a></li>
-<li><a href="#deleting-a-lesson-code-deletelesson-code">3.1.5. Deleting a lesson: <code>deleteLesson</code></a></li>
-<li><a href="#reloading-all-lessons-code-reloadlessons-code">3.1.6. Reloading all lessons: <code>reloadLessons</code></a></li>
-<li><a href="#openLesson">3.1.7. Opening a lesson: <code>openLesson</code></a></li>
-<li><a href="#closing-a-lesson-code-closelesson-code">3.1.8. Closing a lesson: <code>closeLesson</code></a></li>
-<li><a href="#listCards">3.1.9. Listing all flashcards: <code>listCards</code></a></li>
-<li><a href="#addCard">3.1.10. Adding a flashcard: <code>addCard</code></a></li>
-<li><a href="#deleteCard">3.1.11. Deleting a flashcard: <code>deleteCard</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.1.12. Listing entered commands : <code>history</code></a></li>
-<li><a href="#quitting-the-program-code-quit-code">3.1.13. Quitting the program : <code>quit</code></a></li>
+<li><a href="#changing-theme-code-changetheme-code">3.1.2. Changing theme: <code>changeTheme</code></a></li>
+<li><a href="#start">3.1.3. Starting a quiz session: <code>start</code></a></li>
+<li><a href="#listLessons">3.1.4. Listing all lessons: <code>listLessons</code><br></a></li>
+<li><a href="#addLesson">3.1.5. Adding a lesson: <code>addLesson</code><br></a></li>
+<li><a href="#deleting-a-lesson-code-deletelesson-code-br">3.1.6. Deleting a lesson: <code>deleteLesson</code><br></a></li>
+<li><a href="#reloading-all-lessons-code-reload-code-br">3.1.7. Reloading all lessons: <code>reload</code><br></a></li>
+<li><a href="#openLesson">3.1.8. Editing a lesson in card view: <code>edit</code><br></a></li>
+<li><a href="#quit">3.1.9. Quitting card view: <code>quit</code><br></a></li>
+<li><a href="#set">3.1.10. Setting the lesson&#8217;s test pair: <code>set</code><br></a></li>
+<li><a href="#listCards">3.1.11. Listing all cards: <code>listCards</code><br></a></li>
+<li><a href="#addCard">3.1.12. Adding a card: <code>addCard</code><br></a></li>
+<li><a href="#deleteCard">3.1.13. Deleting a card: <code>deleteCard</code><br></a></li>
+<li><a href="#listing-entered-commands-code-history-code-br">3.1.14. Listing entered commands : <code>history</code><br></a></li>
+<li><a href="#exiting-the-program-code-exit-code-br">3.1.15. Exiting the program : <code>exit</code><br></a></li>
 </ul>
 </li>
-<li><a href="#quizmode">3.2. Quiz mode</a>
+<li><a href="#quizmode">3.2. Quiz mode<br></a>
 <ul class="sectlevel3">
-<li><a href="#viewing-help-code-help-code">3.2.1. Viewing help: <code>\help</code></a></li>
-<li><a href="#viewing-the-quiz-session-s-status-code-status-code">3.2.2. Viewing the quiz session&#8217;s status: <code>\status</code></a></li>
-<li><a href="#answering-a-flashcard-code-answer-code">3.2.3. Answering a flashcard : <code>[ANSWER]</code></a></li>
-<li><a href="#labelling-the-current-flashcard-as-difficult-code-difficult-code">3.2.4. Labelling the current flashcard as difficult: <code>\difficult</code></a></li>
-<li><a href="#hint">3.2.5. Viewing the current flashcard&#8217;s hint(s): <code>\hint</code></a></li>
-<li><a href="#quitting-the-quiz-session-code-quit-code">3.2.6. Quitting the quiz session: <code>\quit</code></a></li>
+<li><a href="#answering-a-card-code-answer-code-br">3.2.1. Answering a card : <code>[ANSWER]</code><br></a></li>
+<li><a href="#labelling-the-current-card-as-difficult-code-difficult-code">3.2.2. Labelling the current card as difficult: <code>\difficult</code></a></li>
+<li><a href="#viewing-help-code-help-code">3.2.3. Viewing help: <code>\help</code></a></li>
+<li><a href="#hint">3.2.4. Viewing the current card&#8217;s hint(s): <code>\hint</code></a></li>
+<li><a href="#quitting-the-quiz-session-code-quit-code">3.2.5. Quitting the quiz session: <code>\quit</code></a></li>
+<li><a href="#viewing-the-status-of-the-current-quiz-code-status-code">3.2.6. Viewing the status of the current quiz: <code>\status</code></a></li>
+</ul>
+</li>
+<li><a href="#usermode">3.3. User Transfer mode</a>
+<ul class="sectlevel3">
+<li><a href="#using-braintrain-across-different-devices">3.3.1. Using BrainTrain across different devices</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#troubleshooting">4. Troubleshooting</a></li>
-<li><a href="#faq">5. FAQ</a></li>
-<li><a href="#command-summary">6. Command Summary</a>
+<li><a href="#future-enhancements">4. Future enhancements</a>
 <ul class="sectlevel2">
-<li><a href="#management-mode-2">6.1. Management mode</a></li>
-<li><a href="#quiz-mode">6.2. Quiz mode</a></li>
+<li><a href="#importing-data-from-website-coming-in-v2-0">4.1. Importing data from website [Coming in v2.0]</a></li>
+<li><a href="#supporting-timer-countdown-in-quiz-mode-coming-in-v2-0">4.2. Supporting timer countdown in quiz mode [Coming in v2.0]</a></li>
+<li><a href="#supporting-auto-generation-of-mcq-in-quiz-mode-coming-in-v2-0">4.3. Supporting auto generation of mcq in quiz mode [Coming in v2.0]</a></li>
+<li><a href="#support-other-spreadsheet-formats-such-as-xlsx-coming-in-v2-0">4.4. Support other spreadsheet formats such as .xlsx [Coming in v2.0]</a></li>
+<li><a href="#supporting-starting-a-quiz-session-with-multiple-lessons-coming-in-v2-0">4.5. Supporting starting a quiz session with multiple lessons [Coming in v2.0]</a></li>
+</ul>
+</li>
+<li><a href="#troubleshooting">5. Troubleshooting</a></li>
+<li><a href="#faq">6. FAQ</a></li>
+<li><a href="#command-summary">7. Command Summary</a>
+<ul class="sectlevel2">
+<li><a href="#management-mode-2">7.1. Management mode</a></li>
+<li><a href="#quiz-mode">7.2. Quiz mode</a></li>
+<li><a href="#user-transfer">7.3. User transfer</a></li>
 </ul>
 </li>
 </ul>
@@ -57,13 +74,36 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>BrainTrain is an open-source spaced repetition flashcard application which makes <strong>memorizing easy and efficient</strong>. Research has shown that the Spaced-Repetition System (SRS) is <strong>much more effective</strong> than traditional memorization techniques. With BrainTrain, you will <strong>learn more with less time</strong>.</p>
+<p>BrainTrain is a <strong>spaced-repetition card application</strong> which makes <strong>memorizing easy and effective</strong>. With BrainTrain&#8217;s <a href="https://www.theguardian.com/education/2016/jan/23/spaced-repetition-a-hack-to-make-your-brain-store-information">Spaced Repetition System (SRS)</a> optimizing your card revision intervals, you will be able to <strong>learn more in less time</strong>.</p>
 </div>
 <div class="paragraph">
-<p>BrainTrain is also a <strong>portable</strong> and <strong>easy-to-navigate</strong> desktop program. It is an <strong>offline</strong> application which you can use anywhere, even in places with limited or no Internet availability. It can be navigated and used via <strong>easy-to-use</strong> commands through the Command Line Interface (CLI). The CLI is supplemented by a minimalistic Graphical User Interface (GUI) which provides <strong>helpful but non-distracting visual aid</strong>. Together, the CLI and GUI provides an <strong>effective and straightforward</strong> way for you to use BrainTrain.</p>
+<p><strong>Who is it for:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Anyone who needs to memorise anything (e.g. Japanese vocabulary, the periodic table, the human anatomy). BrainTrain&#8217;s card system is <strong>content-agnostic</strong> and <strong>flexible</strong>. It accommodates all forms of learning you may require.</p>
+</li>
+<li>
+<p>Anyone who needs to create flashcards for educational purposes. BrainTrain&#8217;s cards are grouped as lessons which can be <strong>easily imported and exported</strong>. These lessons are also saved in <code>.csv</code> files which you <strong>can edit in your favourite spreadsheet application</strong> (e.g. Excel).</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Start using BrainTrain today! To get started, read [<a href="#quick-start">Section 2, &#8220;Quick start&#8221;</a>] for installation and setup instructions.</p>
+<p><strong>Main features of BrainTrain:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can manage card lessons in BrainTrain&#8217;s management mode or alternatively do so in your preferred spreadsheet application.</p>
+</li>
+<li>
+<p>You can attempt card lessons in BrainTrain&#8217;s quiz mode which will track and manage your user-specific spaced-repetition data automatically.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Read the next section, <a href="#Quick-start">Section 2, &#8220;Quick start&#8221;</a>, to start using BrainTrain.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -71,7 +111,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="quick-start"><a class="link" href="#quick-start">2. Quick start</a></h2>
+<h2 id="Quick-start"><a class="link" href="#Quick-start">2. Quick start</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To begin using BrainTrain, follow the following set of instructions:<br></p>
@@ -82,34 +122,27 @@
 <p>Ensure that Java version <code>9</code> or later is installed on your Computer. You can download it <a href="https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html">here</a>.</p>
 </li>
 <li>
-<p>Download the latest <code>braintrain.jar</code> file <a href="https://github.com/CS2103-AY1819S2-W14-1/main/releases">here</a>.</p>
+<p>Download the latest <code>braintrain.jar</code> file <a href="https://github.com/CS2103-AY1819S2-W14-1/main/releases">here</a>. It is located under <em>Assets</em>.</p>
 </li>
 <li>
-<p>Create a folder to use as the home folder for BrainTrain (e.g. <code>braintrain/</code>).</p>
+<p>Create a folder to store the downloaded file (e.g. <code>braintrain/</code>).</p>
 </li>
 <li>
-<p>Move the downloaded file to the created folder.</p>
+<p>Move <code>braintrain.jar</code> into the created folder.</p>
 </li>
 <li>
-<p>You can <strong>optionally</strong> download a sample lesson here: <a href="https://github.com/CS2103-AY1819S2-W14-1/main/blob/master/src/test/data/country-capitals-asia.csv"><code>country-capitals-asia.csv</code></a>.<br>
-Put the sample lesson into a <code>data</code> sub-folder within the <code>braintrain</code> folder (i.e. <code>braintrain/data/</code>).</p>
-</li>
-<li>
-<p>Double-click the file to run BrainTrain. The GUI will appear in a few seconds.</p>
+<p>Double-click <code>braintrain.jar</code> to launch the BrainTrain app. You should see the following within a few seconds:</p>
 <div id="img-firstlook" class="imageblock">
 <div class="content">
-<img src="images/UiFirstLook.png" alt="UiFirstLook" width="790">
+<img src="images/UiFirstLook.png" alt="UiFirstLook" width="384">
 </div>
-<div class="title">Figure 1. BrainTrain&#8217;s GUI on first run</div>
+<div class="title">Figure 1. BrainTrain on first run</div>
 </div>
 </li>
 <li>
-<p>Type the command <a href="#help"><code>help</code></a> in the command box and press <kbd>Enter</kbd> to find out how to use BrainTrain commands.</p>
+<p>Read the next section, <a href="#Features">Section 3, &#8220;Features&#8221;</a>, to find out what BrainTrain commands there are.</p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>To learn more about BrainTrain commands, carry on to [<a href="#Features">Section 3, &#8220;Features&#8221;</a>].</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -131,14 +164,14 @@ Put the sample lesson into a <code>data</code> sub-folder within the <code>brain
 for <code>deleteCard INDEX</code>, <code>INDEX</code> is a parameter you have to specify.</p>
 </li>
 <li>
-<p>Parameters with trailing <code>&#8230;&#8203;</code> can be specified multiple times. For example, for the <code>addLesson n/NAME q/QUESTION CORE a/ANSWER CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code> command, you can specify as many <code>CORE</code> values as you need to. On the other hand, you can only specify exactly 1 <code>QUESTION CORE</code> value.</p>
+<p>Parameters in <code>[ ]</code> brackets are optional. For example, for the <code>addCard t/TEST t/TEST [t/TEST]&#8230;&#8203; [h/HINT]&#8230;&#8203;</code> command, you have to specify at least <strong>2</strong> <code>TEST</code> values, but you can optionally specify more than <strong>2</strong> <code>TEST</code> values. You can also specify <strong>0 or more</strong> <code>OPTIONAL</code> values.</p>
 </li>
 <li>
-<p>Parameters in <code>[ ]</code> brackets are optional. For example, for the <code>addCard c/CORE c/CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code> command, you have to specify at least 2 <code>CORE</code> values, but you can optionally specify more than 2 <code>CORE</code> values or 0 or more <code>OPTIONAL</code> values.</p>
+<p>Parameters with trailing <code>&#8230;&#8203;</code> can be specified more than once. For example, for the <code>addLesson n/NAME t/TEST t/TEST [t/TEST]&#8230;&#8203; [h/HINT]&#8230;&#8203;</code> command, you can specify <strong>0 or more</strong> <code>HINT</code> values and <strong>2 or more</strong> <code>TEST</code> values. On the other hand, you can only specify exactly <strong>1</strong> <code>NAME</code> value.</p>
 </li>
 <li>
-<p>Parameters can be entered in any order. For example, for <code>addCard c/CORE c/CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code>, you can use the
-command as such <code>addCard o/Country Code c/Country c/Capital</code>.</p>
+<p>Parameters can be entered in any order. For example, for the <code>addCard t/TEST t/TEST [t/TEST]&#8230;&#8203; [h/HINT]&#8230;&#8203;</code> command, you can use the
+command as such: <code>addCard t/Australia h/Starts with C t/Canberra t/English</code>.</p>
 </li>
 </ul>
 </div>
@@ -169,10 +202,31 @@ Alternatively, press <kbd>F1</kbd> to display usage information on all commands.
 </div>
 </div>
 <div class="sect3">
-<h4 id="start"><a class="link" href="#start">3.1.2. Starting a quiz session: <code>start</code></a></h4>
+<h4 id="changing-theme-code-changetheme-code"><a class="link" href="#changing-theme-code-changetheme-code">3.1.2. Changing theme: <code>changeTheme</code></a></h4>
+<div class="paragraph">
+<p>Changes the theme from light to dark vice versa.<br>
+Format: <code>changeTheme</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="start"><a class="link" href="#start">3.1.3. Starting a quiz session: <code>start</code></a></h4>
 <div class="paragraph">
 <p>Starts a new quiz session.<br>
-Format: <code>start n/NAME [c/COUNT] m/MODE</code></p>
+Format: <code>start LESSON_INDEX [c/COUNT] m/MODE</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command only works in lesson view. If you are currently editing a lesson in card view, you have to use the <a href="#quit"><code>quit</code></a> command to return to lesson view before you can use this command.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Usage rules:</p>
@@ -180,26 +234,39 @@ Format: <code>start n/NAME [c/COUNT] m/MODE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>You can optionally specify the <code>COUNT</code> parameter. <code>COUNT</code> sets the number of cards to be tested in the quiz session. If no <code>COUNT</code> is specified, by default 1 card is tested.</p>
+<p>You must specify the index of lesson to be started. If your input index is out of range of current Lesson List, an error will be thrown.</p>
 </li>
 <li>
-<p>The name field is used to choose lesson.</p>
+<p>You can optionally specify the <code>COUNT</code> parameter. <code>COUNT</code> sets the number of cards to be tested in the quiz session.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If no <code>COUNT</code> is specified, by default 1 card is tested.</p>
 </li>
 <li>
-<p>You must specify <code>MODE</code>. <code>MODE</code> sets the testing mode of the quiz session. The three available modes are <code>LEARN</code>, <code>PREVIEW</code>, <code>REVIEW</code> and <code>DIFFICULT</code>.</p>
+<p>If <code>COUNT</code> is larger than the size of the current lesson, the <code>COUNT</code> will be reset to be the size of the lesson by default.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You must specify index and count as a valid number which should be less than the MAXIMUM_INTEGER(0*7ffffffff), otherwise an error will be thrown.</p>
+</li>
+<li>
+<p>You must specify <code>MODE</code>. <code>MODE</code> sets the testing mode of the quiz session. The four available modes are <code>LEARN</code>, <code>PREVIEW</code>, <code>REVIEW</code> and <code>DIFFICULT</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>LEARN</code>: Displays new cards with both question and answer shown, before testing begins and only question or answer are shown.</p>
+<p><code>LEARN</code>: Displays new cards with both question and answer before test begins, and then only question is shown to test you. If you have already learned all the cards in current lesson, an error of no more new card to learn will be thrown.</p>
 </li>
 <li>
-<p><code>PREVIEW</code>: Displays both question and answer of all flashcards. You will not be tested.</p>
+<p><code>PREVIEW</code>: Displays both question and answer of cards. You will not be tested.</p>
 </li>
 <li>
-<p><code>REVIEW</code>: Tests the words based on the spaced-repetition algorithm - flashcards with the earliest test date are tested first.</p>
+<p><code>REVIEW</code>: Tests the words based on the spaced-repetition algorithm, which means that cards with the earliest test date are tested first. If no card has due date before current time, an error of no card for review will be thrown.</p>
 </li>
 <li>
-<p><code>DIFFICULT</code>: Displays cards you previously labelled as difficult with both question and answer shown. You will not be tested.</p>
+<p><code>DIFFICULT</code>: Displays cards you previously labelled as difficult with both question and answer shown. You will not be tested. If no card has been labelled as difficult, an error of no difficult card will be thrown.</p>
 </li>
 </ol>
 </div>
@@ -214,7 +281,7 @@ Format: <code>start n/NAME [c/COUNT] m/MODE</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Flashcards are tested based on the <a href="https://en.wikipedia.org/wiki/Spaced_repetition">Space-Repetition technique</a>.</p>
+<p>Only in review mode, cards are tested based on the <a href="https://en.wikipedia.org/wiki/Spaced_repetition">Space-Repetition system</a>.</p>
 </div>
 </td>
 </tr>
@@ -226,12 +293,12 @@ Format: <code>start n/NAME [c/COUNT] m/MODE</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>start n/country-capitals m/LEARN</code><br>
-Starts a quiz in <code>LEARN</code> mode with the 'country-capitals' lesson.</p>
+<p><code>start 1 m/LEARN</code><br>
+Starts a quiz in <code>LEARN</code> mode. Cards will be chosen from the first lesson in lesson list. Since count is not specified, the quiz will only contain one card by default.</p>
 </li>
 <li>
-<p><code>start n/country-capitals-asia c/20 m/PREVIEW</code><br>
-Starts a quiz containing 20 cards in <code>PREVIEW</code> mode with the 'country-capitals-asia' lesson.</p>
+<p><code>start 2 c/20 m/PREVIEW</code><br>
+Starts a quiz containing 20 cards chosen from the second lesson in lesson list in <code>PREVIEW</code> mode, which only displays question and answer together one time.</p>
 </li>
 </ul>
 </div>
@@ -252,17 +319,51 @@ mode</code></a> and you will only be allowed to enter <a href="#quizmode"><code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listLessons"><a class="link" href="#listLessons">3.1.3. Listing all lessons: <code>listLessons</code></a></h4>
+<h4 id="listLessons"><a class="link" href="#listLessons">3.1.4. Listing all lessons: <code>listLessons</code><br></a></h4>
 <div class="paragraph">
 <p>Displays a numbered list of all lessons.<br>
-Format: <code>listLessons</code></p>
+Format: <code>listLessons</code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command only works in lesson view. If you are currently editing a lesson in card view, you have to use the <a href="#quit"><code>quit</code></a> command to return to lesson view before you can use this command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="img-listLessons" class="imageblock">
+<div class="content">
+<img src="images/list_lessons.png" alt="list lessons">
+</div>
+<div class="title">Figure 2. Listing of lessons by <code>listLessons</code> command</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="adding-a-lesson-code-addlesson-code"><a class="link" href="#adding-a-lesson-code-addlesson-code">3.1.4. Adding a lesson: <code>addLesson</code></a></h4>
+<h4 id="addLesson"><a class="link" href="#addLesson">3.1.5. Adding a lesson: <code>addLesson</code><br></a></h4>
 <div class="paragraph">
-<p>Adds a lesson.<br>
-Format: <code>addLesson n/NAME q/QUESTION CORE a/ANSWER CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code></p>
+<p>Adds a lesson which is used to store cards of the same type and topic.<br>
+Format: <code>addLesson n/NAME t/TEST t/TEST [t/TEST]&#8230;&#8203; [h/HINT]&#8230;&#8203;</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command only works in lesson view. If you are currently editing a lesson in card view, you have to use the <a href="#quit"><code>quit</code></a> command to return to lesson view before you can use this command.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Usage rules:</p>
@@ -270,30 +371,27 @@ Format: <code>addLesson n/NAME q/QUESTION CORE a/ANSWER CORE [c/CORE]&#8230;&#82
 <div class="ulist">
 <ul>
 <li>
-<p>You must specify <code>QUESTION CORE</code> and <code>ANSWER CORE</code>. <code>QUESTION CORE</code> and <code>ANSWER CORE</code> sets the <code>CORE</code> headers describing the question and answer <code>CORE</code> values of flashcards added to this lesson.</p>
+<p>You must specify at least 2 <code>TEST</code> values. Flashcards added to this lesson must have corresponding <code>TEST</code> values.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>For example, a lesson for memorising the capitals of countries will have the <code>QUESTION CORE</code> set as "Country" and <code>ANSWER_CORE</code> set as "Capital".</p>
+<p>For example, a lesson for memorising <em>muscle anatomy</em> will have three <code>TEST</code> values: 'Muscle', 'Action' and 'Innervation'.</p>
+</li>
+<li>
+<p>By default, the first 2 <code>TEST</code> values ('Muscle' and 'Action') will be tested when the lesson is started in quiz mode.</p>
+</li>
+<li>
+<p>You can set the 2 <code>TEST</code> values to be tested by using the <a href="#set"><code>set</code></a> command.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>You can optionally specify 0 or more additional <code>CORE</code> headers (e.g. "Language"), which can be set as the <code>QUESTION CORE</code> and <code>ANSWER CORE</code> by using the command <code>editLesson</code>.</p>
-</li>
-<li>
-<p>You can only add flashcards which have <code>QUESTION CORE</code>, <code>ANSWER CORE</code> and <code>CORE</code> values which correspond to the lesson&#8217;s <code>CORE</code> headers.</p>
-</li>
-<li>
-<p>You can optionally specify 0 or more <code>OPTIONAL</code> values (e.g. "Hint").</p>
+<p>You can specify 0 or more <code>HINT</code> values (e.g. 'Muscle Group').</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Flash cards added to the lesson <strong>need not</strong> have corresponding <code>OPTIONAL</code> values.</p>
-</li>
-<li>
-<p><code>OPTIONAL</code> values are displayed during quiz mode when you enter <a href="#hint"><code>\hint</code></a>.</p>
+<p><code>HINT</code> values are displayed during quiz mode when you enter <a href="#hint"><code>\hint</code></a>.</p>
 </li>
 </ul>
 </div>
@@ -306,32 +404,68 @@ Format: <code>addLesson n/NAME q/QUESTION CORE a/ANSWER CORE [c/CORE]&#8230;&#82
 <div class="ulist">
 <ul>
 <li>
-<p><code>addLesson n/Upper limb anatomy q/Statement a/TrueOrFalse</code></p>
+<p><code>addLesson n/Capitals of the world t/Country t/Capital t/Language h/Hint</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Adds a lesson named 'Capitals of the world' with 3 <code>TEST</code> values and 1 <code>HINT</code> value.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><code>addLesson n/Capitals of the world q/Country a/Capital c/Language o/Hint</code></p>
+<p><code>addLesson n/Chinese vocabulary t/English t/Chinese</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Adds a lesson named 'Chinese vocabulary' with 2 <code>TEST</code> values.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-a-lesson-code-deletelesson-code"><a class="link" href="#deleting-a-lesson-code-deletelesson-code">3.1.5. Deleting a lesson: <code>deleteLesson</code></a></h4>
+<h4 id="deleting-a-lesson-code-deletelesson-code-br"><a class="link" href="#deleting-a-lesson-code-deletelesson-code-br">3.1.6. Deleting a lesson: <code>deleteLesson</code><br></a></h4>
 <div class="paragraph">
-<p>Deletes a lesson by referencing its index in the numbered lesson list.<br>
+<p>Deletes the lesson at the specified INDEX of the numbered lesson list.<br>
 Format: <code>deleteLesson INDEX</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Usage rules:</p>
+<p>This command only works in lesson view. If you are currently editing a lesson in card view, you have to use the <a href="#quit"><code>quit</code></a> command to return to lesson view before you can use this command.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>To view the list, enter the command <a href="#listLessons"><code>listLessons</code></a>.</p>
-</li>
-<li>
-<p>You must specify the <code>INDEX</code> of the lesson in the numbered lesson list.</p>
-</li>
-</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/delete_lesson.png" alt="delete lesson" width="384">
+</div>
+<div class="title">Figure 3. BrainTrain with sample lessons loaded</div>
+</div>
+<div class="paragraph">
+<p>In the above scenario, the command <code>deleteLesson 2</code> will delete the second lesson in the numbered list, 'Sample-Muscle-Anatomy'.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="reloading-all-lessons-code-reload-code-br"><a class="link" href="#reloading-all-lessons-code-reload-code-br">3.1.7. Reloading all lessons: <code>reload</code><br></a></h4>
+<div class="paragraph">
+<p>Reloads all lessons from the lessons folder. The default lessons folder is <code>/lessons/</code>, found next to <code>braintrain.jar</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>reload</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -341,71 +475,117 @@ Format: <code>deleteLesson INDEX</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You have to open a lesson before you can use the following commands: <a href="#listCards"><code>listCards</code></a>, <a href="#addCard"><code>addCard</code></a> and <a href="#deleteCard"><code>deleteCard</code></a> commands.</p>
+<p>This command only works in lesson view. If you are currently editing a lesson in card view, you have to use the <a href="#quit"><code>quit</code></a> command to return to lesson view before you can use this command.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Steps:</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><code>deleteLesson 2</code><br>
-Deletes the second lesson in the numbered list displayed by <code>listLessons</code>.</p>
+<p>You have a newly downloaded .csv lesson file, <code>new_lesson.csv</code>, with no lessons currently loaded.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/reload_0_csv.png" alt="reload 0 csv">
+</div>
+<div class="title">Figure 4. A new lesson file.</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/reload_1_empty.png" alt="reload 1 empty">
+</div>
+<div class="title">Figure 5. No lessons are currently loaded.</div>
+</div>
 </li>
-</ul>
+<li>
+<p>You drag the new file into the <code>/lessons/</code> folder.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/reload_2_drag.png" alt="reload 2 drag">
+</div>
+<div class="title">Figure 6. Dragging the file.</div>
+</div>
+</li>
+<li>
+<p>You enter <code>reload</code> into the app, and the new lesson appears.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/reload_3_reload.png" alt="reload 3 reload" width="400">
+</div>
+<div class="title">Figure 7. Reloading lessons.</div>
+</div>
+</li>
+<li>
+<p>You verify again with <code>listLessons</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/reload_4_list.png" alt="reload 4 list" width="400">
+</div>
+<div class="title">Figure 8. New lesson has been loaded.</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Lessons are automatically reloaded when you open the application.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If the lesson does not appear, please check <a href="#troubleshooting">Section 5, &#8220;Troubleshooting&#8221;</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="reloading-all-lessons-code-reloadlessons-code"><a class="link" href="#reloading-all-lessons-code-reloadlessons-code">3.1.6. Reloading all lessons: <code>reloadLessons</code></a></h4>
+<h4 id="openLesson"><a class="link" href="#openLesson">3.1.8. Editing a lesson in card view: <code>edit</code><br></a></h4>
 <div class="paragraph">
-<p>Reloads all lessons from the hard disk including all newly added lesson <code>.csv</code> files which were directly moved into the data folder.<br>
-Format: <code>reloadLessons</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="openLesson"><a class="link" href="#openLesson">3.1.7. Opening a lesson: <code>openLesson</code></a></h4>
-<div class="paragraph">
-<p>Opens a lesson from the numbered lesson list so you can edit the lesson and its flash cards.<br>
+<p>Opens the lesson at the specified INDEX in Card View for editing.<br>
 Format: <code>openLesson INDEX</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Usage rules:</p>
+<p>In Card View, users will be able to use the following commands: <a href="#set"><code>set</code></a>, <a href="#addCard"><code>addCard</code></a>, <a href="#deleteCard"><code>deleteCard</code></a> and <a href="#listCards"><code>listCards</code></a>.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>To view the lesson list, enter the command <a href="#listLessons"><code>listLessons</code></a>.</p>
-</li>
-<li>
-<p>You must specify the <code>INDEX</code> of the lesson in the numbered lesson list.</p>
-</li>
-</ul>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>openLesson 1</code><br>
-Opens the first lesson in the numbered list.</p>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="images/edit_lesson.png" alt="edit lesson" width="384">
+</div>
+<div class="title">Figure 9. BrainTrain with sample lessons loaded</div>
+</div>
+<div class="paragraph">
+<p>In the above scenario, the command <code>edit 1</code> will open the first lesson in the numbered list, 'Sample-Capitals' in Card View for editing.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="closing-a-lesson-code-closelesson-code"><a class="link" href="#closing-a-lesson-code-closelesson-code">3.1.8. Closing a lesson: <code>closeLesson</code></a></h4>
+<h4 id="quit"><a class="link" href="#quit">3.1.9. Quitting card view: <code>quit</code><br></a></h4>
 <div class="paragraph">
-<p>Closes and saves changes made to the opened lesson.<br>
-Format: <code>closeLesson</code></p>
-</div>
-<div class="paragraph">
-<p>Usage rule:<br>
-To open a lesson, enter the command <a href="#openLesson"><code>openLessons</code></a>.</p>
+<p>Quits Card View and returns to Lesson View.<br>
+Format: <code>quit</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -415,7 +595,7 @@ To open a lesson, enter the command <a href="#openLesson"><code>openLessons</cod
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Changes made to the opened lesson through the commands: <a href="#addCard"><code>addCard</code></a> and <a href="#deleteCard"><code>deleteCard</code></a>, are only saved when you close the lesson.</p>
+<p>Changes made to the lesson in Card View are saved automatically upon quitting Card View.</p>
 </div>
 </td>
 </tr>
@@ -423,21 +603,24 @@ To open a lesson, enter the command <a href="#openLesson"><code>openLessons</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="listCards"><a class="link" href="#listCards">3.1.9. Listing all flashcards: <code>listCards</code></a></h4>
+<h4 id="set"><a class="link" href="#set">3.1.10. Setting the lesson&#8217;s test pair: <code>set</code><br></a></h4>
 <div class="paragraph">
-<p>Displays a numbered list of all flashcards in the opened lesson. <br>
-Format: <code>listCards</code></p>
+<p>Sets the 2 <code>TEST</code> values at the 2 specified INDEX of the numbered card list to be tested in quiz mode.<br>
+Format: <code>set INDEX INDEX</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Usage rule:<br>
-To open a lesson, enter the command <a href="#openLesson"><code>openLesson</code></a>.</p>
+<p>This command only works in card view. You have to open a lesson in card view for editing with the <a href="#edit"><code>edit</code></a> command before you can use this command.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="addCard"><a class="link" href="#addCard">3.1.10. Adding a flashcard: <code>addCard</code></a></h4>
-<div class="paragraph">
-<p>Adds a flashcard to the opened lesson.<br>
-Format: <code>addCard c/CORE c/CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code></p>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Usage rules:</p>
@@ -445,25 +628,102 @@ Format: <code>addCard c/CORE c/CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#
 <div class="ulist">
 <ul>
 <li>
-<p>To open a lesson, enter the command <a href="#openLesson"><code>openLesson</code></a>.</p>
-</li>
-<li>
-<p>You must specify at least 2 <code>CORE</code> values. This is because a flashcard needs at least 2 values to be testable.</p>
-</li>
-<li>
-<p>You can optionally specify 0 or more additional <code>CORE</code> values.</p>
-</li>
-<li>
-<p>You can optionally specify 0 or more <code>OPTIONAL</code> values.</p>
+<p>You must specify exactly 2 valid <code>INDEX</code> values.</p>
 </li>
 </ul>
 </div>
-<div id="NOTE" class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p>You can only add flashcards to the opened lesson if the flashcards have <code>CORE</code> values which corresponds to the lesson&#8217;s <code>CORE</code> headers.</p>
+<p>Example:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/set_test_before.png" alt="set test before" width="384">
+</div>
+<div class="title">Figure 10. A lesson opened in card view, before <code>set 1 3</code> is entered</div>
+</div>
+<div class="paragraph">
+<p>In the above scenario, the command <code>set 1 3</code> will set the first <code>TEST</code> value 'Muscle' and the third <code>TEST</code> value 'Innervation' as the values to be tested. After the command is entered, the interface updates accordingly:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/set_test_after.png" alt="set test after" width="384">
+</div>
+<div class="title">Figure 11. A lesson opened in card view, after <code>set 1 3</code> is entered</div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="listCards"><a class="link" href="#listCards">3.1.11. Listing all cards: <code>listCards</code><br></a></h4>
+<div class="paragraph">
+<p>Displays a numbered list of all cards in the lesson opened in Card View.<br>
+Format: <code>listCards</code><br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command only works in card view. You have to open a lesson in card view for editing with the <a href="#edit"><code>edit</code></a> command before you can use this command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="img-listCards" class="imageblock">
+<div class="content">
+<img src="images/list_cards.png" alt="list cards">
+</div>
+<div class="title">Figure 12. Listing of cards by <code>listCards</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="addCard"><a class="link" href="#addCard">3.1.12. Adding a card: <code>addCard</code><br></a></h4>
+<div class="paragraph">
+<p>Adds a card to the lesson opened in Card View.<br>
+Format: <code>addCard t/TEST t/TEST [t/TEST]&#8230;&#8203; [h/HINT]&#8230;&#8203;</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command only works in card view. You have to open a lesson in card view for editing with the <a href="#edit"><code>edit</code></a> command before you can use this command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Usage rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You must specify at least 2 <code>TEST</code> values. This is because a card needs at least 2 <code>TEST</code> values to be testable in quiz mode.</p>
+</li>
+<li>
+<p>You can specify 0 or more <code>HINT</code> values.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can only add cards to the opened lesson if they have the same number of <code>TEST</code> values as the opened lesson. See <a href="#addLesson"><code>addLesson</code></a> command for more information.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -471,49 +731,68 @@ Format: <code>addCard c/CORE c/CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#
 <div class="ulist">
 <ul>
 <li>
-<p><code>addCard c/Stapes is the smallest bone in the body c/True</code></p>
+<p><code>addCard t/Australia t/Canberra t/English h/Starts with C</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Adds a card with 3 <code>TEST</code> values and 1 <code>HINT</code> value.</p>
 </li>
 <li>
-<p><code>addCard c/Australia c/Canberra c/English o/Starts with C</code></p>
+<p>By default, the lesson will be set to test the first 2 <code>TEST</code> values. In this case, 'Australia' and 'Canberra' are the 2 values to be tested by default.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>addCard t/Cake t/蛋糕 h/🎂</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Adds a card with 2 <code>TEST</code> values which are both tested in quiz  mode.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleteCard"><a class="link" href="#deleteCard">3.1.11. Deleting a flashcard: <code>deleteCard</code></a></h4>
+<h4 id="deleteCard"><a class="link" href="#deleteCard">3.1.13. Deleting a card: <code>deleteCard</code><br></a></h4>
 <div class="paragraph">
-<p>Deletes a flashcard by referencing its index in the numbered flashcard list.<br>
+<p>Deletes the card at the specified INDEX of the numbered card list.<br>
 Format: <code>deleteCard INDEX</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Usage rules:</p>
+<p>This command only works in card view. You have to open a lesson in card view for editing with the <a href="#edit"><code>edit</code></a> command before you can use this command.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>To view the list, enter the command <a href="#listCards"><code>listCards</code></a>.</p>
-</li>
-<li>
-<p>Deletes the flashcard at the specified <code>INDEX</code> of the numbered flashcard list.</p>
-</li>
-</ul>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>deleteCard 2</code><br>
-Deletes the second flashcard.</p>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="images/delete_card.png" alt="delete card" width="384">
+</div>
+<div class="title">Figure 13. BrainTrain with sample cards loaded</div>
+</div>
+<div class="paragraph">
+<p>In the above scenario, the command <code>deleteCard 2</code> will delete the second card in the numbered list, 'Orbicularis oculi / Facial nerve'.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.1.12. Listing entered commands : <code>history</code></a></h4>
+<h4 id="listing-entered-commands-code-history-code-br"><a class="link" href="#listing-entered-commands-code-history-code-br">3.1.14. Listing entered commands : <code>history</code><br></a></h4>
 <div class="paragraph">
-<p>Lists all the commands that you have entered in reverse chronological order.<br>
+<p>Lists all the commands you have entered in reversed chronological order.<br>
 Format: <code>history</code></p>
 </div>
 <div class="admonitionblock note">
@@ -532,10 +811,10 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="quitting-the-program-code-quit-code"><a class="link" href="#quitting-the-program-code-quit-code">3.1.13. Quitting the program : <code>quit</code></a></h4>
+<h4 id="exiting-the-program-code-exit-code-br"><a class="link" href="#exiting-the-program-code-exit-code-br">3.1.15. Exiting the program : <code>exit</code><br></a></h4>
 <div class="paragraph">
-<p>Quits the program.<br>
-Format: <code>quit</code></p>
+<p>Exits the program.<br>
+Format: <code>exit</code></p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -543,30 +822,18 @@ Format: <code>quit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="quizmode"><a class="link" href="#quizmode">3.2. Quiz mode</a></h3>
+<h3 id="quizmode"><a class="link" href="#quizmode">3.2. Quiz mode<br></a></h3>
 <div class="paragraph">
 <p>When you <a href="#start"><code>start</code></a> a quiz, you will enter quiz mode. In this mode, you will only be allowed to enter the following set of quiz commands. Management commands are disabled in this mode.</p>
 </div>
 <div class="sect3">
-<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.2.1. Viewing help: <code>\help</code></a></h4>
+<h4 id="answering-a-card-code-answer-code-br"><a class="link" href="#answering-a-card-code-answer-code-br">3.2.1. Answering a card : <code>[ANSWER]</code><br></a></h4>
 <div class="paragraph">
-<p>Displays usage information on all quiz mode commands and acceptable inputs for answering cards.<br>
-Format: <code>\help</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="viewing-the-quiz-session-s-status-code-status-code"><a class="link" href="#viewing-the-quiz-session-s-status-code-status-code">3.2.2. Viewing the quiz session&#8217;s status: <code>\status</code></a></h4>
-<div class="paragraph">
-<p>Displays information on the current session&#8217;s status such as lesson progress (i.e. number of flashcards left).<br>
-Format: <code>\status</code></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="answering-a-flashcard-code-answer-code"><a class="link" href="#answering-a-flashcard-code-answer-code">3.2.3. Answering a flashcard : <code>[ANSWER]</code></a></h4>
-<div class="paragraph">
-<p>An input without the <code>\</code> prefix will be treated as an answer to the current flashcard.<br>
+<p>An input without the <code>\</code> prefix will be treated as an answer to the current card.<br>
 Format: <code>[ANSWER]&#8230;&#8203;</code></p>
 </div>
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
 <p>Usage rules:</p>
 </div>
@@ -578,21 +845,23 @@ Format: <code>[ANSWER]&#8230;&#8203;</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p>What a flashcard contains:</p>
+<p>What a card contains:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>For each flashcard, total attempts and answer streak are tracked.</p>
+<p>For each card, total attempts and answer streak are tracked.</p>
 </li>
 <li>
-<p>Total attempts refers to the number of times you have attempted this flashcard, regardless of
+<p>Total attempts refers to the number of times you have attempted this card, regardless of
 whether you were answered it correctly.</p>
 </li>
 <li>
-<p>The answer streak is the number of times you have answered the flashcard correctly consecutively.</p>
+<p>The answer streak is the number of times you have answered the card correctly consecutively.</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -601,7 +870,8 @@ whether you were answered it correctly.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The streak will be reduced to 0 after you answer a flashcard wrongly twice in a row. Hence, if you accidentally enter the wrong answer once, your streak for the question will not be affected, unless you answer wrongly again.
+The streak will be reduced to 0 after you answer a card wrongly twice in a row. Hence, if you
+accidentally enter the wrong answer once, your streak for the question will not be affected, unless you answer wrongly again.
 </td>
 </tr>
 </table>
@@ -619,34 +889,71 @@ You can press <kbd>ENTER</kbd> twice without entering any other input to reveal 
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Going through the different scenarios in a quiz</strong>:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>The question is "Japan" and is asking for the capital of "Japan":<br>
-<code>Tokyo</code><br>
-This is the correct answer, both the streak and total attempts increased by 1.</p>
-</li>
-<li>
-<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
-<code>Japaan</code><br>
-<code>Japan</code><br>
-This is the correct answer, the streak increased by 1 while total attempts increased by 2.</p>
-</li>
-<li>
-<p>The question is "Tokyo" and is asking for the country of "Tokyo":<br>
-<code>Japaan</code><br>
-<code>Jappan</code><br>
-This is the wrong answer, the streak is reduced to 0 while total attempts increased by 2.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p><strong>Step 1:</strong><br>
+  The question is "Japan" and is asking for the capital of "Japan":<br>
+  Enters <code>Tokyo</code> as answer<br>
+  The picture shown below shows the expected result if the question has been answered correctly,
+  which the total correct question counter increased by 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/answer-tokyo-correctly.PNG" alt="answer tokyo correctly" width="500">
+</div>
+<div class="title">Figure 14. Expected result of answering the question correctly.</div>
+</div>
+<div class="paragraph">
+<p><br>
+<strong>Step 2:</strong><br>
+  The question is "Tokyo" and is asking for the country of "Tokyo":<br>
+  Enters <code>Japaan</code> as wrong answer<br>
+  The picture shown below shows the expected result if the question has been answered wrongly once,
+  which the total attempts counter increased by 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/answer-japan-wrongly-once.PNG" alt="answer japan wrongly once" width="500">
+</div>
+<div class="title">Figure 15. Expected result of answering the question wrongly once.</div>
+</div>
+<div class="paragraph">
+<p><br>
+<strong>Step 3:</strong><br>
+  Same question as above, "Tokyo" and is asking for the country of "Tokyo":<br>
+  Enters <code>Jappan</code> as another wrong answer<br>
+  The picture shown below shows the expected result if the question has been answered wrongly twice,
+  which shows the correct answer and the total attempts counter increased by 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/answer-japan-wrongly-twice.PNG" alt="answer japan wrongly twice" width="500">
+</div>
+<div class="title">Figure 16. Expected result of answering the question wrongly twice.</div>
+</div>
+<div class="paragraph">
+<p><br>
+<strong>Step 4:</strong><br>
+  Same question as above, "Tokyo" and is asking for the country of "Tokyo":<br>
+  Enters <code>Japan</code> as correct answer<br>
+  The picture shown below shows the expected result if the question has been answered correctly
+  after answer has been revealed, which shows how well each question is performed in this quiz.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/answer-end.PNG" alt="answer end" width="500">
+</div>
+<div class="title">Figure 17. Expected result of quiz after questions have been completed.</div>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="labelling-the-current-flashcard-as-difficult-code-difficult-code"><a class="link" href="#labelling-the-current-flashcard-as-difficult-code-difficult-code">3.2.4. Labelling the current flashcard as difficult: <code>\difficult</code></a></h4>
+<h4 id="labelling-the-current-card-as-difficult-code-difficult-code"><a class="link" href="#labelling-the-current-card-as-difficult-code-difficult-code">3.2.2. Labelling the current card as difficult: <code>\difficult</code></a></h4>
 <div class="paragraph">
-<p>Labels the current flashcard as difficult.<br>
+<p>Labels the current card as difficult.<br>
 Format: <code>\difficult</code></p>
 </div>
 <div class="paragraph">
@@ -656,30 +963,172 @@ Format: <code>\difficult</code></p>
 <ul>
 <li>
 <p>The question is "Japan" and is asking for the capital of "Japan":<br>
-<code>\difficult</code><br>
-This will label flashcard of "Japan" as difficult.</p>
+Enters <code>\difficult</code><br>
+Labelled this card as difficult as shown in the picture below.</p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/difficult.PNG" alt="difficult" width="500">
+</div>
+<div class="title">Figure 18. Expected result of card labelled as difficult.</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>The question is "Japan" and is asking for the capital of "Japan":<br>
-<code>\difficult</code><br>
-<code>\difficult</code><br>
-This will label flashcard of "Japan" as not difficult.</p>
+Enters <code>\difficult</code><br>
+Enters <code>\difficult</code><br>
+Labelled this card as difficult as shown in the picture below.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/not-difficult.PNG" alt="not difficult" width="500">
+</div>
+<div class="title">Figure 19. Expected result of card labelled as difficult.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.2.3. Viewing help: <code>\help</code></a></h4>
+<div class="paragraph">
+<p>Displays usage information on all quiz mode commands and acceptable inputs for answering cards.<br>
+Format: <code>\help</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hint"><a class="link" href="#hint">3.2.4. Viewing the current card&#8217;s hint(s): <code>\hint</code></a></h4>
+<div class="paragraph">
+<p>Reveals the hint(s) for the current card (if any).<br>
+Format: <code>\hint</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enters <code>\hint</code><br>
+Reveals the hint of the current card</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/hint.PNG" alt="hint" width="500">
+</div>
+<div class="title">Figure 20. Expected result revealing the hint of the card.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="quitting-the-quiz-session-code-quit-code"><a class="link" href="#quitting-the-quiz-session-code-quit-code">3.2.5. Quitting the quiz session: <code>\quit</code></a></h4>
+<div class="paragraph">
+<p>Quits the current quiz session and switches back to <code>management mode</code>.<br>
+Format: <code>\quit</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The question is "Japan" and is asking for the capital of "Japan":<br>
+Enters <code>Tokyo</code> as answer<br>
+Enters <code>\quit</code> to quit the quiz.<br>
+Saves the progress of 1 attempted question "Japan".</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/quit.PNG" alt="quit" width="500">
+</div>
+<div class="title">Figure 21. Expected result of quitting a quiz after answering a question correctly.</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-the-status-of-the-current-quiz-code-status-code"><a class="link" href="#viewing-the-status-of-the-current-quiz-code-status-code">3.2.6. Viewing the status of the current quiz: <code>\status</code></a></h4>
+<div class="paragraph">
+<p>Displays information on the current quiz&#8217;s status such as question progress (i.e. number of
+correct questions).<br>
+Format: <code>\status</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>What does status display:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Total attempts refers to the number of times you have attempted this card, regardless of
+whether you answered it correctly.</p>
+</li>
+<li>
+<p>Total correct answers refers to the number of times you correctly answered, regardless of the
+streak.</p>
+</li>
+<li>
+<p>Current progress refers to which card are you currently on, out of all the cards in the quiz.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hint"><a class="link" href="#hint">3.2.5. Viewing the current flashcard&#8217;s hint(s): <code>\hint</code></a></h4>
+</div>
 <div class="paragraph">
-<p>Reveals the hint(s) for the current flashcard (if any).<br>
-Format: <code>\hint</code></p>
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The question is "Japan" and is asking for the capital of "Japan":<br>
+Enters <code>Tokyo</code> as answer<br>
+Enters <code>\status</code> to view the status of the current quiz.<br>
+Saves the progress of 1 attempted question "Japan".</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/quiz-command-examples/status.PNG" alt="status" width="500">
+</div>
+<div class="title">Figure 22. Expected result of viewing the status of a quiz after answering a question correctly.</div>
+</div>
+<div class="paragraph">
+<p><br></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="quitting-the-quiz-session-code-quit-code"><a class="link" href="#quitting-the-quiz-session-code-quit-code">3.2.6. Quitting the quiz session: <code>\quit</code></a></h4>
+</div>
+<div class="sect2">
+<h3 id="usermode"><a class="link" href="#usermode">3.3. User Transfer mode</a></h3>
 <div class="paragraph">
-<p>Quits the current quiz session and switches back to <code>management mode</code>.<br>
-Format: <code>\quit</code></p>
+<p>You can use BrainTrain across different devices. This is an in-built feature that is automated in BrainTrain.</p>
+</div>
+<div class="sect3">
+<h4 id="using-braintrain-across-different-devices"><a class="link" href="#using-braintrain-across-different-devices">3.3.1. Using BrainTrain across different devices</a></h4>
+<div class="paragraph">
+<p>To transfer your files:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Store the <code>userdata</code> and <code>lessons</code> folder into your transfer device (thumbdrive etc.).</p>
+</li>
+<li>
+<p>On another device, ensure that BrainTrain has been executed <code>at least once</code>.</p>
+</li>
+<li>
+<p>Transfer and overwrite the <code>userdata</code> and <code>lessons</code> folder.</p>
+</li>
+<li>
+<p>Your progress will be automatically imported on that device.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -689,11 +1138,69 @@ Format: <code>\quit</code></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="troubleshooting"><a class="link" href="#troubleshooting">4. Troubleshooting</a></h2>
+<h2 id="future-enhancements"><a class="link" href="#future-enhancements">4. Future enhancements</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="importing-data-from-website-coming-in-v2-0"><a class="link" href="#importing-data-from-website-coming-in-v2-0">4.1. Importing data from website [Coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>Easily transfer files using import command to get files directly from a specific link without the use of transfer devices.<br>
+The usage of hard drives to transfer and pull documents has reduced overtime as new cloud storage are introduced. Thus, with this new feature, it will help to pull the user file and lessons from links.<br>
+Example : <code>import User l/[INSERT_DESIRED_LINK_HERE]</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="supporting-timer-countdown-in-quiz-mode-coming-in-v2-0"><a class="link" href="#supporting-timer-countdown-in-quiz-mode-coming-in-v2-0">4.2. Supporting timer countdown in quiz mode [Coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>User will see a 10 seconds timer countdown when answering a question (e.g. learn or review mode).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="supporting-auto-generation-of-mcq-in-quiz-mode-coming-in-v2-0"><a class="link" href="#supporting-auto-generation-of-mcq-in-quiz-mode-coming-in-v2-0">4.3. Supporting auto generation of mcq in quiz mode [Coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>BrainTrain will auto generate a list of mcq options depending on the list of values in the
+user specified lesson.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-other-spreadsheet-formats-such-as-xlsx-coming-in-v2-0"><a class="link" href="#support-other-spreadsheet-formats-such-as-xlsx-coming-in-v2-0">4.4. Support other spreadsheet formats such as .xlsx [Coming in v2.0]</a></h3>
+<div class="paragraph">
+<p>BrainTrain will be able to accept more robust spreadsheet file formats.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="supporting-starting-a-quiz-session-with-multiple-lessons-coming-in-v2-0"><a class="link" href="#supporting-starting-a-quiz-session-with-multiple-lessons-coming-in-v2-0">4.5. Supporting starting a quiz session with multiple lessons [Coming in v2.0]</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Format: <code>start LESSON_INDEX_1 LESSON_INDEX_2 [c/COUNT1] [c/COUNT2] m/MODE</code></p>
+</li>
+<li>
+<p>You can start a quiz session with cards from more than one lesson. The sequence of cards will be random instead of following the sequence of lessons to increase the difficulty for you to memorize.</p>
+</li>
+<li>
+<p>Example: <code>start 1 2 c/5 c/5 m/learn</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Starts a quiz with 5 words from the first lesson and 5 words from the second lesson in <code>LEARN</code> mode.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="troubleshooting"><a class="link" href="#troubleshooting">5. Troubleshooting</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: Why are my card values shown as <code>?????</code>?<br>
-<strong>A</strong>: If your lesson contains non-ASCII characters such as:</p>
+<strong>A</strong>: If your lesson contains non-English characters such as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -706,18 +1213,28 @@ Format: <code>\quit</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p>This can be fixed by opening the lesson file in your preferred spreadsheet application (e.g. Excel), and then saving it as <code>CSV UTF-8 (Comma delimited) (*.csv)</code>.<br></p>
+<p>This can be fixed by opening the lesson file in your preferred spreadsheet application (e.g. Excel), and then saving it as <code>CSV UTF-8 (Comma delimited) (*.csv)</code>. UTF encoding allows a computer to show non-English characters.<br></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>The default encoding setting is unable to process special characters. As a result, you will need to save it as a <code>UTF-8</code> encoded <code>.csv</code> file.</p>
+<p>The default encoding setting is unable to process special characters. As a result, you will need to save it as a <code>UTF-8</code> encoded file.</p>
 </div>
 <div class="paragraph">
-<p>Note that the lesson files have to be saved as a <code>UTF-8</code> encoded <code>.csv</code> file before the first save.<br>
-If the file is saved without <code>UTF-8</code> encoding, the data may be saved as <code>?????</code>, and all non-ASCII characters will be discarded.</p>
+<p>Note that externally created lesson files have to be saved with UTF-8 encoding before using them in BrainTrain.<br>
+If the files are saved without <code>UTF-8</code> encoding, any non-English data may be saved as <code>?????</code>, and the data will be lost.</p>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="paragraph">
+<p><strong>Q</strong>: Why are my lessons not loading?<br>
+<strong>A</strong>: Please verify if the location of BrainTrain is suitable. Depending on your computer&#8217;s permissions and security settings, places such as the Desktop may not be usable, and your operating system may prevent BrainTrain from loading the lesson files.</p>
+</div>
+<div class="paragraph">
+<p>If BrainTrain still does not load lessons despite trying other locations, please contact Team BrainTrain at <a href="https://github.com/CS2103-AY1819S2-W14-1/main/issues">our issue tracker</a> or email us at <a href="mailto:eugenef@u.nus.edu">eugenef@u.nus.edu</a>, and attach any generated braintrain.log files.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -725,11 +1242,11 @@ If the file is saved without <code>UTF-8</code> encoding, the data may be saved 
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">5. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another computer?<br>
-<strong>A</strong>: Install the app in the other computer and transfer the lesson <code>.csv</code> files over to the <code>/data</code> directory.</p>
+<strong>A</strong>: Install the app in the other computer and transfer the lesson <code>.csv</code> files over to the <code>lessons</code> directory, and userdata <code>.csv</code> files over to the <code>userdata</code> directory.</p>
 </div>
 <div class="paragraph">
 <p><br></p>
@@ -737,56 +1254,74 @@ If the file is saved without <code>UTF-8</code> encoding, the data may be saved 
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">6. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="management-mode-2"><a class="link" href="#management-mode-2">6.1. Management mode</a></h3>
+<h3 id="management-mode-2"><a class="link" href="#management-mode-2">7.1. Management mode</a></h3>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>Viewing help</strong>: <code>help</code></p>
 </li>
 <li>
-<p><strong>Starting quiz session</strong>: <code>start n/NAME [c/COUNT] m/MODE</code><br>
-e.g. <code>start n/country-capitals c/15 m/LEARN</code></p>
+<p><strong>Changing theme</strong>: <code>changeTheme</code></p>
+</li>
+<li>
+<p><strong>Starting a quiz session</strong>: <code>start LESSON_INDEX [c/COUNT] m/MODE</code><br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>e.g. <code>start 1 c/15 m/LEARN</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Listing all lessons</strong>: <code>listLessons</code></p>
 </li>
 <li>
-<p><strong>Adding a lesson</strong>: <code>addLesson n/NAME q/QUESTION CORE a/ANSWER CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code><br>
-e.g. <code>addLesson n/Capitals of the world q/Country a/Capital c/Language o/Hint</code></p>
+<p><strong>Adding a lesson</strong>: <code>addLesson n/NAME t/TEST t/TEST [t/TEST]…​ [h/HINT]…​</code><br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>e.g. <code>addLesson n/Capitals of the world t/Country t/Capital t/Language h/Hint</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><strong>Deleting a lesson</strong>: <code>deleteLesson INDEX</code><br>
-e.g. <code>deleteLesson 2</code></p>
+<p><strong>Deleting a lesson</strong>: <code>deleteLesson INDEX</code><br></p>
 </li>
 <li>
-<p><strong>Reloading all lessons</strong>: <code>reloadLessons</code></p>
+<p><strong>Reloading all lessons</strong>: <code>reload</code></p>
 </li>
 <li>
-<p><strong>Opening a lesson</strong>: <code>openLesson INDEX</code><br>
-e.g. <code>openLesson 1</code></p>
+<p><strong>Editing a lesson in Card View</strong>: <code>edit INDEX</code><br></p>
 </li>
 <li>
-<p><strong>Closing a lesson</strong>: <code>closeLesson</code></p>
+<p><strong>Quitting card view</strong>: <code>quit</code></p>
 </li>
 <li>
-<p><strong>Listing all flashcards</strong>: <code>listCards</code></p>
+<p><strong>Listing all cards</strong>: <code>listCards</code></p>
 </li>
 <li>
-<p><strong>Adding a flashcard</strong>: <code>c/CORE c/CORE [c/CORE]&#8230;&#8203; [o/OPTIONAL]&#8230;&#8203;</code><br>
-e.g. <code>addCard c/Australia c/Canberra c/English o/Starts with C</code></p>
+<p><strong>Adding a card</strong>: <code>addCard t/TEST t/TEST [t/TEST]&#8230;&#8203; [h/HINT]&#8230;&#8203;</code><br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>e.g. <code>addCard t/Australia t/Canberra t/English h/Starts with C</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><strong>Deleting a flashcard</strong>: <code>deleteCard INDEX</code><br>
-e.g. <code>deleteCard 2</code></p>
+<p><strong>Deleting a card</strong>: <code>deleteCard INDEX</code><br></p>
 </li>
 <li>
 <p><strong>Listing entered commands</strong>: <code>history</code></p>
 </li>
 <li>
-<p><strong>Quiting the program</strong>: <code>quit</code></p>
+<p><strong>Exiting the program</strong>: <code>exit</code></p>
 </li>
 </ul>
 </div>
@@ -795,26 +1330,39 @@ e.g. <code>deleteCard 2</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="quiz-mode"><a class="link" href="#quiz-mode">6.2. Quiz mode</a></h3>
+<h3 id="quiz-mode"><a class="link" href="#quiz-mode">7.2. Quiz mode</a></h3>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Answering a card</strong>: <code>[ANSWER]&#8230;&#8203;</code></p>
+</li>
+<li>
+<p><strong>Labelling the current card as difficult</strong>: <code>\difficult</code></p>
+</li>
 <li>
 <p><strong>Viewing help</strong>: <code>\help</code></p>
 </li>
 <li>
+<p><strong>Viewing the current card&#8217;s hint(s)</strong>: <code>\hint</code></p>
+</li>
+<li>
+<p><strong>Quitting the quiz</strong>: <code>\quit</code></p>
+</li>
+<li>
 <p><strong>Viewing the quiz session&#8217;s status</strong>: <code>\status</code></p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="user-transfer"><a class="link" href="#user-transfer">7.3. User transfer</a></h3>
+<div class="ulist">
+<ul>
 <li>
-<p><strong>Answering a flashcard</strong>: <code>[*]</code></p>
-</li>
-<li>
-<p><strong>Labelling the current flashcard as difficult</strong>: <code>\difficult</code></p>
-</li>
-<li>
-<p><strong>Viewing the current flashcard&#8217;s hint(s)</strong>: <code>\hint</code></p>
-</li>
-<li>
-<p><strong>Quitting the quiz session</strong>: <code>\quit</code></p>
+<p><strong>Using BrainTrain on another device</strong></p>
 </li>
 </ul>
 </div>
@@ -823,4 +1371,4 @@ e.g. <code>deleteCard 2</code></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-09 15:56:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-04-15 14:09:35 UTC</div></div></div></body></html>
